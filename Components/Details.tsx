@@ -2,7 +2,7 @@ import React from 'react'
 
 const Details = () => {
   return (
-    <section className='w-full h-[120vh] bg-white relative pt-20 pb-20'>
+    <section className='w-full h-[100vh] bg-white relative pt-20 pb-20'>
         <div className='w-full h-full px-25 flex justify-center items-center gap-x-10'>
             <div className='w-240 h-238.75 '>
                 <img src="/images/can-holdin-woman-why-magnessium.png" alt="/" className='w-full object-cover rounded-[20px]  bg-gradient-to-t from-[#FFF8E5] to-[#CAF8D4]' />
@@ -16,11 +16,11 @@ const Details = () => {
                     <p className='font-Albert font-normal text-[#141414] text-[22px]'>Magnesium L-Threonate is a unique form of magnesium known<br/>for its ability to support cognitive function and brain health. It<br/>may help with:</p>
                 </div>
                 <div className='leading-[48px] ml-10'>
-                    <li className='font-semibold font-Albert text-[24px]'>Mental clarity and focus</li>
-                    <li className='font-semibold font-Albert text-[24px]'>Memory support</li>
-                    <li className='font-semibold font-Albert text-[24px]'>Brain performance</li>
-                    <li className='font-semibold font-Albert text-[24px]'>Relaxation and stress support</li>
-                    <li className='font-semibold font-Albert text-[24px]'>Healthy sleep quality</li>
+                    <li className='font-semibold font-Albert text-[24px] text-black'>Mental clarity and focus</li>
+                    <li className='font-semibold font-Albert text-[24px] text-black'>Memory support</li>
+                    <li className='font-semibold font-Albert text-[24px] text-black'>Brain performance</li>
+                    <li className='font-semibold font-Albert text-[24px] text-black'>Relaxation and stress support</li>
+                    <li className='font-semibold font-Albert text-[24px] text-black'>Healthy sleep quality</li>
                 </div>
                 <div className='ml-14'>
                     <button className='primary-btn px-1.5 py-1.5 w-45'>

@@ -8,7 +8,7 @@ const Header = () => {
             <div className="flex justify-start">
                 <img src="/images/logo.png" alt="LOGO" />
             </div>
-            <div className="w-full flex justify-end items-center gap-x-10 capitalize">
+            <div className="w-full flex justify-end items-center gap-x-10 capitalize text-black">
                 <a href="/home">home</a>
                 <a href="/ourstory">our story</a>
                 <a href="/shop">shop</a>

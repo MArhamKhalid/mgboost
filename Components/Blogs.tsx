@@ -2,8 +2,8 @@ import React from 'react'
 
 const Blogs = () => {
   return (
-    <section className='w-full h-[120vh] bg-white relative pt-20 pb-20'>
-        <div className='w-full h-full px-25 flex justify-center items-center gap-x-6'>
+    <section className='w-full h-[110vh] bg-white relative pt-20 pb-20'>
+        <div className='w-full h-full px-25 flex justify-center items-center gap-x-6 text-black'>
             <div className='w-199.5 h-211'>
                 <img src="/images/can-holding-woman-about.png" alt="/" className='w-full object-cover' />
             </div>

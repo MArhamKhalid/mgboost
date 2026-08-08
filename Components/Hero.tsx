@@ -10,11 +10,11 @@ const Hero = () => {
                     <span className='py-1 px-3 rounded-2xl border border-solid border-[#DAA404] text-[#DAA404] hover:bg-[#DAA404] hover:text-white cursor-pointer'>daily wellness</span>
                     <span className='py-1 px-3 rounded-2xl border border-solid border-[#DAA404] text-[#DAA404] hover:bg-[#DAA404] hover:text-white cursor-pointer'>better living</span>
                 </div>
-                <div className='capitalize font-Alan'>
+                <div className='capitalize font-Alan text-black'>
                     <h2 className='text-4xl font-bold font-Albert'>the smarter way to</h2>
                     <h2 className='text-7xl font-bold'> get magnesium.</h2>
                 </div>
-                <div className='flex flex-col gap-y-4 font-Albert'>
+                <div className='flex flex-col gap-y-4 font-Albert text-black'>
                     <p>MG BOOST is a premium magnesium sparkling drink that supports<br/>calm, focus, digestion, and better sleep</p>
                     <div className='flex gap-x-3 capitalize'>
                         <button className='primary-btn px-1.5 py-1.5 w-40'>

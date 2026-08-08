@@ -80,3 +80,6 @@ body {
     transform: translate(-40%);
   }
 }
+.end-logo{
+  background: linear-gradient(#DAA404,#FFF2CB);
+}

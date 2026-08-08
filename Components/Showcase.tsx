@@ -1,13 +1,13 @@
 const Showcase = () => {
   return (
-    <section className="w-full h-[230vh] bg-white relative">
+    <section className="w-full h-[210vh] bg-white relative">
         <div className="flex justify-center h-100 items-center py-20">
           <h2 className="capitalize font-Alan text-center text-[#818181] text-[44px]">
               To make magnesium simple, <span className="text-[#DAA404] font-bold capitalize">enjoyable, and part<br/>of everyday life.Instead of complicated<br/>supplements</span>, we believe wellness should fit<br/>naturally into your routine
           </h2>
         </div>
         <div className="w-full h-max flex flex-col gap-y-16">
-        <div className="px-15 flex gap-x-5">
+        <div className="px-15 flex gap-x-5 text-black">
             <div className="w-144.5 h-233">
                 <div className="w-full h-165 bg-[#FFF4D7] rounded-b-xl flex justify-center ">
                     <img src="/images/mango-flavor.png" alt="" className="mt-20 w-67.5 h-176"/>
@@ -23,7 +23,7 @@ const Showcase = () => {
                     </button>
                 </div>
             </div>
-            <div className="w-144.5 h-233 bg-[#EEAF09] relative flex justify-center overflow-hidden">
+            <div className="w-144.5 h-233 bg-[#EEAF09] relative flex justify-center overflow-hidden text-black">
                 <div className="absolute z-10 w-48.5 h-126 -rotate-8 bottom-30 left-23">
                     <img src="/images/mango-flavor.png" alt="" />
                 </div>
@@ -59,9 +59,9 @@ const Showcase = () => {
                 </div>
             </div>
         </div>
-        <div className="w-full px-25 flex justify-center gap-x-6">
-            <div className="w-135 h-171 rounded-[20px] bg-gradient-to-t from-[#FFEFC0] to-[#F4B08C]">
-                <img src="/images/can-holding-woman.png" alt="" className="w-full"/>
+        <div className="w-full px-25 flex justify-center gap-x-6 text-black">
+            <div className="w-135 h-171 rounded-[20px] bg-gradient-to-t from-[#FFEFC0] to-[#F4B08C] relative">
+                <img src="/images/can-holding-woman.png" alt="" className="w-full absolute bottom-0"/>
             </div>
             <div className="w-294 h-171 rounded-[20px] bg-gradient-to-t from-[#FAF9BA] to-[#C3F8D8] relative">
                 <div className="w-full absolute bottom-0">
@@ -92,7 +92,7 @@ const Showcase = () => {
             </div>
         </div>
       </div>
-        <div className="w-full h-50 bg-[#FFF7DF] flex justify-center items-end -mt-20 px-20">
+        <div className="w-full h-50 bg-[#FFF7DF] flex justify-center items-end -mt-20 px-20 text-black">
             <div className="w-full flex justify-center items-center gap-x-8 capitalize text-[40px] font-Albert font-light text-slider mb-5">
                 <p>Supports relaxation </p>
                 <img src="/images/flower.png" alt="" />

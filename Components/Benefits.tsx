@@ -2,7 +2,7 @@ import React from 'react'
 
 const Benefits = () => {
   return (
-    <section className='w-full h-[140vh] relative bg-white flex flex-col justify-center overflow-hidden'>
+    <section className='w-full h-[120vh] relative bg-white flex flex-col justify-center overflow-hidden text-black'>
         <div className='w-full absolute object-cover top-0 left-0'>
             <img src="/images/benefits-mask.png" alt="" className='w-full bg-cover'/>
         </div>
@@ -17,38 +17,38 @@ const Benefits = () => {
                 <img src="/images/can-rotate.png" alt=""/>
             </div>
         </div>
-        <div className='absolute left-[19.5%] bottom-[34%] w-[397px] h-[89px] rounded-[88px] bg-gradient-to-b from-[#FBFBFB] to-[#FAF1D4] flex justify-end items-center pr-2 shadow-xl gap-x-3'>
+        <div className='absolute left-[18%] bottom-[36%] w-[397px] h-[89px] rounded-[88px] bg-gradient-to-b from-[#FBFBFB] to-[#FAF1D4] flex justify-end items-center pr-2 shadow-xl gap-x-3'>
             <p className='capitalize text-[22px] font-Albert font-normal text-right leading-[26px]'>Supports calmness<br/>and relaxation</p>
             <div className='w-18.75 h-18.75 rounded-full bg-[#E0B121] flex justify-center items-center'>
                 <img src="/icons/meditation.png" alt="" />
             </div>
         </div>
-        <div className='absolute left-[22.5%] bottom-[21%] w-[397px] h-[89px] rounded-[88px] bg-gradient-to-b from-[#FBFBFB] to-[#FAF1D4] flex justify-end items-center pr-2 shadow-xl gap-x-3'>
+        <div className='absolute left-[20.5%] bottom-[22%] w-[397px] h-[89px] rounded-[88px] bg-gradient-to-b from-[#FBFBFB] to-[#FAF1D4] flex justify-end items-center pr-2 shadow-xl gap-x-3'>
             <p className='capitalize text-[22px] font-Albert font-normal text-right leading-[26px]'>help supports<br/>memory and focus</p>
             <div className='w-18.75 h-18.75 rounded-full bg-[#E0B121] flex justify-center items-center'>
                 <img src="/icons/inner-beauty.png" alt="" />
             </div>
         </div>
-        <div className='absolute left-[27.5%] bottom-[8%] w-[397px] h-[89px] rounded-[88px] bg-gradient-to-b from-[#FBFBFB] to-[#FAF1D4] flex justify-end items-center pr-2 shadow-xl gap-x-3'>
+        <div className='absolute left-[25.5%] bottom-[9%] w-[397px] h-[89px] rounded-[88px] bg-gradient-to-b from-[#FBFBFB] to-[#FAF1D4] flex justify-end items-center pr-2 shadow-xl gap-x-3'>
             <p className='capitalize text-[22px] font-Albert font-normal text-right leading-[26px]'>promotes healthy<br/>sleep and recovery</p>
             <div className='w-18.75 h-18.75 rounded-full bg-[#E0B121] flex justify-center items-center'>
                 <img src="/icons/sleep.png" alt="" />
             </div>
         </div>
 
-        <div className='absolute right-[25%] bottom-[41.5%] w-[397px] h-[89px] rounded-[88px] bg-gradient-to-b from-[#FBFBFB] to-[#FAF1D4] flex justify-start items-center pl-2 shadow-xl gap-x-2'>
+        <div className='absolute right-[22%] bottom-[45%] w-[397px] h-[89px] rounded-[88px] bg-gradient-to-b from-[#FBFBFB] to-[#FAF1D4] flex justify-start items-center pl-2 shadow-xl gap-x-2'>
             <div className='w-18.75 h-18.75 rounded-full bg-[#E0B121] flex justify-center items-center'>
                 <img src="/icons/gut.png" alt="" />
             </div>
             <p className='capitalize text-[22px] font-Albert font-normal text-left leading-[26px]'>Supports digestion<br/>and gut wellnes</p>
         </div>
-        <div className='absolute right-[20.5%] bottom-[30.5%] w-[397px] h-[89px] rounded-[88px] bg-gradient-to-b from-[#FBFBFB] to-[#FAF1D4] flex justify-start items-center pl-2 shadow-xl gap-x-2'>
+        <div className='absolute right-[18%] bottom-[33%] w-[397px] h-[89px] rounded-[88px] bg-gradient-to-b from-[#FBFBFB] to-[#FAF1D4] flex justify-start items-center pl-2 shadow-xl gap-x-2'>
             <div className='w-18.75 h-18.75 rounded-full bg-[#E0B121] flex justify-center items-center'>
                 <img src="/icons/almond.png" alt="" />
             </div>
             <p className='capitalize text-[22px] font-Albert font-normal text-left leading-[26px]'>Helps replenish essential<br/>magnesium levels</p>
         </div>
-        <div className='absolute right-[16%] bottom-[18%] w-[397px] h-[89px] rounded-[88px] bg-gradient-to-b from-[#FBFBFB] to-[#FAF1D4] flex justify-start items-center pl-2 shadow-xl gap-x-2'>
+        <div className='absolute right-[14.5%] bottom-[20%] w-[397px] h-[89px] rounded-[88px] bg-gradient-to-b from-[#FBFBFB] to-[#FAF1D4] flex justify-start items-center pl-2 shadow-xl gap-x-2'>
             <div className='w-18.75 h-18.75 rounded-full bg-[#E0B121] flex justify-center items-center'>
                 <img src="/icons/spa.png" alt="" />
             </div>
