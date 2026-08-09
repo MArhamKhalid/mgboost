@@ -2,7 +2,7 @@ import React from 'react'
 
 const Blogs = () => {
   return (
-    <section className='w-full h-[110vh] bg-white relative pt-20 pb-20'>
+    <section className='w-full h-[110vh] bg-white relative pt-10 pb-20'>
         <div className='w-full h-full px-25 flex justify-center items-center gap-x-6 text-black'>
             <div className='w-199.5 h-211'>
                 <img src="/images/can-holding-woman-about.png" alt="/" className='w-full object-cover' />
@@ -19,17 +19,17 @@ const Blogs = () => {
                     <p className='font-Albert font-normal text-[#141414] text-[24px]'>Over time, I began learning how closely digestion, stress, sleep, hydration, mineral intake, and mental well-being are connected. The more I researched, the more I realized that many people are experiencing the same challenges—feeling tired, stressed, bloated, restless, and disconnected from their bodies while trying to keep up with busy modern lives.</p>
                 </div>
                 <div>
-                    <button className='primary-btn px-1.5 py-1.5 w-50'>
-                        <p className='pl-3'>read full story</p>
-                        <span>
+                    <button className='bg-[#DAA404] text-white px-1.5 py-1.5 w-[227px] h-[52px] capitalize font-Alan flex justify-center items-center rounded-full gap-x-[20px] cursor-pointer'>
+                        <p className='pl-3 text-[20px]'>read full story</p>
+                        <span className='bg-white flex justify-center items-center rounded-full w-[42px] h-[42px]'>
                             <img src="/icons/Arrow 1.png" alt="" className='px-2 py-3'/>
                         </span> 
                     </button>
                 </div>
             </div>
         </div>
-        <div className='h-40 '>
-            <div className='w-full flex justify-center items-center gap-x-6 text-slider font-Alan text-[50px] font-bold capitalize'>
+        <div className='h-40 w-full'>
+            <div className='w-full max-h-[80px] flex justify-center items-center gap-x-6 text-slider font-Alan text-[34px] font-bold capitalize'>
                 <p className=' text-[#E0B121]'>your boost.</p>
                 <p className=' text-[#E0B121]'>boost your day.</p>
                 <span>
@@ -38,6 +38,11 @@ const Blogs = () => {
                 <p className='text-white [-webkit-text-stroke:1px_#E0B121]'>Feel good.</p>
                 <p className='text-white [-webkit-text-stroke:1px_#E0B121]'>Find your balance.</p>
                 <p className='text-white [-webkit-text-stroke:1px_#E0B121]'>Boost your day.</p>
+                <span>
+                    <img src="/images/flower.png" alt="" />
+                </span>
+                <p className=' text-[#E0B121]'>your boost.</p>
+                <p className=' text-[#E0B121]'>boost your day.</p>
             </div>
         </div>
     </section>

@@ -2,11 +2,11 @@ import React from 'react'
 
 const Benefits = () => {
   return (
-    <section className='w-full h-[120vh] relative bg-white flex flex-col justify-center overflow-hidden text-black'>
-        <div className='w-full absolute object-cover top-0 left-0'>
+    <section className='w-full h-[130vh] relative bg-white flex flex-col justify-center overflow-hidden text-black'>
+        <div className='w-full absolute object-cover top-30 left-0'>
             <img src="/images/benefits-mask.png" alt="" className='w-full bg-cover'/>
         </div>
-        <div className='w-full z-10 flex flex-col mt-60'>
+        <div className='w-full z-10 flex flex-col mt-70'>
             <div className='text-center capitalize'>
                 <h2 className='font-bold font-Alan text-[87px] text-white'>benefits of MG boost</h2>
                 <p className='text-[22px] font-Albert font-normal'>MG Boost is a refreshing magnesium-powered sparkling drink designed to support calmness,<br/>focus, digestion, hydration, and better daily recovery — without added sugar</p>

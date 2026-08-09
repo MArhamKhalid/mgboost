@@ -47,7 +47,7 @@ const Story = () => {
                     <img src="/images/snapshot6.png" alt="" className='w-[333.36px] h-[312px]'/>
                 </div>
                 <div className='flex flex-col items-end gap-y-[71px] '>
-                    <img src="/images/snapshot7.png" alt="" className='w-[312px] h-[252px] '/>
+                    <img src="/images/snapshot7.png" alt="" className='w-[312px] h-[252px] mr-[50px]'/>
                     <img src="/images/snapshot8.png" alt="" className='w-[288px] h-[337px] '/>
                 </div>
             </div>

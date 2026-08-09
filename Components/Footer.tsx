@@ -2,7 +2,7 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <footer className='w-full bg-linear-to-b from-[#FFFAED] to-[#FFF1C8] relative'>
+    <footer className='w-full h-[749px] bg-linear-to-b from-[#FFFAED] to-[#FFF1C8] relative overflow-hidden'>
         <div className='pt-[138px] px-25 flex justify-between pb-[64px]'>
             <div className='w-full max-w-[500px] text-black h-full '>
                 <h2 className='font-Albert font-bold text-[26px]'>Sign up to get 10% off your first order!</h2>
@@ -40,7 +40,7 @@ const Footer = () => {
             </div>
             
         </div>
-        <div className='w-full text-black flex justify-between absolute bottom-10 px-25'>
+        <div className='w-full h-full max-h-[50px] text-black flex justify-between items-start absolute bottom-0 px-25 z-1 bg-[#FFF2CB] shadow-[0_-22px_24px_-1px_#FFF2CB]'>
             <div className='flex justify-start items-center'>
                 <p>© 2026 - Copyright MG BOOST</p>
             </div>
@@ -51,8 +51,8 @@ const Footer = () => {
             </div>
             <div className='flex justify-end items-center'><img src="/images/Payment-Logo.png" alt="" /></div>
         </div>
-        <div className='w-full mb-10 flex justify-center items-end'>
-            <h2 className='font-Albert text-[315.39px] bg-linear-to-t from-[#FFF2CB] to-[#DAA404] bg-clip-text text-transparent font-bold uppercase text-center leading-[320px] '>mg boost</h2>
+        <div className='w-full mb-10 flex justify-center items-end absolute -bottom-20 opacity-100'>
+            <h2 className='font-Albert text-[330px] bg-linear-to-t from-[#FFFAED] to-[#DAA404] bg-clip-text text-transparent font-extrabold uppercase text-center leading-[320px] '>mg boost</h2>
         </div>
     </footer>
   )
