@@ -13,7 +13,7 @@ const Footer = () => {
                             subscribe <img src="/images/Arrow 2.png" alt="/" className='w-6 h-4' />
                         </button>
                     </div>
-                    <p className='font-Albert text-[20px] font-light'>i have read the <span className='underline cursor-pointer'>Privacy Policy</span> provided by <span className='font-bold underline'>MG BOOST</span></p>
+                    <p className='font-Albert text-[20px] font-light'>i have read the <span className='underline cursor-pointer'>Privacy Policy</span> provided by <span className='font-bold underline italic'>MG BOOST</span></p>
                 </div>
                 <div className='flex items-center gap-x-[51px]'>
                     <p>Buy On</p>
@@ -33,7 +33,7 @@ const Footer = () => {
                     <a href="/Contact">Contact</a>
                 </ul>
             </div>
-            <div className='w-[300px] flex flex-col items-end text-[#141414]'>
+            <div className='w-[300px] flex flex-col items-end  text-[#141414]'>
                 <div className='font-Albert font-medium text-[20px] flex items-center gap-x-2 '><img src="/images/insta.png" alt="/" /><a href="/" className='underline'>Instagram</a></div>
                 <div className='font-Albert font-medium text-[20px] flex items-center gap-x-2 '><img src="/images/facebook.png" alt="/" /><a href="/" className='underline'>Facebook</a></div>
                 <div className='font-Albert font-medium text-[20px] flex items-center gap-x-2 '><img src="/images/tiktok.png" alt="/" /><a href="/" className='underline'>TikTok</a></div>

@@ -41,7 +41,7 @@ body {
 .primary-btn{
   width: 200px;
   height: 52px;
-  background-color: #DAA404;
+  background-color: #E0B121;
   color: white;
   display: flex ;
   justify-content: center;
@@ -54,7 +54,23 @@ body {
   font-size: 20px;
   font-family: var(--font-Albert);
   font: normal;
+  transition: 0.1s linear;
 }
+/* .teanima{
+  z-index: 0;
+  opacity: 0;
+}
+.teanima:hover{
+  transition: textani 0.2s ease-in;
+}
+@keyframes textani {
+  0%{
+    opacity: 0%;
+  }
+  100%{
+    opacity: 100%;
+  }
+} */
 .primary-btn span{
   width: 42px;
   height: 42px;
@@ -87,14 +103,27 @@ body {
   background-color: #DAA404;
 }
 .text-slider{
-  animation: text 20s linear infinite;
+  width: 100%;
+  animation: text1 20s linear infinite;
 }
-@keyframes text{
+@keyframes text1{
   0%{
     transform: translate(0%);
   }
   100%{
-    transform: translate(-40%);
+    transform: translate(-90%);
+  }
+}
+.text-slider2{
+  /* width: 100%; */
+  animation: text2 20s linear infinite;
+}
+@keyframes text2{
+  0%{
+    transform: translate(0%);
+  }
+  100%{
+    transform: translate(-90%);
   }
 }
 .end-logo{

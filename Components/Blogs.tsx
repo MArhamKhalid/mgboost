@@ -1,10 +1,22 @@
 import React from 'react'
 
+const slidtext = [
+    {
+        text:"your boost.  boost your day."
+    },
+    {
+        text:"your boost.  boost your day."
+    },
+    {
+        text:"your boost.  boost your day."
+    },
+]
+
 const Blogs = () => {
   return (
-    <section className='w-full h-[110vh] bg-white relative pt-10 pb-20'>
-        <div className='w-full h-full px-25 flex justify-center items-center gap-x-6 text-black'>
-            <div className='w-199.5 h-211'>
+    <section className='w-full h-[120vh] bg-white relative pt-[100px] pb-20 overflow-hidden'>
+        <div className='w-full h-full max-h-215 px-25 flex justify-center items-center gap-x-6 text-black'>
+            <div className='w-199.5 h-211 mb-[26px]'>
                 <img src="/images/can-holding-woman-about.png" alt="/" className='w-full object-cover' />
             </div>
             <div className='w-220 h-full flex flex-col justify-center gap-y-10'>
@@ -28,23 +40,16 @@ const Blogs = () => {
                 </div>
             </div>
         </div>
-        <div className='h-40 w-full'>
-            <div className='w-full max-h-[80px] flex justify-center items-center gap-x-6 text-slider font-Alan text-[34px] font-bold capitalize'>
-                <p className=' text-[#E0B121]'>your boost.</p>
-                <p className=' text-[#E0B121]'>boost your day.</p>
-                <span>
-                    <img src="/images/flower.png" alt="" />
-                </span>
-                <p className='text-white [-webkit-text-stroke:1px_#E0B121]'>Feel good.</p>
-                <p className='text-white [-webkit-text-stroke:1px_#E0B121]'>Find your balance.</p>
-                <p className='text-white [-webkit-text-stroke:1px_#E0B121]'>Boost your day.</p>
-                <span>
-                    <img src="/images/flower.png" alt="" />
-                </span>
-                <p className=' text-[#E0B121]'>your boost.</p>
-                <p className=' text-[#E0B121]'>boost your day.</p>
+            <div className="w-full h-[200px]  flex justify-center items-end -mt-20  text-black">
+                {slidtext.map((text, i) => (
+                <div className="w-full flex justify-center items-center text-slider mb-5 z-1 " key={i}>
+                    <span className="w-200 flex items-center text-center justify-evenly px-5 capitalize text-[50px] font-Albert font-bold text-[#E0B121] leading-[26px]"><p>{text.text}</p>
+                    <img src="/images/flower.png" alt=""/></span>
+                     <span className='w-220 text-white [-webkit-text-stroke:1px_#E0B121] leading-[20px] font-bold font-Albert text-[50px]'>Find your balance.  Boost your day.</span>
+                    <img src="/images/flower.png" alt=""/>
+                </div>
+                ))}
             </div>
-        </div>
     </section>
   )
 }
