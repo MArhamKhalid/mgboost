@@ -34,7 +34,7 @@ const Blogs = () => {
                     <button className='bg-[#DAA404] text-white px-1.5 py-1.5 w-[227px] h-[52px] capitalize font-Alan flex justify-center items-center rounded-full gap-x-[20px] cursor-pointer'>
                         <p className='pl-3 text-[20px]'>read full story</p>
                         <span className='bg-white flex justify-center items-center rounded-full w-[42px] h-[42px]'>
-                            <img src="/icons/Arrow 1.png" alt="" className='px-2 py-3'/>
+                            <img src="/icons/Arrow-orange.svg" alt="" className='px-2 py-3'/>
                         </span> 
                     </button>
                 </div>

@@ -43,7 +43,7 @@ const Details = () => {
                     <button className='primary-btn '>
                         <p className='pl-8'>shop now</p>
                         <span className=''>
-                            <img src="/icons/Arrow 1.png" alt="" className='w-[17px] h-[15px]'/>
+                            <img src="/icons/Arrow-orange.svg" alt="" className='w-[17px] h-[15px]'/>
                         </span> 
                     </button>
                 </div>

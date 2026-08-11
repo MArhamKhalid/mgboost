@@ -81,7 +81,7 @@ const Showcase = () => {
                             <button className='primary-btn mt-4'>
                                 <p className='pl-8'>shop now</p>
                                 <span className=''>
-                                    <img src="/icons/Arrow 1.png" alt="" className='w-[17px] h-[15px]' />
+                                    <img src="/icons/Arrow-orange.svg" alt="" className='w-[17px] h-[15px]' />
                                 </span>
                             </button>
                         </div>
@@ -111,7 +111,7 @@ const Showcase = () => {
                         <button className="w-[158px] h-[42px] flex items-center cursor-pointer z-10 capitalize underline gap-x-4 absolute bottom-4">
                             <p className="text-[20px] font-Albert">shop now </p>
                             <span className="w-[42px] h-[42px] bg-black rounded-full flex justify-center items-center">
-                                <img src="/icons/Arrow 1.png" alt="" className='px-2 py-3' />
+                                <img src="/icons/Arrow-orange.svg" alt="" className='px-2 py-3' />
                             </span>
                         </button>
                     </div>
@@ -125,7 +125,7 @@ const Showcase = () => {
                             <button className='primary-btn mt-4'>
                                 <p className='pl-8'>shop now</p>
                                 <span className=''>
-                                    <img src="/icons/Arrow 1.png" alt="" className='w-[17px] h-[15px]' />
+                                    <img src="/icons/Arrow-orange.svg" alt="" className='w-[17px] h-[15px]' />
                                 </span>
                             </button>
                         </div>
@@ -158,7 +158,7 @@ const Showcase = () => {
                                 <button className="w-[158px] h-[42px] flex items-center cursor-pointer z-10 capitalize underline gap-x-4 mt-[29px]">
                                     <p className="text-[20px] font-Albert">shop now </p>
                                     <span className="w-[42px] h-[42px] bg-black rounded-full flex justify-center items-center">
-                                        <img src="/icons/Arrow 1.png" alt="" className='px-2 py-3' />
+                                        <img src="/icons/Arrow-orange.svg" alt="" className='px-2 py-3' />
                                     </span>
                                 </button>
                             </div>
@@ -171,13 +171,6 @@ const Showcase = () => {
                 <div className="w-full flex justify-center items-center text-slider mb-5 z-1 " key={i}>
                     <span className="w-150 flex items-center text-center justify-evenly px-5 capitalize text-[40px] font-Albert font-light leading-[26px]"><p>{text.text}</p>
                     <img src="/images/flower.png" alt=""/></span>
-                    {/* <p>promotes mentel focus</p>
-                    <img src="/images/flower.png" alt="" />
-                    <p>zero suger</p>
-                    <img src="/images/flower.png" alt="" />
-                    <p>clean ingredients</p>
-                    <img src="/images/flower.png" alt="" />
-                    <p>naturally refreshing</p> */}
                 </div>
                 ))}
             </div>

@@ -10,7 +10,7 @@ const Footer = () => {
                     <div className='border-b flex w-[480px]'>
                         <input type="text" placeholder='Enter Your Email' required className='outline-none w-full max-w-90'/>
                         <button className='flex capitalize gap-x-[12px] items-center'>
-                            subscribe <img src="/images/Arrow 2.png" alt="/" className='w-6 h-4' />
+                            subscribe <img src="/icons/Arrow-black.svg" alt="/" className='w-6 h-4' />
                         </button>
                     </div>
                     <p className='font-Albert text-[20px] font-light'>i have read the <span className='underline cursor-pointer'>Privacy Policy</span> provided by <span className='font-bold underline italic'>MG BOOST</span></p>
