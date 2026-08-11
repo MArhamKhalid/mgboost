@@ -1,9 +1,6 @@
 const Header = () => {
   return (
-    <header className="w-full relative flex justify-between">
-        <div className='absolute'>
-            <img src="/images/header-mask.png" alt="" />
-        </div>
+    <header className="w-full absolute flex justify-between">
         <nav className="w-full flex justify-between px-[100px]  z-10">
             <div className="flex justify-start w-[260px] h-[88.3px] mt-[56px]">
                 <img src="/images/logo.png" alt="LOGO" />
