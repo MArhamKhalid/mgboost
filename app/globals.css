@@ -34,9 +34,7 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
-}
-.hero{
-  background: linear-gradient(#FFFBF3, #FFF8E8, #FFEAB5);
+  overflow-x: hidden;
 }
 .primary-btn{
   width: 200px;
@@ -73,22 +71,38 @@ body {
   font: normal;
   transition: 0.1s linear;
 }
-/* @keyframes sectionChange {
-  from {
-    animation-delay: 800s;
-    transform: translateX(0%);
-    z-index: 0;
-  }
+.imageChange {
+  animation: imageChange 0.8s ease-in-out;
+}
 
-  to {
-    transform: translateX(-100%);
-    z-index: 100;
+.topChange {
+  animation: topChange 0.8s ease-in-out;
+  animation-delay: 1s;
+  animation-fill-mode: both;
+}
+
+.sidetext {
+  animation: sidetext 0.8s ease-in-out;
+  animation-delay: 1.8s;
+  animation-fill-mode: both;
+}
+.sectionChange {
+  animation: sectionChange 0.9s ease-in-out;
+}
+@keyframes sectionChange {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
   }
-} */
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
 @keyframes imageChange {
   from {
     opacity: 0;
-    transform: translateX(40px);
+    transform: translateX(100%);
   }
 
   to {
@@ -97,12 +111,12 @@ body {
   }
 }
 @keyframes topChange {
-  from {
+  0% {
     opacity: 0;
-    transform: translateY(-40px);
+    transform: translateY(-50%);
   }
 
-  to {
+  100% {
     opacity: 1;
     transform: translateY(0);
   }
@@ -110,11 +124,11 @@ body {
 @keyframes sidetext {
   from{
     opacity: 0;
-    transform: translateX(-40px);
+    transform: translateY(-30%);
   }
   to {
     opacity: 1;
-    transform: translateX(0);
+    transform: translateY(0);
   }
 }
 .btn2 span{

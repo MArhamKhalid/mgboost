@@ -13,11 +13,6 @@ const box = [
     boxtext:"better living"
   },
 ]
-
-  //  const images = [           
-  //   "/images/primary-banner.png",
-  //   "/images/primary-banner02.png",
-  //   ]
 const slides = [
   {
     images:"/images/primary-banner.png",
@@ -46,42 +41,6 @@ const slides = [
   }
 
 ];
-// const arrows = [
-//   "/icons/Arrow-orange.svg",
-//   "/icons/Arrow-green.svg"
-// ]
-// const mask = [
-//   "/images/Mask group-1.png",
-//   "/images/Mask group.png"
-// ]
-// const rightside = [
-//   "pr-20",
-//   "pr-0"
-// ]
-// const textColor = [
-//   "text-[#161616]",
-//   "text-[#325535]"
-// ]
-// const textColor2 = [
-//   "text-[#DAA404]",
-//   "text-[#325535]"
-// ]
-// const borderColor = [
-//   "border-[#DAA404]",
-//   "border-[#325535]",
-// ]
-// const bgColor = [
-//   " hover:bg-[#E0B121]",
-//   " hover:bg-[#325535] ",
-// ]
-// const btnbg = [
-//   "bg-[#E0B121]",
-//   "bg-[#325535]",
-// ]
-// const sectionbg = [
-//   "bg-linear-to-b from-[#FFFBF3] via-[#FFF8E8] to-[#FFEAB5]",
-//   "bg-linear-to-b from-[#F6EDE9] to-[#FFF2CE]",
-// ]
 
 const Hero = () => {
   const [currentSec, setCurrentSec] = useState(0);
@@ -89,7 +48,7 @@ const Hero = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSec((next) => (next + 1) % slides.length);
-    }, 5000);
+    }, 10000);
 
     return () => clearInterval(timer);
   }, []);
@@ -97,16 +56,16 @@ const Hero = () => {
   const currentSlide = slides[currentSec];
   
   return (
-    <section className={`w-full h-[100vh] relative overflow-hidden ${currentSlide.sectionbg}`}>
+    <section className={`w-full h-[87vh] relative overflow-hidden ${currentSlide.sectionbg} sectionChange`} key={currentSec}>
 
-      <div className=" w-full absolute">
+      <div className=" w-full absolute -top-25 topChange">
         <img 
-            src={currentSlide.mask} alt="" className="bg-cover w-full animate-[topChange_0.6s_ease-in-out]" />
+            src={currentSlide.mask} alt="" className="bg-cover w-full"/>
       </div>
 
       <div className="w-full h-full flex justify-between items-center px-[100px] relative">
 
-        <div className="w-full h-full max-h-[400px] max-w-[665px] flex flex-col justify-start gap-y-5 z-1 mt-60 animate-[sidetext_0.6s_ease-in-out]" >
+        <div className="w-full h-full max-h-[400px] max-w-[665px] flex flex-col justify-start gap-y-5 z-1 mt-30 sidetext" >
 
         
           <div className="flex justify-start items-center gap-x-3 capitalize font-Alan " >
@@ -161,12 +120,12 @@ const Hero = () => {
 
         </div>
 
-        <div className={`flex h-full justify-end items-end w-full absolute ${currentSlide.rightside} right-0 bottom-0`}>
+        <div className={`flex h-full justify-end items-end w-full absolute ${currentSlide.rightside} right-0 bottom-0 imageChange`}>
 
           <img
             src={currentSlide.images}
             alt=""
-            className="animate-[imageChange_0.6s_ease-in-out] h-[800px] "
+            className=" h-[800px] "
           />
 
         </div>

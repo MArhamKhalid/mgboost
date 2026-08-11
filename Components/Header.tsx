@@ -1,6 +1,6 @@
 const Header = () => {
   return (
-    <header className="w-full absolute flex justify-between">
+    <header className="w-full bg-[#E0B121] flex justify-between">
         <nav className="w-full flex justify-between px-[100px]  z-10">
             <div className="flex justify-start w-[260px] h-[88.3px] mt-[56px]">
                 <img src="/images/logo.png" alt="LOGO" />
