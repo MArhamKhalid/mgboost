@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 
 const box = [
   {
-    boxtext:"pure hydrattion"
+    boxtext:"pure hydration"
   },
   {
     boxtext:"daily wellness"
@@ -14,68 +14,94 @@ const box = [
   },
 ]
 
-              
-const images = [
-  "/images/primary-banner.png",
-  "/images/primary-banner02.png"
+  //  const images = [           
+  //   "/images/primary-banner.png",
+  //   "/images/primary-banner02.png",
+  //   ]
+const slides = [
+  {
+    images:"/images/primary-banner.png",
+    mask:"/images/Mask group-1.png",
+    arrows:"/icons/Arrow-orange.svg",
+    rightside:"pr-20",
+    textColor:"text-[#161616]",
+    textColor2:"text-[#DAA404]",
+    borderColor:"border-[#DAA404]",
+    bgColor:"hover:bg-[#E0B121]",
+    btnbg:"bg-[#E0B121]",
+    sectionbg:"bg-linear-to-b from-[#FFFBF3] via-[#FFF8E8] to-[#FFEAB5]",
+  },
+  {
+    images:"/images/primary-banner02.png",
+    mask:"/images/Mask group.png",
+    arrows:"/icons/Arrow-green.svg",
+    rightside:"pr-0",
+    textColor:"text-[#325535]",
+    textColor2:"text-[#325535]",
+    borderColor:"border-[#325535]",
+    bgColor:"hover:bg-[#325535]",
+    btnbg:"bg-[#325535]",
+    sectionbg:"bg-linear-to-b from-[#F6EDE9] to-[#FFF2CE]",
+
+  }
 
 ];
-const arrows = [
-  "/icons/Arrow-orange.svg",
-  "/icons/Arrow-green.svg"
-]
-const mask = [
-  "/images/Mask group-1.png",
-  "/images/Mask group.png"
-]
-const rightside = [
-  "pr-20",
-  "pr-0"
-]
-const textColor = [
-  "text-[#161616]",
-  "text-[#325535]"
-]
-const textColor2 = [
-  "text-[#DAA404]",
-  "text-[#325535]"
-]
-const borderColor = [
-  "border-[#DAA404]",
-  "border-[#325535]",
-]
-const bgColor = [
-  " hover:bg-[#E0B121]",
-  " hover:bg-[#325535] ",
-]
-const btnbg = [
-  "bg-[#E0B121]",
-  "bg-[#325535]",
-]
-const sectionbg = [
-  "bg-linear-to-b from-[#FFFBF3] via-[#FFF8E8] to-[#FFEAB5]",
-  "bg-linear-to-b from-[#F6EDE9] to-[#FFF2CE]",
-]
+// const arrows = [
+//   "/icons/Arrow-orange.svg",
+//   "/icons/Arrow-green.svg"
+// ]
+// const mask = [
+//   "/images/Mask group-1.png",
+//   "/images/Mask group.png"
+// ]
+// const rightside = [
+//   "pr-20",
+//   "pr-0"
+// ]
+// const textColor = [
+//   "text-[#161616]",
+//   "text-[#325535]"
+// ]
+// const textColor2 = [
+//   "text-[#DAA404]",
+//   "text-[#325535]"
+// ]
+// const borderColor = [
+//   "border-[#DAA404]",
+//   "border-[#325535]",
+// ]
+// const bgColor = [
+//   " hover:bg-[#E0B121]",
+//   " hover:bg-[#325535] ",
+// ]
+// const btnbg = [
+//   "bg-[#E0B121]",
+//   "bg-[#325535]",
+// ]
+// const sectionbg = [
+//   "bg-linear-to-b from-[#FFFBF3] via-[#FFF8E8] to-[#FFEAB5]",
+//   "bg-linear-to-b from-[#F6EDE9] to-[#FFF2CE]",
+// ]
 
 const Hero = () => {
-  const [currentImage, setCurrentImage] = useState(0);
+  const [currentSec, setCurrentSec] = useState(0);
 
   useEffect(() => {
     const timer = setInterval(() => {
-      
-      setCurrentImage((prev) => (prev + 1) % images.length);
+      setCurrentSec((next) => (next + 1) % slides.length);
     }, 5000);
 
     return () => clearInterval(timer);
   }, []);
 
+  const currentSlide = slides[currentSec];
+  
   return (
-    <section className={`w-full h-[100vh] relative overflow-hidden ${sectionbg}`} key={currentImage}>
+    <section className={`w-full h-[100vh] relative overflow-hidden ${currentSlide.sectionbg}`}>
 
       <div className=" w-full absolute">
         <img 
-            key={currentImage}
-            src={mask[currentImage]} alt="" className="bg-cover w-full animate-[topChange_0.6s_ease-in-out]" />
+            src={currentSlide.mask} alt="" className="bg-cover w-full animate-[topChange_0.6s_ease-in-out]" />
       </div>
 
       <div className="w-full h-full flex justify-between items-center px-[100px] relative">
@@ -85,7 +111,7 @@ const Hero = () => {
         
           <div className="flex justify-start items-center gap-x-3 capitalize font-Alan " >
           {box.map((item) => (
-            <span className={` py-1 px-3 rounded-[30px] border border-solid ${borderColor[currentImage]} text-[20px] ${textColor2[currentImage]} ${bgColor[currentImage]} hover:text-white cursor-pointer`} >
+            <span className={` py-1 px-3 rounded-[30px] border border-solid ${currentSlide.borderColor} text-[20px] ${currentSlide.textColor2} ${currentSlide.bgColor} hover:text-white cursor-pointer`} >
               {item.boxtext}
             </span>
           ))}
@@ -99,7 +125,7 @@ const Hero = () => {
               the smarter way to
             </h2>
 
-            <h2 className={`text-[87.32px] font-bold ${textColor[currentImage]} `}>
+            <h2 className={`text-[87.32px] font-bold ${currentSlide.textColor} `}>
               get magnesium.
             </h2>
 
@@ -114,18 +140,18 @@ const Hero = () => {
 
             <div className="flex gap-x-3 capitalize">
 
-              <button className={`btn2 ${btnbg[currentImage]}`}>
+              <button className={`btn2 ${currentSlide.btnbg}`}>
                 <p className="pl-8">shop now</p>
                 <span>
                   <img
-                    src={arrows[currentImage]}
+                    src={currentSlide.arrows}
                     alt=""
                     className="w-[17px] h-[15px] "
                   />
                 </span>
               </button>
 
-              <button className={`sec-btn  ${borderColor[currentImage]}  ${textColor2[currentImage]}  ${bgColor[currentImage]}`}>
+              <button className={`sec-btn  ${currentSlide.borderColor}  ${currentSlide.textColor2}  ${currentSlide.bgColor}`}>
                 join to waitlist
               </button>
 
@@ -135,12 +161,10 @@ const Hero = () => {
 
         </div>
 
-        {/* ONLY THIS IMAGE CHANGES */}
-        <div className={`flex h-full justify-end items-end w-full absolute ${rightside[currentImage]} right-0 bottom-0`}>
+        <div className={`flex h-full justify-end items-end w-full absolute ${currentSlide.rightside} right-0 bottom-0`}>
 
           <img
-            key={currentImage}
-            src={images[currentImage]}
+            src={currentSlide.images}
             alt=""
             className="animate-[imageChange_0.6s_ease-in-out] h-[800px] "
           />
