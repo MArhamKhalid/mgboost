@@ -35,20 +35,20 @@ const Showcase = () => {
     // const [active, setActive] = useState(false);
     const textRef = useRef(null)
 
-    useEffect(() => {
-        gsap.registerPlugin(ScrollTrigger);
+    // useEffect(() => {
+    //     gsap.registerPlugin(ScrollTrigger);
 
-        gsap.from(textRef.current,{
-            y:10,
-            opacity:100,
-            // duration:1,
-            delay: 1,
-            scrollTrigger:{
-                trigger: textRef.current,
-                start: "top+=500 bottom",
-                toggleActions:" play none none"
-            }
-        })
+    //     gsap.from(textRef.current,{
+    //         y:10,
+    //         opacity:100,
+    //         // duration:1,
+    //         delay: 1,
+    //         scrollTrigger:{
+    //             trigger: textRef.current,
+    //             start: "top+=500 bottom",
+    //             toggleActions:" play none none"
+    //         }
+    //     })
         // const handleScroll = () => {
         //     if (window.scrollY > 500) {
         //         setActive(true);
@@ -59,7 +59,7 @@ const Showcase = () => {
 
         // window.addEventListener("scroll", handleScroll);
         // return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
+    // }, []);
 
 
     return (
