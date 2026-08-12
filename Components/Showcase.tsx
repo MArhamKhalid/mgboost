@@ -1,7 +1,9 @@
 "use client";
 import { useEffect, useRef, useState } from "react"
-// import gsap from "gsap";
-// import { ScrollTrigger } from "gsap/ScrollTrigger";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger)
 
 const textslider = [
     {
@@ -32,50 +34,185 @@ const textslider = [
 
 const Showcase = () => {
 
-    // const [active, setActive] = useState(false);
-    const textRef = useRef(null)
+    const sectionRef = useRef(null);
+    useEffect(() => {
+  const ctx = gsap.context(() => {
+    gsap.fromTo(
+      ".behindCantext",
+      {
+        opacity: 0,
+        y: 80,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.5,
+        ease: "power1.inOut",
+        delay: 0.2,
 
-    // useEffect(() => {
-    //     gsap.registerPlugin(ScrollTrigger);
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: "400px top top",
+          toggleActions: "play none none reverse",
+          markers: true,
+        },
+      }
+    );
+    gsap.fromTo(
+        ".Cantext",
+        {
+            // opacity: 1,
+            clipPath: "inset(0 0 80% 0)",
+        },
+        {
+            // opacity: 0,
+            clipPath: "inset(0 0 0% 0)",
+            duration: 0.8,
+            ease: "power1.inOut",
+            delay: 0.5,
 
-    //     gsap.from(textRef.current,{
-    //         y:10,
-    //         opacity:100,
-    //         // duration:1,
-    //         delay: 1,
-    //         scrollTrigger:{
-    //             trigger: textRef.current,
-    //             start: "top+=500 bottom",
-    //             toggleActions:" play none none"
-    //         }
-    //     })
-        // const handleScroll = () => {
-        //     if (window.scrollY > 500) {
-        //         setActive(true);
-        //     } else {
-        //         setActive(false);
-        //     }
-        // };
+            scrollTrigger: {
+                trigger: sectionRef.current,
+                start: "400px top top",
+            //   end: "+=3000vh",
+                toggleActions: "play none none reverse"
+            }
+        }
+    );
+    gsap.fromTo(
+        ".MangoCan",
+        {
+            left: "32.8%",
+            rotate: 0,
+        },
+        {
+            left: "20%",
+            rotate: -8,
+            duration: 0.8,
+            ease: "power1" ,
+            delay: 1.2,
 
-        // window.addEventListener("scroll", handleScroll);
-        // return () => window.removeEventListener("scroll", handleScroll);
-    // }, []);
+            scrollTrigger: {
+                trigger: sectionRef.current,
+                start: "360px top top",
+            //   end: "+=3000vh",
+                toggleActions: "play none none reverse",
+                markers: true,
+            }
+        }
+    );
+    gsap.fromTo(
+        ".LemonCan",
+        {
+            right: "32.8%",
+            rotate: 0,
+        },
+        {
+            right: "20%",
+            rotate: 8,
+            duration: 0.8,
+            ease: "power1" ,
+            delay: 1.2,
 
+            scrollTrigger: {
+                trigger: sectionRef.current,
+                start: "360px top top",
+            //   end: "+=3000vh",
+                toggleActions: "play none none reverse",
+                markers: true,
+            }
+        }
+    );
+
+    gsap.fromTo(
+        ".Can1",
+        {
+            opacity: 0,
+            x: 100,
+        },
+        {
+            opacity: 1,
+            x: 0,
+            duration: 0.6,
+            ease: "power1.inOut",
+            delay: 1,
+
+            scrollTrigger: {
+              trigger: sectionRef.current,
+              start: "430px top top",
+            //   end: "+=3000vh",
+              toggleActions: "play none none reverse",
+              markers: true,
+            },
+
+        }
+    );
+    gsap.fromTo(
+        ".Can2",
+        {
+            opacity: 0,
+            x: -100,
+        },
+        {
+            opacity: 1,
+            x: 0,
+            duration: 0.6,
+            ease: "power1.inOut",
+            delay: 1,
+
+            scrollTrigger: {
+              trigger: sectionRef.current,
+              start: "430px top top",
+            //   end: "+=3000vh",
+              toggleActions: "play none none reverse",
+              markers: true,
+            },
+
+        }
+    );
+    gsap.fromTo(
+        ".Can-animate",
+        {
+            // opacity: 0,
+            clipPath: "inset(0 0 100% 0)",
+        },
+        {
+            // opacity: 1,
+            clipPath: "inset(0 0 0% 0)",
+            duration: 0.9,
+            ease:"power1.inOut",
+            delay: 2.3,
+
+            scrollTrigger: {
+              trigger: sectionRef.current,
+              start: "430px top top",
+            //   end: "+=3000vh",
+              toggleActions: "play none none reverse",
+              markers: true,
+            },
+        }
+    );
+  }, sectionRef);
+
+  return () => ctx.revert();
+}, []);
+    
 
     return (
-        <section className="w-full h-[235vh] bg-white relative flex flex-col items-center pt-[100px] overflow-hidden">
-            <div className="teanima flex justify-center max-w-[984px]  max-h-[272px] items-center">
-                <h2  className="capitalize font-Alan text-center text-[#818181] text-[44px] leading-[68px] font-light">
-                    To make magnesium simple, <span className="text-[#DAA404] font-bold capitalize">enjoyable, and part of everyday life.Instead of complicated supplements</span>, we believe wellness should fit naturally into your routine
-                </h2>
-            </div>
-            <div className="w-full flex flex-col gap-y-[32px] pt-[110px]">
-                <div className="px-15 flex gap-x-[32px] text-black">
-                    <div className="w-144.5 h-233 ">
+        // <div className=" top-0 h-screen">
+        <section ref={sectionRef} className="relative w-full h-[300vh] bg-white  ">
+            <div className="sticky top-0 w-full flex flex-col gap-y-[32px] h-screen items-center">
+                <div className="absolute inset-0 z-10 teanima flex justify-center items-center ">
+                    <h2 className=" max-w-[984px]  max-h-[272px] capitalize font-Alan text-center text-[#818181] text-[44px] leading-[68px] font-light firsthead">
+                        To make magnesium simple, <span className="text-[#DAA404] font-bold capitalize">enjoyable, and part of everyday life.Instead of complicated supplements</span>, we believe wellness should fit naturally into your routine
+                    </h2>
+                </div>
+                <div className="absolute inset-0 z-20 px-15 flex gap-x-[32px] text-black py-15 ">
+                    <div className="w-144.5 h-[931px] Can1  ">
                         <div className="w-full h-165 bg-[#FFF4D7] rounded-b-xl flex justify-center rounded-[16px]">
                             <img src="/images/mango-flavor.png" alt="" className="mt-14 w-67.5 h-176" />
                         </div>
-                        <div className="w-full h-68 flex flex-col justify-end items-center gap-y-4 leading-[18px] ">
+                        <div className="w-full h-68 flex flex-col justify-end items-center gap-y-4 leading-[18px] Can-animate">
                             <h2 className="uppercase font-Albert font-bold text-[20px]">magnesium infused</h2>
                             <p className="capitalize text-[28px] font-Albert">sparkling water mango flavor</p>
                             <button className='primary-btn mt-4'>
@@ -86,25 +223,20 @@ const Showcase = () => {
                             </button>
                         </div>
                     </div>
-                    <div className="w-144.5 h-233 bg-[#EEAF09] relative flex justify-center overflow-hidden text-black rounded-[16px]">
-                        <div className="absolute z-10 w-48.5 h-126 -rotate-8 bottom-28 left-20">
-                            <img src="/images/mango-flavor.png" alt="" />
-                        </div>
-                        <div className="absolute z-1 w-48.5 h-128 rotate-8 bottom-24 right-20">
-                            <img src="/images/lemon-flavor.png" alt="" />
-                        </div>
-                        <div className="absolute  w-160 h-128  bottom-46 left-12">
-                            <img src="/images/MGBOOST.png" alt="" />
-                        </div>
-                        <div className="absolute  w-180 h-128  bottom-14 left-0">
-                            <img src="/images/MGBOOST.png" alt="" className="w-[80%]"/>
-                        </div>
-                        <div className="absolute  w-160 h-128  -bottom-18 left-0">
-                            <img src="/images/MGBOOST.png" alt=""  className="w-[90%]"/>
-                        </div>
-                        <div className="pt-10 w-full max-w-[520px]">
+                    <div className="w-144.5 h-[931px] bg-[#EEAF09] relative flex flex-col justify-start items-center overflow-hidden text-black rounded-[16px] z-10">
+                        <div className="pt-10 w-full max-w-[520px] Cantext  [clip-path:inset(0_0_80%_0)]">
                             <h2 className="text-[#FFFCD9] text-center text-[48px] font-Albert font-bold capitalize leading-[40px]">Thousands are making
                                 <span className="flex inline-block pt-3 pb-6 px-4 bg-[#045C00] rounded-xl -rotate-3 text-white leading-[30px]">magnesium</span> part of their daily ritual.</h2>
+                        </div>
+                        <div className="relative w-full h-full flex flex-col items-center mt-10 behindCantext">
+                            <img src="/images/MGBOOST.png" alt="" className="w-[80%]"/>
+                            <img src="/images/MGBOOST.png" alt="" className="w-full"/>
+                            <img src="/images/MGBOOST.png" alt=""  className="w-full"/>
+
+                        </div>
+                        <div className="absolute flex justify-center z-10 w-full h-126 bottom-28 ">
+                            <img src="/images/mango-flavor.png" alt="" className="absolute z-1  h-[503.02px] w-[194.13px] MangoCan"/>
+                            <img src="/images/lemon-flavor.png" alt="" className="absolute h-[484.81px] w-[193.13px] LemonCan"/>
                         </div>
                         <div className="w-full h-142 rounded-t-full bg-[#FFF4D7] absolute -bottom-70">
                         </div>
@@ -115,11 +247,11 @@ const Showcase = () => {
                             </span>
                         </button>
                     </div>
-                    <div className="w-144.5 h-233">
+                    <div className="w-144.5 h-[931px] Can2 ">
                         <div className="w-full h-165 bg-[#FFF4D7] rounded-b-xl flex justify-center rounded-[16px]">
                             <img src="/images/lemon-flavor.png" alt="" className="mt-14 w-[282px] h-176" />
                         </div>
-                        <div className="w-full h-68 flex flex-col justify-end items-center gap-y-4 leading-[18px]">
+                        <div className="w-full h-68 flex flex-col justify-end items-center gap-y-4 leading-[18px] Can-animate">
                             <p className="uppercase font-Albert font-bold text-[20px]">magnesium infused</p>
                             <p className="capitalize text-[28px] font-Albert">sparkling water lemon flavor</p>
                             <button className='primary-btn mt-4'>
@@ -131,7 +263,7 @@ const Showcase = () => {
                         </div>
                     </div>
                 </div>
-                <div className="w-full px-25 flex justify-center gap-x-[32px] text-black">
+                <div className="absolute inset-0  z-30 w-full px-25 flex justify-center gap-x-[32px] text-black ">
                     <div className="w-135 h-171 rounded-[20px] bg-gradient-to-b from-[#FFEFC0] to-[#F4B08C] relative">
                         <img src="/images/can-holding-woman.png" alt="" className="w-full absolute bottom-0" />
                     </div>
@@ -165,16 +297,18 @@ const Showcase = () => {
                         </div>
                     </div>
                 </div>
-            </div>
-            <div className="w-full h-[230px] bg-[#FFF7DF] flex justify-center items-end -mt-20  text-black">
-                {textslider.map((text, i) => (
-                <div className="w-full flex justify-center items-center text-slider mb-5 z-1 " key={i}>
-                    <span className="w-150 flex items-center text-center justify-evenly px-5 capitalize text-[40px] font-Albert font-light leading-[26px]"><p>{text.text}</p>
-                    <img src="/images/flower.png" alt=""/></span>
+                <div className=" w-full h-[230px] bg-[#FFF7DF] flex justify-center items-end -mt-20  text-black">
+                    {textslider.map((text, i) => (
+                    <div className="w-full flex justify-center items-center text-slider mb-5 z-1 " key={i}>
+                        <span className="w-150 flex items-center text-center justify-evenly px-5 capitalize text-[40px] font-Albert font-light leading-[26px]"><p>{text.text}</p>
+                        <img src="/images/flower.png" alt=""/></span>
+                    </div>
+                    ))}
                 </div>
-                ))}
+                
             </div>
         </section>
+        // </div>
     )
 }
 

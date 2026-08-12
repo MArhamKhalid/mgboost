@@ -14,7 +14,7 @@ const slidtext = [
 
 const Blogs = () => {
   return (
-    <section className='w-full h-[120vh] bg-white relative pt-[100px] pb-20 overflow-hidden'>
+    <section className='w-full h-dvh bg-white relative pt-[100px] pb-20 overflow-hidden'>
         <div className='w-full h-full max-h-215 px-25 flex justify-center items-center gap-x-6 text-black'>
             <div className='w-199.5 h-211 mb-[26px]'>
                 <img src="/images/can-holding-woman-about.png" alt="/" className='w-full object-cover' />

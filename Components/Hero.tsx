@@ -56,21 +56,21 @@ const Hero = () => {
   const currentSlide = slides[currentSec];
   
   return (
-    <section className={`w-full h-[87vh] relative overflow-hidden ${currentSlide.sectionbg} sectionChange`} key={currentSec}>
+    <section className={`w-full h-[100vh] relative overflow-hidden ${currentSlide.sectionbg} sectionChange`} key={currentSec}>
 
-      <div className=" w-full absolute -top-25 topChange">
+      <div className=" w-full absolute top-0 topChange">
         <img 
             src={currentSlide.mask} alt="" className="bg-cover w-full"/>
       </div>
 
       <div className="w-full h-full flex justify-between items-center px-[100px] relative">
 
-        <div className="w-full h-full max-h-[400px] max-w-[665px] flex flex-col justify-start gap-y-5 z-1 mt-30 sidetext" >
+        <div className="w-full h-full max-h-[400px] max-w-[665px] flex flex-col justify-start gap-y-5 z-1 mt-60 sidetext" >
 
         
           <div className="flex justify-start items-center gap-x-3 capitalize font-Alan " >
           {box.map((item) => (
-            <span className={` py-1 px-3 rounded-[30px] border border-solid ${currentSlide.borderColor} text-[20px] ${currentSlide.textColor2} ${currentSlide.bgColor} hover:text-white cursor-pointer`} >
+            <span key={item.boxtext} className={` py-1 px-3 rounded-[30px] border border-solid ${currentSlide.borderColor} text-[20px] ${currentSlide.textColor2} ${currentSlide.bgColor} hover:text-white cursor-pointer`} >
               {item.boxtext}
             </span>
           ))}

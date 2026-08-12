@@ -36,6 +36,20 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   overflow-x: hidden;
 }
+/* .header{
+  animation: head 1s ease-in-out;
+}
+@keyframes head {
+  from{
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+} */
 .primary-btn{
   width: 200px;
   height: 52px;
@@ -73,62 +87,68 @@ body {
 }
 .imageChange {
   animation: imageChange 0.8s ease-in-out;
+  animation-delay: 0.5s;
+  animation-fill-mode: both;
 }
 
 .topChange {
+  clip-path: inset( 0 0 100% 0);
   animation: topChange 0.8s ease-in-out;
   animation-delay: 1s;
   animation-fill-mode: both;
 }
 
 .sidetext {
+  clip-path: inset( 0 0 100% 0);
   animation: sidetext 0.8s ease-in-out;
-  animation-delay: 1.8s;
+  animation-delay: 1s;
   animation-fill-mode: both;
 }
 .sectionChange {
-  animation: sectionChange 0.9s ease-in-out;
+  clip-path: inset(0 100% 0 0 );
+  animation: sectionChange 0.5s ease-in-out;
+  animation-delay: 0.2s;
+  animation-fill-mode: both;
 }
 @keyframes sectionChange {
-  from {
-    opacity: 0;
-    transform: translateX(100%);
+  0% {
+    clip-path: inset(0 0 0 100%);
   }
-  to {
-    opacity: 1;
-    transform: translateX(0%);
+  /* 40%{
+    clip-path: inset(0 0 0 90%);
+  } */
+  100%{
+    clip-path: inset(0 0 0 0);
   }
 }
-@keyframes imageChange {
+/* @keyframes imageChange {
   from {
     opacity: 0;
-    transform: translateX(100%);
+    transform: translateX(40px);
   }
 
   to {
     opacity: 1;
     transform: translateX(0);
   }
-}
+} */
 @keyframes topChange {
   0% {
-    opacity: 0;
-    transform: translateY(-50%);
+    clip-path: inset(0 0 100% 0);
   }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0);
+  60% {
+    clip-path: inset(0 0 60% 0);
+  }
+  100%{
+    clip-path: inset(0 0 0 0);
   }
 }
 @keyframes sidetext {
-  from{
-    opacity: 0;
-    transform: translateY(-30%);
+  80% {
+    clip-path: inset(0 0 90% 0);
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+  100%{
+    clip-path: inset(0 0 0 0);
   }
 }
 .btn2 span{
@@ -182,6 +202,123 @@ body {
     transform: translate(-90%);
   }
 }
+.firsthead{
+  animation: firsthead 0.9s ease-in-out;
+  animation-delay: 0.5s;
+}
+@keyframes firsthead {
+  from{
+    filter: blur(10px);
+    clip-path: inset( 0 0 80% 0);
+  }
+  to{
+    filter: blur(0);
+    clip-path: inset(0 0 0 0);
+  }
+}
+/* .behindCantext{
+  animation: behindCantext 0.5s ease-in-out;
+  animation-delay: 0.2s;
+}
+@keyframes behindCantext {
+  from{
+    opacity: 0;
+    transform: translateY(80px);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+} */
+/* .Cantext {
+  animation: Cantext 0.8s ease-in-out;
+  animation-delay: 0.3s;
+  animation-fill-mode: both;
+}
+@keyframes Cantext {
+  80% {
+    clip-path: inset(0 0 80% 0);
+  }
+  100%{
+    clip-path: inset(0 0 0 0);
+  }
+} */
+/* .MangoCan{
+  position: absolute;
+  animation: MangoCan 0.8s ease forwards;
+  animation-delay: 1.2s;
+}
+@keyframes MangoCan{
+  from{
+    left: 32%;
+    transform: rotate(0deg);
+  }
+  to{
+    left: 20%;
+    transform: rotate(-8deg);
+  }
+} */
+/* .LemonCan{
+  position: absolute;
+  animation: LemonCan 0.8s ease forwards;
+  animation-delay: 1.2s;
+
+}
+@keyframes LemonCan{
+  from{
+    right: 32%;
+    transform: rotate(0deg);
+  }
+  to{
+    right: 20%;
+    transform: rotate(8deg);
+  }
+} */
+/* .Can1{
+  animation: Can1 0.9s ease-in-out;
+  animation-delay: 1.2s;
+  animation-fill-mode: both;
+}
+@keyframes Can1{
+  from{
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to{
+    opacity: 1;
+    transform: translateX(0);
+  }
+} */
+/* .Can2{
+  animation: Can2 0.9s ease-in-out;
+  animation-delay: 1.2s;
+  animation-fill-mode: both;
+}
+@keyframes Can2{
+  from{
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to{
+    opacity: 1;
+    transform: translateX(0);
+  }
+} */
+/* .Can-animate{
+  animation: Cananimate 0.9s ease-in-out;
+  animation-delay: 1.9s;
+  animation-fill-mode: both;
+}
+@keyframes Cananimate{
+  from{
+    opacity: 0;
+    clip-path: inset(0 0 100% 0);
+  }
+  to{
+    opacity: 1;
+    clip-path: inset(0 0 0 0);
+  }
+} */
 .end-logo{
   background: linear-gradient(#DAA404,#FFF2CB);
 }
