@@ -174,7 +174,7 @@ body {
     transform: translate(-90%);
   }
 }
-.firsthead{
+/* .firsthead{
   animation: firsthead 0.9s ease-in-out;
   animation-delay: 0.5s;
 }
@@ -187,7 +187,7 @@ body {
     filter: blur(0);
     clip-path: inset(0 0 0 0);
   }
-}
+} */
 .end-logo{
   background: linear-gradient(#DAA404,#FFF2CB);
 }
