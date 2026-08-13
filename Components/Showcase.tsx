@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useRef, useState } from "react"
+import { useLayoutEffect, useRef, useState } from "react"
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/all";
@@ -37,51 +37,80 @@ const textslider = [
 const Showcase = () => {
 
     const sectionRef = useRef(null);
-    useEffect(() => {
-    const ctx = gsap.context(() => {
+    useLayoutEffect(() => {
 
+    const ctx = gsap.context(() => {
+        gsap.set(".scene-1", {
+            yPercent: 0,
+        });
+
+        gsap.set(".scene-2", {
+            yPercent: 100,
+        });
+
+        gsap.set(".scene-3", {
+            yPercent: 100,
+        });
         gsap.set(
             ".firsthead",
             {
-                // height: "0%",
                 scale: 0.8,
-                // filter: "blur(25px)",
                 clipPath: "inset(0 0 50% 0)",
             });
-        // gsap.set(
-        //     ".scene-1", 
-        //     {
-        //         yPercent: "50%",
-        //     }
-        // );
+
+        gsap.set(
+            ".Cantext",
+            {
+                clipPath: "inset(0 0 80% 0)",
+            }
+        );
+
+        gsap.set(
+            ".behindCantext",
+            {
+              opacity: 0,
+              y: 80,
+            }
+        );
+
+        gsap.set(
+            ".MangoCan",
+            {
+                left: "32.8%",
+                rotate: 0,
+            }
+        );
+
+        gsap.set(
+            ".LemonCan",
+            {
+                right: "32.8%",
+                rotate: 0,
+            }
+        );
+
+
         const split = new SplitText(
             ".firsthead" ,
             {
                 type: "lines",
             }
         );
+
+        
         const lines = split.lines;
         const bottomThree = lines.slice(-3);
-
+        
         const tl = gsap.timeline({
             
             scrollTrigger: {
                 trigger:sectionRef.current,
-                start: "top top",
-                end: "bottom bottom",
-                toggleActions: "play none none reverse",
-                markers: true,
+                start: "top top ",
+                end: "bottom top",
+                scrub: 1,
+                // markers: true,
             }
         });
-        // tl.to(
-        //     ".scene-1", 
-        //     {
-        //         yPercent: "100%",
-        //         duration: 0.6,
-        //         ease: "power1.inOut",
-
-        //     }
-        // );
 
         tl.to(
             ".firsthead",
@@ -99,7 +128,6 @@ const Showcase = () => {
             ".firsthead", 
             {
               scale: 1.4,
-            //   filter: "blur(0px)",
               clipPath: "inset(0 0 0% 0)",
               duration: 1,
             });
@@ -118,318 +146,150 @@ const Showcase = () => {
             "<"
 
         );
+
+tl.to(".scene-1", {
+    yPercent: -100,
+    duration: 1,
+    ease: "none",
+});
+
+tl.to(
+    ".scene-2",
+    {
+        yPercent: 0,
+        duration: 1,
+        ease: "none",
+    },
+    "<"
+);
         
 
+// ////           scene 2 start here ///////////////
 
-
-        gsap.fromTo(
-            ".scene-2",
-            {
-                top: "20%",
-            },
-            {
-                top: "0%",
-                duration: 0.5,
-                ease: "power2.out",
-
-                scrollTrigger: {
-                    trigger: ".scene-2",
-                    start: "100vh top top",
-                    end: "bottom bottom",
-                    toggleActions: "play none none none",
-                    markers: true,
-                }
-
-            }
-        );
-        gsap.fromTo(
-            ".scene-3",
-            {
-                top: "30%",
-            },
-            {
-                top: "0%",
-                duration: 0.5,
-                ease: "power2.out",
-
-                scrollTrigger: {
-                    trigger: ".scene-3",
-                    start: "100vh top top",
-                    end: "bottom bottom",
-                    toggleActions: "play none none none",
-                    markers: true,
-                }
-
-            }
-        );
-
-        // gsap.set(".scene-1", {
-        //     yPercent: 0,
-        // });
-
-        // gsap.set(".scene-2", {
-        //     yPercent: 100,
-        // });
-
-        // gsap.set(".scene-3", {
-        //     yPercent: 100,
-        // });
-
-
-        // const tl = gsap.timeline({
-        //     scrollTrigger: {
-        //         trigger: sectionRef.current,
-        //         start: "top top",
-        //         end: "bottom bottom",
-        //         scrub: 1,
-        //         markers: true,
-        //     }
-        // });
-
-        // // --------------------------------
-        // // SCENE 1
-        // // --------------------------------
-
-        // tl.to({}, { duration: 200 });
-
-        // // Scene 1 → Scene 2
-        // tl.to(".scene-1", {
-        //     // opacity: 0,
-        //     yPercent: -100,
-        //     duration: 3,
-        //     ease: "power2.Out",
-        //     stagger: 0.8,
-
-        // });
-
-        // tl.to(".scene-2", {
-        //     // opacity: 1,
-        //     yPercent: 0,
-        //     duration: 3,
-        //     ease: "power2.Out",
-        //     stagger: 0.8,
-        // });
-
-        // // --------------------------------
-        // // SCENE 2
-        // // --------------------------------
-
-        // tl.to({}, { duration: 300 });
-
-        // // Scene 2 → Scene 3
-        // tl.to(".scene-2", {
-        //     // opacity: 0,
-        //     yPercent: -100,
-        //     duration: 3,
-        //     ease: "power2.Out",
-        //     stagger: 0.8,
-        // });
-
-        // tl.to(".scene-3", {
-        //     // opacity: 1,
-        //     yPercent: 0,
-        //     duration: 3,
-        //     ease: 'none',
-        //     stagger: 0.8,
-        // });
-
-        // // --------------------------------
-        // // SCENE 3
-        // // --------------------------------
-
-        // tl.to({}, { duration: 20 });
-
-        // gsap.fromTo(
-        //     ".teanima",
-            // {   
-            //     // opacity:0,
-            //     marginTop: "15%",
-            //     height: "0%",
-            //     scale:1,
-            // },
-        //     {
-        //         paddingTop: "0%",
-        //         height: "50%",
-        //         scale:0.5,
-
-        //     },
-        //     {
-        //         // opacity: 1,
-        //         paddingTop: "10%",
-        //         height: "100%",
-        //         scale: 1,
-        //         duration: 0.6,
-        //         ease: "power1.inOut",
-        //         delay: 1,
-
-
-        //         scrollTrigger: {
-        //             trigger: sectionRef.current,
-        //             start: "100px top top",
-        //         //   end: "+=3000vh",
-        //             toggleActions: "play none none reverse",
-        //             markers: true,
-        //         }
-        //     }
-        // );
-
-    gsap.fromTo(
-        ".Cantext",
+        tl.to(
+            ".Cantext",
         {
-            // opacity: 1,
-            clipPath: "inset(0 0 80% 0)",
-        },
-        {
-            // opacity: 0,
             clipPath: "inset(0 0 0% 0)",
             duration: 0.6,
             ease: "power1.inOut",
-            delay: 1,
 
-            scrollTrigger: {
-                trigger: sectionRef.current,
-                start: "250px top top",
-            //   end: "+=3000vh",
-                toggleActions: "play none none reverse",
-                // markers: true,
-            }
-        }
-    );
+        });
 
-    gsap.fromTo(
-        ".behindCantext",
-        {
-          opacity: 0,
-          y: 80,
-        },
-        {
+        tl.to(
+            ".behindCantext",
+            {
           opacity: 1,
           y: 0,
           duration: 0.6,
           ease: "power1.inOut",
-          delay:0.5,
+        });
 
-          scrollTrigger: {
-            trigger: sectionRef.current,
-            start: "400px top top",
-            toggleActions: "play none none reverse",
-            // markers: true,
-          },
-        }
-    );
-    gsap.fromTo(
+
+        tl.to(
         ".MangoCan",
-        {
-            left: "32.8%",
-            rotate: 0,
-        },
         {
             left: "13%",
             rotate: -8,
             duration: 0.6,
             ease: "power1.inOut" ,
-            delay: 1,
+        });
 
-            scrollTrigger: {
-                trigger: sectionRef.current,
-                start: "600px top top",
-            //   end: "+=3000vh",
-                toggleActions: "play none none reverse",
-                // markers: true,
-            }
-        }
-    );
-    gsap.fromTo(
+        tl.to(
         ".LemonCan",
-        {
-            right: "32.8%",
-            rotate: 0,
-        },
         {
             right: "13%",
             rotate: 8,
             duration: 0.6,
             ease: "power1.inOut" ,
-            delay: 1,
-
-            scrollTrigger: {
-                trigger: sectionRef.current,
-                start: "600px top top",
-            //   end: "+=3000vh",
-                toggleActions: "play none none reverse",
-                // markers: true,
-            }
-        }
-    );
-
-    gsap.fromTo(
-        ".Can1",
-        {
-            opacity: 0,
-            x: 100,
+            delay: 0,
         },
-        {
-            opacity: 1,
-            x: 0,
-            duration: 0.8,
-            ease: "power1.inOut",
-            delay: 1,
+        "<"
+        );
+    
+        
+        // Scene 2 → Scene 3
+        tl.to(".scene-2", {
+    yPercent: -100,
+    duration: 1,
+    ease: "none",
+});
 
-            scrollTrigger: {
-              trigger: sectionRef.current,
-              start: "500px top top",
-            //   end: "+=3000vh",
-              toggleActions: "play none none reverse",
-            //   markers: true,
-            },
+tl.to(
+    ".scene-3",
+    {
+        yPercent: 0,
+        duration: 1,
+        ease: "none",
+    },
+    "<"
+);
 
-        }
-    );
-    gsap.fromTo(
-        ".Can2",
-        {
-            opacity: 0,
-            x: -100,
-        },
-        {
-            opacity: 1,
-            x: 0,
-            duration: 0.8,
-            ease: "power1.inOut",
-            delay: 1,
+        tl.to({}, { duration: 10});
 
-            scrollTrigger: {
-              trigger: sectionRef.current,
-              start: "500px top top",
-            //   end: "+=3000vh",
-              toggleActions: "play none none reverse",
-            //   markers: true,
-            },
 
-        }
-    );
-    gsap.fromTo(
-        ".Can-animate",
-        {
-            // opacity: 0,
-            clipPath: "inset(0 0 100% 0)",
-        },
-        {
-            // opacity: 1,
-            clipPath: "inset(0 0 0% 0)",
-            duration: 0.9,
-            ease:"power1.inOut",
-            delay: 1.6,
 
-            scrollTrigger: {
-              trigger: sectionRef.current,
-              start: "500px top top",
-            //   end: "+=3000vh",
-              toggleActions: "play none none reverse",
-            //   markers: true,
-            },
-        }
-    );
+    // gsap.fromTo(
+    //     ".Can1",
+    //     {
+    //         opacity: 0,
+    //         x: 100,
+    //     },
+    //     {
+    //         opacity: 1,
+    //         x: 0,
+    //         duration: 0.8,
+    //         ease: "power1.inOut",
+    //         delay: 1,
+
+    //         scrollTrigger: {
+    //           trigger: sectionRef.current,
+    //           start: "500px top top",
+    //           toggleActions: "play none none reverse",
+    //         },
+
+    //     }
+    // );
+    // gsap.fromTo(
+    //     ".Can2",
+    //     {
+    //         opacity: 0,
+    //         x: -100,
+    //     },
+    //     {
+    //         opacity: 1,
+    //         x: 0,
+    //         duration: 0.8,
+    //         ease: "power1.inOut",
+    //         delay: 1,
+
+    //         scrollTrigger: {
+    //           trigger: sectionRef.current,
+    //           start: "500px top top",
+    //           toggleActions: "play none none reverse",
+    //         },
+
+    //     }
+    // );
+    // gsap.fromTo(
+    //     ".Can-animate",
+    //     {
+    //         clipPath: "inset(0 0 100% 0)",
+    //     },
+    //     {
+    //         clipPath: "inset(0 0 0% 0)",
+    //         duration: 0.9,
+    //         ease:"power1.inOut",
+    //         delay: 1.6,
+
+    //         scrollTrigger: {
+    //           trigger: sectionRef.current,
+    //           start: "500px top top",
+    //           toggleActions: "play none none reverse",
+    //         },
+    //     }
+    // );
+        ScrollTrigger.refresh();
+        ScrollTrigger.update();
   }, sectionRef);
 
   return () => ctx.revert();
@@ -437,19 +297,18 @@ const Showcase = () => {
     
 
     return (
-        // <div className=" top-0 h-screen">
         <section ref={sectionRef} className="relative w-full h-[300vh] bg-white  ">
-            <div className="relative w-full flex flex-col justify-center items-center">
+            <div className="sticky top-0 w-full h-screen overflow-hidden">
                 
-                <div className="scene-1 w-full h-screen sticky top-0 z-10 flex justify-center items-center bg-white ">
-                    <div className=" teanima w-full h-full text-center flex justify-center items-center">
+                <div className="scene-1 w-full h-screen absolute top-0 left-0 z-10 flex justify-center items-center bg-white ">
+                    <div className=" w-full h-full text-center flex justify-center items-center">
                         <h2 className=" capitalize w-full max-w-[990px] font-Alan text-[#818181] text-[44px] leading-[68px] font-light firsthead">
                             To make magnesium simple, <span className="text-[#DAA404] font-bold">enjoyable, and part of everyday life.Instead of complicated supplements</span>, we believe wellness should fit naturally into your routine
                         </h2>
                     </div>
                 </div>
 
-                <div className="scene-2 w-full h-screen sticky top-0 z-20  bg-white">
+                <div className="scene-2 w-full h-screen absolute top-0 left-0 z-20  bg-white">
                     <div className=" flex justify-center gap-x-[32px] text-black h-full px-15">
                         <div className="w-144.5 h-220 Can1  ">
                             <div className="w-full h-160 bg-[#FFF4D7] rounded-b-xl flex justify-center rounded-[16px]">
@@ -508,8 +367,8 @@ const Showcase = () => {
 
                     </div>
                 </div>
-                <div className="scene-3 sticky top-0 z-30 w-full h-screen flex flex-col justify-center bg-white">
-                    <div className="w-full flex items-center h-full px-25 gap-x-[32px] text-black">
+                <div className="scene-3 absolute top-0 left-0 z-30 w-full h-screen flex flex-col justify-center bg-white">
+                    <div className="w-full flex items-center h-[85%] px-25 gap-x-[32px] text-black">
                         <div className="w-135 h-171 rounded-[20px] bg-gradient-to-b from-[#FFEFC0] to-[#F4B08C] relative">
                             <img src="/images/can-holding-woman.png" alt="" className="w-full absolute bottom-0" />
                         </div>
