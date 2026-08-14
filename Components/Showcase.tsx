@@ -32,6 +32,12 @@ const textslider = [
     {
         text:"zero suger"
     },
+    {
+        text:"clean ingredients"
+    },
+    {
+        text:"naturally refreshing"
+    },
 ]
 
 const Showcase = () => {
@@ -55,21 +61,21 @@ const Showcase = () => {
             ".firsthead",
             {
                 scale: 0.8,
-                clipPath: "inset(0 0 50% 0)",
+                clipPath: "inset(0 0 75% 0)",
             });
-
-        gsap.set(
-            ".Cantext",
-            {
-                clipPath: "inset(0 0 80% 0)",
-            }
-        );
 
         gsap.set(
             ".behindCantext",
             {
               opacity: 0,
               y: 80,
+            }
+        );
+
+        gsap.set(
+            ".Cantext",
+            {
+                clipPath: "inset(100% 0 0 0)",
             }
         );
 
@@ -89,6 +95,44 @@ const Showcase = () => {
             }
         );
 
+        gsap.set(
+            ".CanLeft",
+            {
+                opacity: 0,
+                x: 100,
+            }
+        );
+        gsap.set(
+            ".CanRight",
+            {
+                opacity: 0,
+                x: -100,
+            }
+        );
+
+        gsap.set(
+            ".Can-animate",
+            {
+                clipPath: "inset(0 0 100% 0)",
+            }
+        );
+
+        gsap.set(
+            ".mg-banner",
+            {
+                clipPath:"inset(0 100% 0 0)",
+            }
+        );
+        gsap.set(
+            ".mgspan",
+            {
+                // opacity: 0,
+                clipPath: "inset(0 0 100% 0)",
+                y: "100%",
+            }
+        );
+        
+
 
         const split = new SplitText(
             ".firsthead" ,
@@ -99,6 +143,7 @@ const Showcase = () => {
 
         
         const lines = split.lines;
+        const bottomTwo = lines.slice(-2);
         const bottomThree = lines.slice(-3);
         
         const tl = gsap.timeline({
@@ -112,182 +157,212 @@ const Showcase = () => {
             }
         });
 
+        // tl.to({}, { duration: 0.5 });
+
         tl.to(
             ".firsthead",
             {   
                 scale: 1,
                 // filter: "blur(15px)",
-                clipPath: "inset(0 0 25% 0)",
+                clipPath: "inset(0 0 30% 0)",
                 duration: 0.6,
                 ease: "power1.inOut",
-            })
+            }
+        );
 
-        tl.to({}, { duration: 1 });
-        
+        // tl.fromTo(
+        //     bottomTwo ,
+        //     {
+        //         filter: "blur(50px)"
+        //     },
+        //     {
+        //         filter: "blur(0px)",
+        //         duration: 0.8,
+        //         // stagger:0.08,
+        //     },
+            
+        //     "<"
+        // );
+
+        // tl.to({}, { duration: 1 });
         tl.to(
             ".firsthead", 
             {
               scale: 1.4,
+              clipPath: "inset(0 0 10% 0)",
+              duration: 0.6,
+              ease: "power1.inOut",
+            }
+        );
+        
+        tl.to(
+            ".firsthead", 
+            {
+              scale: 1.6,
               clipPath: "inset(0 0 0% 0)",
-              duration: 1,
-            });
+              duration: 0.6,
+              ease: "power1.inOut",
+            },
+            "<"
+        );
 
         tl.fromTo(
             bottomThree ,
             {
-                filter: "blur(25px)"
+                filter: "blur(15px)"
             },
             {
                 filter: "blur(0px)",
                 duration: 0.8,
-                stagger:0.08,
+                // stagger:0.08,
             },
             
             "<"
-
         );
 
-tl.to(".scene-1", {
-    yPercent: -100,
-    duration: 1,
-    ease: "none",
-});
+        tl.to({}, { duration: 3 });
 
-tl.to(
-    ".scene-2",
-    {
-        yPercent: 0,
-        duration: 1,
-        ease: "none",
-    },
-    "<"
-);
+
+        tl.to(".scene-1", {
+            yPercent: -100,
+            duration: 1,
+            ease: "none",
+        });
+
+        tl.to(
+            ".scene-2",
+            {
+                yPercent: 0,
+                duration: 1,
+                ease: "none",
+            },
+            "<"
+        );
+        tl.to({}, { duration: 1 });
         
 
 // ////           scene 2 start here ///////////////
 
         tl.to(
+        ".behindCantext",
+        {
+            opacity: 1,
+            y: 0,
+            duration: 1,
+            ease: "power1.inOut",
+        }
+    );
+
+        tl.to({}, { duration: 1 });
+
+
+        tl.to(
             ".Cantext",
         {
-            clipPath: "inset(0 0 0% 0)",
-            duration: 0.6,
+            clipPath: "inset(0% 0 0  0)",
+            duration: 1,
             ease: "power1.inOut",
 
         });
-
-        tl.to(
-            ".behindCantext",
-            {
-          opacity: 1,
-          y: 0,
-          duration: 0.6,
-          ease: "power1.inOut",
-        });
-
 
         tl.to(
         ".MangoCan",
         {
             left: "13%",
             rotate: -8,
-            duration: 0.6,
+            duration: 1,
             ease: "power1.inOut" ,
-        });
+        },
+        "<"
+    );
 
         tl.to(
         ".LemonCan",
         {
             right: "13%",
             rotate: 8,
-            duration: 0.6,
-            ease: "power1.inOut" ,
-            delay: 0,
+            duration: 1,
+            ease: "power1.inOut",
         },
         "<"
         );
+        
+        tl.to({}, { duration: 1 });
+
+        tl.to(
+            ".CanLeft",
+            {
+                opacity: 1,
+                x: 0,
+                duration: 1.5,
+                ease: "power1.inOut",
+
+            }
+        );
+
+        tl.to(
+            ".CanRight",
+            {
+                opacity: 1,
+                x: 0,
+                duration: 1.5,
+                ease: "power1.inOut",
+            },
+            "<"
+        );
+
+        tl.to({}, { duration: 1});
+
+        tl.to(
+                ".Can-animate",
+            {
+                clipPath: "inset(0 0 0% 0)",
+                duration: 0.9,
+                ease:"power1.inOut",
+            },
+        );
     
+        tl.to({}, { duration: 4});
         
         // Scene 2 → Scene 3
         tl.to(".scene-2", {
-    yPercent: -100,
-    duration: 1,
-    ease: "none",
-});
+            yPercent: -100,
+            duration: 1,
+            ease: "none",
+        });
+        tl.to(
+            ".scene-3",
+            {
+                yPercent: 0,
+                duration: 1,
+                ease: "none",
+            },
+            "<"
+        );
+        tl.to({}, { duration: 1});
+        
+        tl.to(
+            ".mg-banner",
+            {
+                clipPath:"inset(0 0% 0 0)",
+                duration: 1.5,
+                ease: "power1.inOut",
+            }
+        );
+        tl.to(
+            ".mgspan",
+            {
+                clipPath: "inset(0 0 0% 0)",
+                y: "0%",
+                duration: 1.5,
+                ease: "power1.inOut"
+            },
+            "<"
+        );
 
-tl.to(
-    ".scene-3",
-    {
-        yPercent: 0,
-        duration: 1,
-        ease: "none",
-    },
-    "<"
-);
 
         tl.to({}, { duration: 10});
 
-
-
-    // gsap.fromTo(
-    //     ".Can1",
-    //     {
-    //         opacity: 0,
-    //         x: 100,
-    //     },
-    //     {
-    //         opacity: 1,
-    //         x: 0,
-    //         duration: 0.8,
-    //         ease: "power1.inOut",
-    //         delay: 1,
-
-    //         scrollTrigger: {
-    //           trigger: sectionRef.current,
-    //           start: "500px top top",
-    //           toggleActions: "play none none reverse",
-    //         },
-
-    //     }
-    // );
-    // gsap.fromTo(
-    //     ".Can2",
-    //     {
-    //         opacity: 0,
-    //         x: -100,
-    //     },
-    //     {
-    //         opacity: 1,
-    //         x: 0,
-    //         duration: 0.8,
-    //         ease: "power1.inOut",
-    //         delay: 1,
-
-    //         scrollTrigger: {
-    //           trigger: sectionRef.current,
-    //           start: "500px top top",
-    //           toggleActions: "play none none reverse",
-    //         },
-
-    //     }
-    // );
-    // gsap.fromTo(
-    //     ".Can-animate",
-    //     {
-    //         clipPath: "inset(0 0 100% 0)",
-    //     },
-    //     {
-    //         clipPath: "inset(0 0 0% 0)",
-    //         duration: 0.9,
-    //         ease:"power1.inOut",
-    //         delay: 1.6,
-
-    //         scrollTrigger: {
-    //           trigger: sectionRef.current,
-    //           start: "500px top top",
-    //           toggleActions: "play none none reverse",
-    //         },
-    //     }
-    // );
         ScrollTrigger.refresh();
         ScrollTrigger.update();
   }, sectionRef);
@@ -309,8 +384,8 @@ tl.to(
                 </div>
 
                 <div className="scene-2 w-full h-screen absolute top-0 left-0 z-20  bg-white">
-                    <div className=" flex justify-center gap-x-[32px] text-black h-full px-15">
-                        <div className="w-144.5 h-220 Can1  ">
+                    <div className=" flex justify-center items-center gap-x-[32px] text-black h-full px-15">
+                        <div className="w-144.5 h-230 CanLeft">
                             <div className="w-full h-160 bg-[#FFF4D7] rounded-b-xl flex justify-center rounded-[16px]">
                                 <img src="/images/mango-flavor.png" alt="" className="mt-14 w-67.5 h-176" />
                             </div>
@@ -349,7 +424,7 @@ tl.to(
                                 </span>
                             </button>
                         </div>
-                        <div className="w-144.5 h-220 Can2 ">
+                        <div className="w-144.5 h-230 CanRight">
                             <div className="w-full h-160 bg-[#FFF4D7] rounded-b-xl flex justify-center rounded-[16px]">
                                 <img src="/images/lemon-flavor.png" alt="" className="mt-14 w-[282px] h-176" />
                             </div>
@@ -367,8 +442,8 @@ tl.to(
 
                     </div>
                 </div>
-                <div className="scene-3 absolute top-0 left-0 z-30 w-full h-screen flex flex-col justify-center bg-white">
-                    <div className="w-full flex items-center h-[85%] px-25 gap-x-[32px] text-black">
+                <div className="scene-3 absolute top-0 left-0 z-30 w-full h-screen flex flex-col gap-y-0 justify-start bg-white">
+                    <div className="w-full flex justify-center  px-25 pt-10 gap-x-[32px] text-black">
                         <div className="w-135 h-171 rounded-[20px] bg-gradient-to-b from-[#FFEFC0] to-[#F4B08C] relative">
                             <img src="/images/can-holding-woman.png" alt="" className="w-full absolute bottom-0" />
                         </div>
@@ -382,14 +457,14 @@ tl.to(
                             <div className="w-full absolute left-0 bottom-0 z-1">
                                 <img src="/images/single-lemon.png" alt="" className="" />
                             </div>
-                            <div className="w-full absolute left-0 top-0">
+                            <div className="w-full absolute left-0 top-0 mg-banner">
                                 <img src="/images/mg-frame.png" alt="" className="" />
                             </div>
                             <div className="w-full flex justify-end ">
                                 <div className="w-140 h-full flex flex-col items-center text-center capitalize mt-[117px]">
                                     <div className="leading-[50px]">
                                         <h2 className="font-Alan text-[82px] font-bold text-[#3F6C48] ">find your</h2>
-                                        <h2 className=" py-6 px-2 rounded-2xl bg-[#3F6C48] text-white text-[82px] font-bold -rotate-3">daily boost</h2>
+                                        <h2 className="mgspan py-6 px-2 rounded-2xl bg-[#3F6C48] text-white text-[82px] font-bold -rotate-3">daily boost</h2>
                                     </div>
                                     <p className="text-[28px] font-Albert font-normal text-[#3F6C48] leading-[28px] mt-[37px]">Choose the perfect option<br />for your lifestyle.</p>
                                     <button className="w-[158px] h-[42px] flex items-center cursor-pointer z-10 capitalize underline gap-x-4 mt-[29px]">
@@ -402,19 +477,24 @@ tl.to(
                             </div>
                         </div>
                     </div>
-                    <div className=" w-full h-20 bg-[#FFF7DF] flex justify-center items-end -mt-20  text-black">
-                        {textslider.map((text, i) => (
-                        <div className="w-full flex justify-center items-center text-slider mb-5 z-1 " key={i}>
-                            <span className="w-150 flex items-center text-center justify-evenly px-5 capitalize text-[40px] font-Albert font-light leading-[26px]"><p>{text.text}</p>
-                            <img src="/images/flower.png" alt=""/></span>
+                    <div className=" h-[25%] bg-[#FFF7DF] flex justify-start -mt-20 text-black overflow-hidden">
+                        <div className="text-slider flex w-max items-end gap-x-20">
+
+                            {textslider.map((text, i) => (
+                                <div className="flex items-end mb-5 shrink-0" key={i} >
+                                    <p className="flex items-center capitalize text-[40px] font-Albert font-light leading-[26px] text-nowrap gap-x-10">
+                                        {text.text}
+                                        <img  src="/images/flower.png" alt=""  className="shrink-0" />
+                                    </p>
+                                </div>
+                            ))}
+
                         </div>
-                        ))}
                     </div>
                 </div>
                 
             </div>
         </section>
-        // </div>
     )
 }
 
