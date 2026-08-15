@@ -86,7 +86,7 @@ body {
 
 .sidetext {
   clip-path: inset( 0 0 100% 0);
-  animation: sidetext 0.8s ease-in-out;
+  animation: sidetext 1.2s ease-in-out;
   animation-delay: 1s;
   animation-fill-mode: both;
 }
@@ -105,22 +105,22 @@ body {
   }
 }
 @keyframes topChange {
-  0% {
+  from {
     clip-path: inset(0 0 100% 0);
   }
-  60% {
+  /* 60% {
     clip-path: inset(0 0 60% 0);
-  }
-  100%{
-    clip-path: inset(0 0 0 0);
+  } */
+  to{
+    clip-path: inset(0 0 0% 0);
   }
 }
 @keyframes sidetext {
-  80% {
-    clip-path: inset(0 0 90% 0);
+  from {
+    clip-path: inset(0 0 100% 0);
   }
-  100%{
-    clip-path: inset(0 0 0 0);
+  to{
+    clip-path: inset(0 0 0% 0);
   }
 }
 .btn2 span{

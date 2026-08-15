@@ -361,7 +361,7 @@ const Showcase = () => {
         );
 
 
-        tl.to({}, { duration: 10});
+        tl.to({}, { duration: 14});
 
         ScrollTrigger.refresh();
         ScrollTrigger.update();
