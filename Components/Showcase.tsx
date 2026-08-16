@@ -152,7 +152,7 @@ const Showcase = () => {
                 trigger:sectionRef.current,
                 start: "top top ",
                 end: "bottom top",
-                scrub: 1,
+                scrub: true,
                 // markers: true,
             }
         });
@@ -220,25 +220,24 @@ const Showcase = () => {
             "<"
         );
 
-        tl.to({}, { duration: 3 });
+        tl.to({}, { duration: 0.5 });
 
 
         tl.to(".scene-1", {
             yPercent: -100,
-            duration: 1,
-            ease: "none",
+            duration: 0.5,
+            ease: "power2.inOut",
         });
 
         tl.to(
             ".scene-2",
             {
                 yPercent: 0,
-                duration: 1,
-                ease: "none",
+                duration: 0.5,
+                ease: "power2.inOut",
             },
             "<"
         );
-        tl.to({}, { duration: 1 });
         
 
 // ////           scene 2 start here ///////////////
@@ -248,20 +247,20 @@ const Showcase = () => {
         {
             opacity: 1,
             y: 0,
-            duration: 1,
+            duration: 2,
             ease: "power1.inOut",
         }
     );
 
-        tl.to({}, { duration: 1 });
+        // tl.to({}, { duration: 1 });
 
 
         tl.to(
             ".Cantext",
         {
             clipPath: "inset(0% 0 0  0)",
-            duration: 1,
-            ease: "power1.inOut",
+            duration: 1.5,
+            ease: "power2.inOut",
 
         });
 
@@ -270,8 +269,8 @@ const Showcase = () => {
         {
             left: "13%",
             rotate: -8,
-            duration: 1,
-            ease: "power1.inOut" ,
+            duration: 1.5,
+            ease: "power2.inOut" ,
         },
         "<"
     );
@@ -281,8 +280,8 @@ const Showcase = () => {
         {
             right: "13%",
             rotate: 8,
-            duration: 1,
-            ease: "power1.inOut",
+            duration: 1.5,
+            ease: "power2.inOut",
         },
         "<"
         );
@@ -311,18 +310,18 @@ const Showcase = () => {
             "<"
         );
 
-        tl.to({}, { duration: 1});
+        tl.to({}, { duration: 0.5});
 
         tl.to(
                 ".Can-animate",
             {
                 clipPath: "inset(0 0 0% 0)",
-                duration: 0.9,
+                duration: 1.2,
                 ease:"power1.inOut",
             },
         );
     
-        tl.to({}, { duration: 4});
+        tl.to({}, { duration: 2});
         
         // Scene 2 → Scene 3
         tl.to(".scene-2", {
@@ -361,7 +360,7 @@ const Showcase = () => {
         );
 
 
-        tl.to({}, { duration: 14});
+        tl.to({}, { duration: 11});
 
         ScrollTrigger.refresh();
         ScrollTrigger.update();

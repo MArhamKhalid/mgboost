@@ -1,8 +1,55 @@
-import React from 'react'
+"use client";
+import { useLayoutEffect, useRef } from 'react'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/all';
+
+gsap.registerPlugin(ScrollTrigger);
+
 
 const Footer = () => {
+
+    const FooterRef = useRef(null);
+    useLayoutEffect(() => {
+
+    const ctx = gsap.context(() => 
+    {
+
+        gsap.set(
+            ".mg-text",
+            {
+                y: "80%"
+            }
+        );
+
+
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger:FooterRef.current,
+                start:"top 30%",
+                end: "bottom bottom",
+                toggleActions: "play none none reverse",
+                // scrub: true,
+                // markers: true,
+            }
+        });
+        tl.to({}, { duration: 0.2 });
+
+
+        tl.to(
+            ".mg-text",
+            {
+                y: "0%",
+                duration:1,
+                ease: "power2.inOut",
+            }
+        );
+
+  }, FooterRef);
+
+  return () => ctx.revert();
+}, []);
   return (
-    <footer className='w-full h-[749px] bg-linear-to-b from-[#FFFAED] to-[#FFF1C8] relative overflow-hidden'>
+    <footer className='w-full h-[749px] bg-linear-to-b from-[#FFFAED] to-[#FFF1C8] relative overflow-hidden ' ref={FooterRef}>
         <div className='pt-[138px] px-25 flex justify-between pb-[64px]'>
             <div className='w-full max-w-[500px] text-black h-full '>
                 <h2 className='font-Albert font-bold text-[26px]'>Sign up to get 10% off your first order!</h2>
@@ -51,7 +98,7 @@ const Footer = () => {
             </div>
             <div className='flex justify-end items-center'><img src="/images/Payment-Logo.png" alt="" /></div>
         </div>
-        <div className='w-full mb-10 flex justify-center items-end absolute -bottom-20 opacity-100'>
+        <div className='w-full mb-10 flex justify-center items-end absolute -bottom-20 opacity-100 mg-text'>
             <h2 className='font-Albert text-[330px] bg-linear-to-t from-[#FFFAED] to-[#DAA404] bg-clip-text text-transparent font-extrabold uppercase text-center leading-[320px] '>mg boost</h2>
         </div>
     </footer>
