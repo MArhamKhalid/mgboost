@@ -121,7 +121,7 @@ const Benefits = () => {
         <div className='w-full absolute object-cover top-0 left-0'>
             <img src="/images/benefits-mask.png" alt="" className='w-full bg-cover'/>
         </div>
-        <div className='w-full max-h-[170px] z-10 flex flex-col mt-[14%] mb-[3%]'>
+        <div className='w-full max-h-[170px] z-10 flex flex-col mt-[14%] mb-[3%] benefits-sub-head'>
             <div className='text-center capitalize benefitshead'>
                 <h2 className='font-bold font-Alan text-[87px] text-white '>benefits of MG boost</h2>
                 <p className='text-[22px] font-Albert font-normal'>MG Boost is a refreshing magnesium-powered sparkling drink designed to support calmness,<br/>focus, digestion, hydration, and better daily recovery — without added sugar</p>

@@ -90,7 +90,7 @@ const Story = () => {
   return (
     <section className='w-full h-[200vh] flex flex-col items-center bg-white z-1 relative ' ref={StorysRef} >
         <div className='w-full h-screen relative flex flex-col items-center sticky top-0 overflow-hidden inner-shadow-tb'>
-            <div className=" w-full max-w-[718px] max-h-[160px] leading-[80px] absolute top-0 z-20 storyhead">
+            <div className=" w-full max-w-[718px] max-h-[160px] leading-[80px] absolute top-0 z-30 storyhead">
                 <h2 className='text-[#E0B121] font-Alan font-bold text-[82px] capitalize text-center'>turning snapshots into stories</h2>
             </div>
             <div className='w-full h-screen flex justify-between items-center pr-[44px] absolute z-10 top-0 firstscene'>

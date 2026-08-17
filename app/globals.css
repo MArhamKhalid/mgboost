@@ -290,5 +290,58 @@ body {
   .mg-text h2{
     font-size: 280px;
   }
+  .blogs-text-1 span{
+    font-size: 30px;
+  }
+  .blogs-text-1 h2{
+    font-size: 72px;
+  }
+  .blogs-text-2 p{
+    font-size: 18px;
+  }
+  .blogs-text-3 p{
+    font-size: 18px;
+  }
+  .blog-slider-text{
+    height: 50px;
+    margin-bottom: 110px;
+  }
+  .canrotate{
+    height: 80%;
+  }
+  .benefits-sub-head{
+    margin-bottom: 1%;
+  }
+  .benefitshead h2{
+    font-size: 78px;
+  }
+  .benefitshead p{
+    font-size: 20px;
+  }
+  .leftcards{
+    row-gap: 70px;
+  }
+  .rightcards{
+    row-gap: 48px;
+    margin-top: 9%;
+  }
+  .detailimage{
+    height: 86%;
+  }
+  .detail-sub-Text-1 span{
+    font-size: 30px;
+  }
+  .detail-sub-Text-1 h2{
+    font-size: 78px;
+  }
+  .detail-sub-Text-2 p{
+    font-size: 20px;
+  }
+  .detail-sub-Text-3{
+    line-height: 14px;
+  }
+  .detail-sub-Text-3 li{
+    font-size: 24px;
+  }
 
 }

@@ -97,11 +97,11 @@ const Details = () => {
   return () => ctx.revert();
 }, []);
   return (
-    <section className='w-full h-[110vh] bg-white relative py-18 ' ref={DetailsRef} >
+    <section className='w-full h-[110vh] bg-white relative py-18 details-section' ref={DetailsRef} >
         <div className='w-full h-full px-25 flex justify-center items-center gap-x-10 z-1'>
-            <div className='w-240 h-230  bg-gradient-to-t from-[#FFF8E5] to-[#CAF8D4] rounded-[20px]'>
+            <div className='w-240 h-230  bg-gradient-to-t from-[#FFF8E5] to-[#CAF8D4] rounded-[20px] detailimage'>
 
-                <div className="detailimage relative w-full h-full overflow-hidden rounded-[20px]">
+                <div className=" relative w-full h-full overflow-hidden rounded-[20px]">
 
                     {/* LEFT HALF */}
                     <div className="absolute inset-y-0 left-0 w-1/2 overflow-hidden">
@@ -124,15 +124,15 @@ const Details = () => {
                 </div>
             </div>
             <div className='w-220 h-full flex flex-col justify-center gap-y-12 detailText'>
-                <div>
+                <div className='detail-sub-Text-1'>
                     <span className='font-albert text-[36px] font-semibold text-[#141414] capitalize'>Why Magnesium</span>
                     <h2 className='text-[#E0B121] font-Alan font-bold text-[87px] capitalize leading-18'>L-Threonate?</h2>
                 </div>
-                <div>
+                <div className='detail-sub-Text-2'>
                     <p className='font-Albert font-normal text-[#141414] text-[22px]'>Magnesium L-Threonate is a unique form of magnesium known<br/>for its ability to support cognitive function and brain health. It<br/>may help with:</p>
                 </div>
                 {items.map((item) => (
-                    <div className='leading-[18px] ml-10' key={item.description} >
+                    <div className='leading-[18px] ml-10 detail-sub-Text-3' key={item.description} >
                         <li className='font-semibold font-Albert text-[24px] text-black'>{item.description}</li>
                     </div>
                 ))}

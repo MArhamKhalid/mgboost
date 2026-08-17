@@ -109,14 +109,14 @@ const slidtext = [
                     <img src="/images/can-holding-woman-about.png" alt="/" className=' object-cover blog-image flex items-center' />
                 </div>
                 <div className='w-220 h-full flex flex-col justify-center gap-y-10 blogs-text'>
-                    <div>
+                    <div className='blogs-text-1'>
                         <span className='font-albert text-[36px] font-semibold text-[#141414] capitalize'>MG BOOST began with a </span>
                         <h2 className='text-[#E0B121] font-Alan font-bold text-[87px] capitalize leading-18'>personal search<br/>for answers.</h2>
                     </div>
-                    <div>
+                    <div className='blogs-text-2'>
                         <p className='font-Albert font-normal text-[#141414] text-[24px]'>After moving to the United States with big dreams for my future, I began quietly struggling with ongoing digestive discomfort, stress, poor sleep, and low energy. I tried different diets, supplements, probiotics, cleansing methods, and wellness routines. Some provided temporary relief, but I still felt that something deeper was missing.</p>
                     </div>
-                    <div>
+                    <div className='blogs-text-3'>
                         <p className='font-Albert font-normal text-[#141414] text-[24px]'>Over time, I began learning how closely digestion, stress, sleep, hydration, mineral intake, and mental well-being are connected. The more I researched, the more I realized that many people are experiencing the same challenges—feeling tired, stressed, bloated, restless, and disconnected from their bodies while trying to keep up with busy modern lives.</p>
                     </div>
                     <div>
@@ -129,7 +129,7 @@ const slidtext = [
                     </div>
                 </div>
             </div>
-            <div className="w-full h-100 flex text-black">
+            <div className="w-full h-100 flex text-black blog-slider-text">
                 <div className="h-full flex justify-start items-center" >
                 {slidtext.map((text, i) => (
                     <span className="flex items-center justify-evenly capitalize gap-x-0 text-nowrap text-slider" key={i}>

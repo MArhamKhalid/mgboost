@@ -52,7 +52,7 @@ const Hero = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSec((next) => (next + 1) % slides.length);
-    }, 30000);
+    }, 10000);
 
     return () => clearInterval(timer);
   }, []);
@@ -62,7 +62,7 @@ const Hero = () => {
   return (
     <section className={`w-full h-[100vh] relative overflow-hidden bg-white`}>
 
-      <div className={`w-full h-full flex justify-between items-center relative sectionChange ${currentSlide.sectionbg} `} >
+      <div className={`w-full h-full flex justify-between items-center relative sectionChange ${currentSlide.sectionbg} `} key={currentSec}>
 
         <div className=" w-full absolute top-0 topChange">
           <img  src={currentSlide.mask} alt="" className="bg-cover w-full"/>
