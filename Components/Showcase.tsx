@@ -58,10 +58,14 @@ const Showcase = () => {
             yPercent: 100,
         });
         gsap.set(
+            ".firstheaddev",
+            {
+                clipPath: "inset(0 0 55% 0)",
+            });
+        gsap.set(
             ".firsthead",
             {
-                scale: 0.8,
-                clipPath: "inset(0 0 75% 0)",
+                fontSize: "44px",
             });
 
         gsap.set(
@@ -162,44 +166,43 @@ const Showcase = () => {
         tl.to(
             ".firsthead",
             {   
-                scale: 1,
-                // filter: "blur(15px)",
-                clipPath: "inset(0 0 30% 0)",
+
+                fontSize: "55px",
+                // clipPath: "inset(0 0 30% 0)",
                 duration: 0.6,
                 ease: "power1.inOut",
             }
         );
+        tl.to(
+            ".firstheaddev",
+            {
+                clipPath: "inset(0 0 50% 0)",
+                duration: 0.8,
+                ease: "power1.inOut",
+            });
 
-        // tl.fromTo(
-        //     bottomTwo ,
-        //     {
-        //         filter: "blur(50px)"
-        //     },
-        //     {
-        //         filter: "blur(0px)",
-        //         duration: 0.8,
-        //         // stagger:0.08,
-        //     },
-            
-        //     "<"
-        // );
-
-        // tl.to({}, { duration: 1 });
         tl.to(
             ".firsthead", 
             {
-              scale: 1.4,
-              clipPath: "inset(0 0 10% 0)",
-              duration: 0.6,
-              ease: "power1.inOut",
+                fontSize: "65px",
+                // clipPath: "inset(0 0 10% 0)",
+                duration: 0.6,
+                ease: "power1.inOut",
             }
         );
+        tl.to(
+            ".firstheaddev",
+            {
+                clipPath: "inset(0 0 0% 0)",
+                duration: 0.6,
+                ease: "power1.inOut",
+            });
         
         tl.to(
             ".firsthead", 
-            {
-              scale: 1.6,
-              clipPath: "inset(0 0 0% 0)",
+            {                
+                fontSize: "76px",
+            //   clipPath: "inset(0 0 0% 0)",
               duration: 0.6,
               ease: "power1.inOut",
             },
@@ -374,18 +377,19 @@ const Showcase = () => {
         <section ref={sectionRef} className="relative w-full h-[300vh] bg-white  ">
             <div className="sticky top-0 w-full h-screen overflow-hidden">
                 
-                <div className="scene-1 w-full h-screen absolute top-0 left-0 z-10 flex justify-center items-center bg-white ">
-                    <div className=" w-full h-full text-center flex justify-center items-center">
-                        <h2 className=" capitalize w-full max-w-[990px] font-Alan text-[#818181] text-[44px] leading-[68px] font-light firsthead">
-                            To make magnesium simple, <span className="text-[#DAA404] font-bold">enjoyable, and part of everyday life.Instead of complicated supplements</span>, we believe wellness should fit naturally into your routine
-                        </h2>
+                <div className="scene-1 w-full h-screen absolute top-0 left-0 z-10 flex justify-center items-center bg-white firstheaddev">
+                    <div className=" w-full h-full text-center flex flex-col justify-center items-center capitalize font-Alan text-[#818181] text-[44px] font-light firsthead">
+                        <h2 className="max-w-max">To make magnesium simple, <span className="text-[#DAA404] font-bold">enjoyable, and part</span></h2>
+                        <h2 className="max-w-max"><span className="text-[#DAA404] font-bold">of everyday life.Instead of complicated </span></h2>
+                        <h2 className="max-w-max"><span className="text-[#DAA404] font-bold">supplements</span>, we believe wellness should fit</h2>
+                        <h2 className="max-w-max"> naturally into your routine</h2>
                     </div>
                 </div>
 
                 <div className="scene-2 w-full h-screen absolute top-0 left-0 z-20  bg-white">
-                    <div className=" flex justify-center items-center gap-x-[32px] text-black h-full px-15">
+                    <div className=" flex justify-center items-center gap-x-[32px] text-black h-full px-15 sub-scene-2">
                         <div className="w-144.5 h-230 CanLeft">
-                            <div className="w-full h-160 bg-[#FFF4D7] rounded-b-xl flex justify-center rounded-[16px]">
+                            <div className="w-full h-160 bg-[#FFF4D7] rounded-b-xl flex justify-center rounded-[16px] can-bg">
                                 <img src="/images/mango-flavor.png" alt="" className="mt-14 w-67.5 h-176" />
                             </div>
                             <div className="w-full h-68 flex flex-col justify-end items-center gap-y-4 leading-[18px] Can-animate">
@@ -399,7 +403,7 @@ const Showcase = () => {
                                 </button>
                             </div>
                         </div>
-                        <div className="w-144.5 h-230 bg-[#EEAF09] relative flex flex-col justify-start items-center overflow-hidden text-black rounded-[16px] z-10">
+                        <div className="middle-can w-144.5 h-230 bg-[#EEAF09] relative flex flex-col justify-start items-center overflow-hidden text-black rounded-[16px] z-10">
                             <div className="pt-10 w-full max-w-[520px] Cantext  [clip-path:inset(0_0_80%_0)]">
                                 <h2 className="text-[#FFFCD9] text-center text-[48px] font-Albert font-bold capitalize leading-[40px]">Thousands are making
                                     <span className="flex inline-block pt-3 pb-6 px-4 bg-[#045C00] rounded-xl -rotate-3 text-white leading-[30px]">magnesium</span> part of their daily ritual.</h2>
@@ -410,7 +414,7 @@ const Showcase = () => {
                                 <img src="/images/MGBOOST.png" alt=""  className="w-full"/>
 
                             </div>
-                            <div className="absolute flex justify-center z-10 w-full h-126 bottom-28 ">
+                            <div className="absolute flex justify-center z-10 w-full h-126 bottom-28 can-show-middle">
                                 <img src="/images/mango-flavor.png" alt="" className="absolute z-1  h-[503.02px] w-[194.13px] MangoCan"/>
                                 <img src="/images/lemon-flavor.png" alt="" className="absolute h-[484.81px] w-[193.13px] LemonCan"/>
                             </div>
@@ -424,7 +428,7 @@ const Showcase = () => {
                             </button>
                         </div>
                         <div className="w-144.5 h-230 CanRight">
-                            <div className="w-full h-160 bg-[#FFF4D7] rounded-b-xl flex justify-center rounded-[16px]">
+                            <div className="w-full h-160 bg-[#FFF4D7] rounded-b-xl flex justify-center rounded-[16px]  can-bg">
                                 <img src="/images/lemon-flavor.png" alt="" className="mt-14 w-[282px] h-176" />
                             </div>
                             <div className="w-full h-68 flex flex-col justify-end items-center gap-y-4 leading-[18px] Can-animate">
@@ -446,26 +450,26 @@ const Showcase = () => {
                         <div className="w-135 h-171 rounded-[20px] bg-gradient-to-b from-[#FFEFC0] to-[#F4B08C] relative">
                             <img src="/images/can-holding-woman.png" alt="" className="w-full absolute bottom-0" />
                         </div>
-                        <div className="w-294 h-171 rounded-[20px] bg-gradient-to-t from-[#FAF9BA] to-[#C3F8D8] relative">
-                            <div className="w-full absolute bottom-0">
+                        <div className="w-294 h-171 rounded-[20px] bg-gradient-to-t from-[#FAF9BA] to-[#C3F8D8] relative sub-scene-3">
+                            <div className="w-full absolute bottom-0 ice">
                                 <img src="/images/ice.png" alt="" className="object-cover w-full rounded-b-[20px]" />
                             </div>
-                            <div className="w-full absolute left-0 bottom-0">
+                            <div className="w-full absolute left-0 bottom-0 doubleCan">
                                 <img src="/images/double-lemon.png" alt="" className="" />
                             </div>
-                            <div className="w-full absolute left-0 bottom-0 z-1">
+                            <div className="w-full absolute left-0 bottom-0 z-1 singleCan">
                                 <img src="/images/single-lemon.png" alt="" className="" />
                             </div>
-                            <div className="w-full absolute left-0 top-0 mg-banner">
+                            <div className="w-full absolute left-0 top-0 mg-banner frame">
                                 <img src="/images/mg-frame.png" alt="" className="" />
                             </div>
-                            <div className="w-full flex justify-end ">
-                                <div className="w-140 h-full flex flex-col items-center text-center capitalize mt-[117px]">
-                                    <div className="leading-[50px]">
-                                        <h2 className="font-Alan text-[82px] font-bold text-[#3F6C48] ">find your</h2>
+                            <div className="w-full flex justify-end">
+                                <div className="w-140 h-full flex flex-col items-center text-center capitalize mt-[117px] lemon-text">
+                                    <div className="leading-[50px] lemon-sub-text">
+                                        <h2 className="font-Alan text-[82px] font-bold text-[#3F6C48] lemon-sub-text-1">find your</h2>
                                         <h2 className="mgspan py-6 px-2 rounded-2xl bg-[#3F6C48] text-white text-[82px] font-bold -rotate-3">daily boost</h2>
                                     </div>
-                                    <p className="text-[28px] font-Albert font-normal text-[#3F6C48] leading-[28px] mt-[37px]">Choose the perfect option<br />for your lifestyle.</p>
+                                    <p className="text-[28px] font-Albert font-normal text-[#3F6C48] leading-[28px] mt-[37px] lemon-sub-text-2">Choose the perfect option<br />for your lifestyle.</p>
                                     <button className="w-[158px] h-[42px] flex items-center cursor-pointer z-10 capitalize underline gap-x-4 mt-[29px]">
                                         <p className="text-[20px] font-Albert">shop now </p>
                                         <span className="w-[42px] h-[42px] bg-black rounded-full flex justify-center items-center">

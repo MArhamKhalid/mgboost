@@ -16,6 +16,8 @@ const box = [
 const slides = [
   {
     images:"/images/primary-banner.png",
+    imageClass: "image-one",
+
     mask:"/images/Mask group-1.png",
     arrows:"/icons/Arrow-orange.svg",
     rightside:"pr-20",
@@ -28,6 +30,8 @@ const slides = [
   },
   {
     images:"/images/primary-banner02.png",
+    imageClass: "image-two",
+
     mask:"/images/Mask group.png",
     arrows:"/icons/Arrow-green.svg",
     rightside:"pr-0",
@@ -48,7 +52,7 @@ const Hero = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSec((next) => (next + 1) % slides.length);
-    }, 10000);
+    }, 30000);
 
     return () => clearInterval(timer);
   }, []);
@@ -58,7 +62,7 @@ const Hero = () => {
   return (
     <section className={`w-full h-[100vh] relative overflow-hidden bg-white`}>
 
-      <div className={`w-full h-full flex justify-between items-center relative sectionChange ${currentSlide.sectionbg}`} key={currentSec}>
+      <div className={`w-full h-full flex justify-between items-center relative sectionChange ${currentSlide.sectionbg} `} >
 
         <div className=" w-full absolute top-0 topChange">
           <img  src={currentSlide.mask} alt="" className="bg-cover w-full"/>
@@ -121,11 +125,7 @@ const Hero = () => {
 
         <div className={`flex h-full justify-end items-end w-full absolute ${currentSlide.rightside} right-0 bottom-0 imageChange`}>
 
-          <img
-            src={currentSlide.images}
-            alt=""
-            className=" h-[800px] "
-          />
+          <img src={currentSlide.images} alt="" className={`object-cover ${currentSlide.imageClass}`}/>
 
         </div>
 

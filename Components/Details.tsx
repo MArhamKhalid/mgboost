@@ -1,5 +1,10 @@
-import React from 'react'
-import { text } from 'stream/consumers'
+"use client";
+import { useLayoutEffect, useRef } from 'react'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/all';
+
+gsap.registerPlugin(ScrollTrigger);
+
 
 const items = [
     {
@@ -20,13 +25,105 @@ const items = [
 ]
 
 const Details = () => {
+
+    const DetailsRef = useRef(null);
+    useLayoutEffect(() => {
+
+    const ctx = gsap.context(() => 
+    {
+        gsap.set(
+            ".detailText",
+            {
+                clipPath: "inset(0 100% 0 0)"
+            }
+        );
+        gsap.set(
+            ".detailImageLeft",
+            {
+                y: "-100%"
+            }
+        );
+        gsap.set(
+            ".detailImageRight",
+            {
+                y: "100%"
+            }
+        );
+
+
+        
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger:DetailsRef.current,
+                start:"top top",
+                end: "bottom bottom",
+                toggleActions: "play none none reverse",
+                // scrub: true,
+                // markers: true,
+            }
+        });
+
+        tl.to(
+            ".detailText",
+            {
+                clipPath: "inset(0 0% 0 0)",
+                duration:0.8,
+                ease: "power1.inOut",
+
+            }
+        );
+        tl.to(
+            ".detailImageLeft",
+            {
+                y: "-0%",
+                duration:0.8,
+                ease: "power2.inOut",
+            }
+        );
+        tl.to(
+            ".detailImageRight",
+            {
+                y: "0%",
+                duration:0.8,
+                ease: "power2.inOut",
+            },
+            "<"
+        );
+
+
+
+    }, DetailsRef);
+
+  return () => ctx.revert();
+}, []);
   return (
-    <section className='w-full h-[120vh] bg-white relative py-18'>
-        <div className='w-full h-full px-25 flex justify-center items-center gap-x-10'>
-            <div className='w-240 h-238.75 '>
-                <img src="/images/can-holdin-woman-why-magnessium.png" alt="/" className='w-full object-cover rounded-[20px]  bg-gradient-to-t from-[#FFF8E5] to-[#CAF8D4]' />
+    <section className='w-full h-[110vh] bg-white relative py-18 ' ref={DetailsRef} >
+        <div className='w-full h-full px-25 flex justify-center items-center gap-x-10 z-1'>
+            <div className='w-240 h-230  bg-gradient-to-t from-[#FFF8E5] to-[#CAF8D4] rounded-[20px]'>
+
+                <div className="detailimage relative w-full h-full overflow-hidden rounded-[20px]">
+
+                    {/* LEFT HALF */}
+                    <div className="absolute inset-y-0 left-0 w-1/2 overflow-hidden">
+                        <img
+                            src="/images/can-holdin-woman-why-magnessium.png"
+                            alt=""
+                            className="detailImageLeft absolute w-[200%] h-full max-w-none object-cover"
+                        />
+                    </div>
+
+                    {/* RIGHT HALF */}
+                    <div className="absolute inset-y-0 right-0 w-1/2 overflow-hidden">
+                        <img
+                            src="/images/can-holdin-woman-why-magnessium.png"
+                            alt=""
+                            className="detailImageRight absolute right-0 w-[200%] h-full max-w-none object-cover"
+                        />
+                    </div>
+
+                </div>
             </div>
-            <div className='w-220 h-full flex flex-col justify-center gap-y-12'>
+            <div className='w-220 h-full flex flex-col justify-center gap-y-12 detailText'>
                 <div>
                     <span className='font-albert text-[36px] font-semibold text-[#141414] capitalize'>Why Magnesium</span>
                     <h2 className='text-[#E0B121] font-Alan font-bold text-[87px] capitalize leading-18'>L-Threonate?</h2>
