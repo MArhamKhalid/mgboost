@@ -706,5 +706,35 @@ body {
   .sub-Blogs-02 .text-slider p{
     font-size: 30px;
   }
+  .details-section{
+    height: 160vh;
+  }
+  .sub-details-section{
+    justify-content: start;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    padding: 0 40px;
+    row-gap: 10%;
 
+  }
+  .detailimage{
+    width: 100%;
+  }
+  .detailText{
+    width: 100%;
+    padding: 0 30px;
+    justify-content: start;
+    row-gap: 30px;
+
+  }
+  .detail-sub-Text-1 span{
+    font-size: 30px;
+  }
+  .detail-sub-Text-1 h2{
+    font-size: 66px;
+  }
+  .detail-sub-Text-2 p{
+    font-size: 20px;
+  }
 }

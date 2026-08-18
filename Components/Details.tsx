@@ -29,8 +29,13 @@ const Details = () => {
     const DetailsRef = useRef(null);
     useLayoutEffect(() => {
 
-    const ctx = gsap.context(() => 
-    {
+    const ctx = gsap.context(() => {
+        
+        // const mm = gsap.matchMedia();
+
+
+        // mm.add("(min-width: 769px)", () => {
+                
         gsap.set(
             ".detailText",
             {
@@ -59,7 +64,7 @@ const Details = () => {
                 end: "bottom bottom",
                 toggleActions: "play none none reverse",
                 // scrub: true,
-                // markers: true,
+                markers: true,
             }
         });
 
@@ -89,6 +94,7 @@ const Details = () => {
             },
             "<"
         );
+    // });
 
 
 
@@ -98,7 +104,7 @@ const Details = () => {
 }, []);
   return (
     <section className='w-full h-[110vh] bg-white relative py-18 details-section' ref={DetailsRef} >
-        <div className='w-full h-full px-25 flex justify-center items-center gap-x-10 z-1'>
+        <div className='w-full h-full px-25 flex justify-center items-center gap-x-10 z-1 sub-details-section'>
             <div className='w-240 h-230  bg-gradient-to-t from-[#FFF8E5] to-[#CAF8D4] rounded-[20px] detailimage'>
 
                 <div className=" relative w-full h-full overflow-hidden rounded-[20px]">
