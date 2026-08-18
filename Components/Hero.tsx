@@ -52,7 +52,7 @@ const Hero = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSec((next) => (next + 1) % slides.length);
-    }, 10000);
+    }, 30000);
 
     return () => clearInterval(timer);
   }, []);
@@ -60,18 +60,18 @@ const Hero = () => {
   const currentSlide = slides[currentSec];
   
   return (
-    <section className={`w-full h-[100vh] relative overflow-hidden bg-white`}>
+    <section className={`w-full h-[100vh] relative overflow-hidden bg-white hero`}>
 
-      <div className={`w-full h-full flex justify-between items-center relative sectionChange ${currentSlide.sectionbg} `} key={currentSec}>
+      <div className={`w-full h-full flex justify-between items-center relative sectionChange ${currentSlide.sectionbg}`} key={currentSec}>
 
         <div className=" w-full absolute top-0 topChange">
           <img  src={currentSlide.mask} alt="" className="bg-cover w-full"/>
         </div>
 
-        <div className="w-full h-full max-h-[50%] flex flex-col justify-end gap-y-5 z-1  sidetext max-w-[770px] pl-[100px]" >
+        <div className="w-full h-full max-h-[50%] flex flex-col justify-end gap-y-5 z-1 sidetext max-w-[770px] pl-[100px]" >
 
         
-          <div className="flex justify-start gap-x-3 capitalize font-Alan " >
+          <div className="flex justify-start gap-x-3 capitalize font-Alan spanicons" >
           {box.map((item) => (
             <span key={item.boxtext} className={` py-1 px-3 rounded-[30px] border border-solid ${currentSlide.borderColor} text-[20px] ${currentSlide.textColor2} ${currentSlide.bgColor} hover:text-white cursor-pointer`} >
               {item.boxtext}
@@ -83,11 +83,11 @@ const Hero = () => {
 
           <div className="capitalize font-Alan text-[#161616] leading-[78px]">
 
-            <h2 className="text-[50px] leading-[55px] font-bold font-Albert">
+            <h2 className="text-[50px] leading-[55px] font-bold font-Albert hero-sub-head">
               the smarter way to
             </h2>
 
-            <h2 className={`text-[87.32px] font-bold ${currentSlide.textColor} `}>
+            <h2 className={`text-[87.32px] font-bold ${currentSlide.textColor} hero-head`}>
               get magnesium.
             </h2>
 
@@ -95,7 +95,7 @@ const Hero = () => {
 
           <div className="flex flex-col gap-y-4 font-Albert text-black max-w-[665px]">
 
-            <p className="capitalize font-normal text-[20px] leading-[30px] ">
+            <p className="capitalize font-normal text-[20px] leading-[30px] hero-desc">
               MG BOOST is a premium magnesium sparkling drink that supports
               calm, focus, digestion, and better sleep
             </p>

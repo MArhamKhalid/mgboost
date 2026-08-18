@@ -130,19 +130,19 @@ const Benefits = () => {
         
         <div className='w-full h-full flex justify-center items-start relative'>
             <div className='flex flex-col justify-center items-end gap-y-24 w-full max-w-[37%] h-full max-h-max z-1 mt-[14%] leftcards'>
-                <div className='w-[378px] h-[89px] w-[397px] h-[89px] rounded-[88px] bg-gradient-to-b from-[#FBFBFB] to-[#FAF1D4] flex justify-end items-center shadow-xl gap-x-[11px]'>
+                <div className='benefits-desc w-[378px] h-[89px] w-[397px] h-[89px] rounded-[88px] bg-gradient-to-b from-[#FBFBFB] to-[#FAF1D4] flex justify-end items-center shadow-xl gap-x-[11px]'>
                     <p className='max-w-[214px] capitalize text-[22px] font-Albert font-normal text-right leading-[26px] mr-1'>Supports calmness and relaxation</p>
                     <div className='w-18.75 h-18.75 rounded-full bg-[#E0B121] flex justify-center items-center mr-2'>
                         <img src="/icons/meditation.png" alt="" />
                     </div>
                 </div>
-                <div className='w-[378px] h-[89px] w-[397px] h-[89px] rounded-[88px] bg-gradient-to-b from-[#FBFBFB] to-[#FAF1D4] flex justify-end items-center shadow-xl gap-x-[11px] -mr-[7%]'>
+                <div className='benefits-desc w-[378px] h-[89px] w-[397px] h-[89px] rounded-[88px] bg-gradient-to-b from-[#FBFBFB] to-[#FAF1D4] flex justify-end items-center shadow-xl gap-x-[11px] -mr-[7%]'>
                     <p className='max-w-[214px] capitalize text-[22px] font-Albert font-normal text-right leading-[26px] mr-1'>help supports memory and focus</p>
                     <div className='w-18.75 h-18.75 rounded-full bg-[#E0B121] flex justify-center items-center mr-2'>
                         <img src="/icons/inner-beauty.png" alt="" />
                     </div>
                 </div>
-                <div className='w-[378px] h-[89px] w-[397px] h-[89px] rounded-[88px] bg-gradient-to-b from-[#FBFBFB] to-[#FAF1D4] flex justify-end items-center  shadow-xl gap-x-[11px] -mr-[23%]'>
+                <div className='benefits-desc w-[378px] h-[89px] w-[397px] h-[89px] rounded-[88px] bg-gradient-to-b from-[#FBFBFB] to-[#FAF1D4] flex justify-end items-center  shadow-xl gap-x-[11px] -mr-[23%]'>
                     <p className='max-w-[222px] capitalize text-[22px] font-Albert font-normal text-right leading-[26px] mr-1'>promotes healthy sleep and recovery</p>
                     <div className='w-18.75 h-18.75 rounded-full bg-[#E0B121] flex justify-center items-center  mr-2'>
                         <img src="/icons/sleep.png" alt="" />
@@ -150,27 +150,27 @@ const Benefits = () => {
                 </div>
             </div>
             <div className='flex items-center justify-center h-full w-full max-w-[26%]'>
-                <div className='relative w-full h-full flex justify-center items-center canrotate'>
+                <div className='relative w-full max-h-[90%] flex justify-center items-center canrotate'>
                     <img src="/images/benefitsmango.png" alt="" className=' w-[38%] h-[70%]'/>
 
                     <img src="/images/Subtract02.png" alt="" className=' absolute z-1 w-[100%] h-[92%] watercan'/>
                 </div>
             </div>
             <div className='flex flex-col justify-center items-start gap-y-20 h-full max-h-max w-full max-w-[37%] z-1 mt-[6%] rightcards'>       
-                <div className='w-[378px] h-[89px]  w-[397px] h-[89px] rounded-[88px] bg-gradient-to-b from-[#FBFBFB] to-[#FAF1D4] flex justify-start items-center px shadow-xl gap-x-[11px] -ml-[14%]'>
+                <div className='benefits-desc w-[378px] h-[89px]  w-[397px] h-[89px] rounded-[88px] bg-gradient-to-b from-[#FBFBFB] to-[#FAF1D4] flex justify-start items-center px shadow-xl gap-x-[11px] -ml-[14%]'>
                     <div className='w-18.75 h-18.75 rounded-full bg-[#E0B121] flex justify-center items-center ml-2'>
                         <img src="/icons/gut.png" alt="" />
                     </div>
                     <p className='max-w-[218px] capitalize text-[22px] font-Albert font-normal text-left leading-[26px] ml-1'>Supports digestion and gut wellnes</p>
                 </div>
-                <div className='w-[378px] h-[89px]  w-[397px] h-[89px] rounded-[88px] bg-gradient-to-b from-[#FBFBFB] to-[#FAF1D4] flex justify-start items-center px shadow-xl gap-x-[11px] -ml-[1%]'>
-                    <div className='w-18.75 h-18.75 rounded-full bg-[#E0B121] flex justify-center items-center ml-2'>
+                <div className='benefits-desc w-[378px] h-[89px]  w-[397px] h-[89px] rounded-[88px] bg-gradient-to-b from-[#FBFBFB] to-[#FAF1D4] flex justify-start items-center px shadow-xl gap-x-[11px] -ml-[1%]'>
+                    <div className='benefits-desc-img w-18.75 h-18.75 rounded-full bg-[#E0B121] flex justify-center items-center ml-2'>
                         <img src="/icons/almond.png" alt="" />
                     </div>
                     <p className='max-w-[287px] capitalize text-[22px] font-Albert font-normal text-left leading-[26px] ml-1'>Helps replenish essential magnesium levels</p>
                 </div>
-                <div className='w-[378px] h-[89px]  w-[397px] h-[89px] rounded-[88px] bg-gradient-to-b from-[#FBFBFB] to-[#FAF1D4] flex justify-start items-center px shadow-xl gap-x-[11px] ml-[10%]'>
-                    <div className='w-18.75 h-18.75 rounded-full bg-[#E0B121] flex justify-center items-center ml-2'>
+                <div className='benefits-desc w-[378px] h-[89px]  w-[397px] h-[89px] rounded-[88px] bg-gradient-to-b from-[#FBFBFB] to-[#FAF1D4] flex justify-start items-center px shadow-xl gap-x-[11px] ml-[10%]'>
+                    <div className='benefits-desc-img w-18.75 h-18.75 rounded-full bg-[#E0B121] flex justify-center items-center ml-2'>
                         <img src="/icons/spa.png" alt="" />
                     </div>
                     <p className='max-w-[300px] capitalize text-[22px] font-Albert font-normal text-left leading-[26px] ml-1'>No sugar • No crash • Everyday wellness support</p>

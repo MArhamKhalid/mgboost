@@ -46,6 +46,11 @@ const Showcase = () => {
     useLayoutEffect(() => {
 
     const ctx = gsap.context(() => {
+
+        const mm = gsap.matchMedia();
+
+
+        mm.add("(min-width: 769px)", () => {
         gsap.set(".scene-1", {
             yPercent: 0,
         });
@@ -135,6 +140,9 @@ const Showcase = () => {
                 y: "100%",
             }
         );
+        // ScrollTrigger.create({
+        //     animation: 
+        // })
         
 
 
@@ -362,11 +370,12 @@ const Showcase = () => {
             "<"
         );
 
-
+    
         tl.to({}, { duration: 11});
+    });
 
-        ScrollTrigger.refresh();
-        ScrollTrigger.update();
+        // ScrollTrigger.refresh();
+        // ScrollTrigger.update();
   }, sectionRef);
 
   return () => ctx.revert();
@@ -374,8 +383,8 @@ const Showcase = () => {
     
 
     return (
-        <section ref={sectionRef} className="relative w-full h-[300vh] bg-white  ">
-            <div className="sticky top-0 w-full h-screen overflow-hidden">
+        <section ref={sectionRef} className="relative w-full h-[300vh] bg-white  all-scene">
+            <div className="sticky top-0 w-full h-screen overflow-hidden sub-scene">
                 
                 <div className="scene-1 w-full h-screen absolute top-0 left-0 z-10 flex justify-center items-center bg-white firstheaddev">
                     <div className=" w-full h-full text-center flex flex-col justify-center items-center capitalize font-Alan text-[#818181] text-[44px] font-light firsthead">
@@ -404,7 +413,7 @@ const Showcase = () => {
                             </div>
                         </div>
                         <div className="middle-can w-144.5 h-230 bg-[#EEAF09] relative flex flex-col justify-start items-center overflow-hidden text-black rounded-[16px] z-10">
-                            <div className="pt-10 w-full max-w-[520px] Cantext  [clip-path:inset(0_0_80%_0)]">
+                            <div className="pt-10 w-full max-w-[520px] Cantext  ">
                                 <h2 className="text-[#FFFCD9] text-center text-[48px] font-Albert font-bold capitalize leading-[40px]">Thousands are making
                                     <span className="flex inline-block pt-3 pb-6 px-4 bg-[#045C00] rounded-xl -rotate-3 text-white leading-[30px]">magnesium</span> part of their daily ritual.</h2>
                             </div>
@@ -420,7 +429,7 @@ const Showcase = () => {
                             </div>
                             <div className="w-full h-142 rounded-t-full bg-[#FFF4D7] absolute -bottom-70">
                             </div>
-                            <button className="w-[158px] h-[42px] flex items-center cursor-pointer z-10 capitalize underline gap-x-4 absolute bottom-4">
+                            <button className="btn-secondary w-[158px] h-[42px] flex items-center cursor-pointer z-10 capitalize underline gap-x-4 absolute bottom-4">
                                 <p className="text-[20px] font-Albert">shop now </p>
                                 <span className="w-[42px] h-[42px] bg-black rounded-full flex justify-center items-center">
                                     <img src="/icons/Arrow-orange.svg" alt="" className='px-2 py-3' />
@@ -446,11 +455,11 @@ const Showcase = () => {
                     </div>
                 </div>
                 <div className="scene-3 absolute top-0 left-0 z-30 w-full h-screen flex flex-col gap-y-0 justify-start bg-white">
-                    <div className="w-full flex justify-center  px-25 pt-10 gap-x-[32px] text-black">
-                        <div className="w-135 h-171 rounded-[20px] bg-gradient-to-b from-[#FFEFC0] to-[#F4B08C] relative">
+                    <div className="w-full flex justify-center px-25 pt-10 gap-x-[32px] text-black sub-scene-3">
+                        <div className="w-135 h-171 rounded-[20px] bg-gradient-to-b from-[#FFEFC0] to-[#F4B08C] relative can-holding">
                             <img src="/images/can-holding-woman.png" alt="" className="w-full absolute bottom-0" />
                         </div>
-                        <div className="w-294 h-171 rounded-[20px] bg-gradient-to-t from-[#FAF9BA] to-[#C3F8D8] relative sub-scene-3">
+                        <div className="w-294 h-171 rounded-[20px] bg-gradient-to-t from-[#FAF9BA] to-[#C3F8D8] relative Lemon-scene">
                             <div className="w-full absolute bottom-0 ice">
                                 <img src="/images/ice.png" alt="" className="object-cover w-full rounded-b-[20px]" />
                             </div>
@@ -463,14 +472,14 @@ const Showcase = () => {
                             <div className="w-full absolute left-0 top-0 mg-banner frame">
                                 <img src="/images/mg-frame.png" alt="" className="" />
                             </div>
-                            <div className="w-full flex justify-end">
+                            <div className="w-full flex justify-end all-lemon">
                                 <div className="w-140 h-full flex flex-col items-center text-center capitalize mt-[117px] lemon-text">
                                     <div className="leading-[50px] lemon-sub-text">
                                         <h2 className="font-Alan text-[82px] font-bold text-[#3F6C48] lemon-sub-text-1">find your</h2>
                                         <h2 className="mgspan py-6 px-2 rounded-2xl bg-[#3F6C48] text-white text-[82px] font-bold -rotate-3">daily boost</h2>
                                     </div>
                                     <p className="text-[28px] font-Albert font-normal text-[#3F6C48] leading-[28px] mt-[37px] lemon-sub-text-2">Choose the perfect option<br />for your lifestyle.</p>
-                                    <button className="w-[158px] h-[42px] flex items-center cursor-pointer z-10 capitalize underline gap-x-4 mt-[29px]">
+                                    <button className="btn-secondary w-[158px] h-[42px] flex items-center cursor-pointer z-10 capitalize underline gap-x-4 mt-[29px]">
                                         <p className="text-[20px] font-Albert">shop now </p>
                                         <span className="w-[42px] h-[42px] bg-black rounded-full flex justify-center items-center">
                                             <img src="/icons/Arrow-orange.svg" alt="" className='px-2 py-3' />
@@ -480,11 +489,11 @@ const Showcase = () => {
                             </div>
                         </div>
                     </div>
-                    <div className=" h-[25%] bg-[#FFF7DF] flex justify-start -mt-20 text-black overflow-hidden">
+                    <div className=" h-[25%] bg-[#FFF7DF] flex justify-start -mt-20 text-black overflow-hidden all-slider">
                         <div className="text-slider flex w-max items-end gap-x-20">
 
                             {textslider.map((text, i) => (
-                                <div className="flex items-end mb-5 shrink-0" key={i} >
+                                <div className="flex items-end mb-5 shrink-0 text-sub-slider" key={i} >
                                     <p className="flex items-center capitalize text-[40px] font-Albert font-light leading-[26px] text-nowrap gap-x-10">
                                         {text.text}
                                         <img  src="/images/flower.png" alt=""  className="shrink-0" />

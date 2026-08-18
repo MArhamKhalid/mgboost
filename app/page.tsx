@@ -10,7 +10,7 @@ import EndDetails from "@/Components/EndDetails";
 export default function Home() {
   return (
   <>
-  <Hero/>
+        <Hero/>
         <Showcase/>
         <Blogs/>
         <Benefits/>

@@ -95,42 +95,42 @@ const Story = () => {
             </div>
             <div className='w-full h-screen flex justify-between items-center pr-[44px] absolute z-10 top-0 firstscene'>
                 <div className='flex items-center -mt-[70px]'>
-                    <img src="/images/snapshot1.png" alt="" />
+                    <img src="/images/snapshot1.png" alt="" className='story-image-1 object-contain' />
                 </div>
                 <div className='flex flex-col gap-y-[70px]'>
-                    <img src="/images/snapshot2.png" alt="" className='w-[378px] h-[257px]'/>
-                    <img src="/images/snapshot3.png" alt="" className='w-[284px] h-[397px] '/>
+                    <img src="/images/snapshot2.png" alt="" className='w-[378px] h-[257px] story-image-2 object-contain'/>
+                    <img src="/images/snapshot3.png" alt="" className='w-[284px] h-[397px] story-image-3 object-contain'/>
                 </div>
                 <div className='flex flex-col gap-y-[129px] mt-[86px]'>
-                    <img src="/images/snapshot4.png" alt="" className='w-w-67.25 h-86.75'/>
+                    <img src="/images/snapshot4.png" alt="" className='w-67.25 h-86.75 story-image-4 object-contain'/>
                 </div>
                 <div className='flex flex-col justify-end gap-y-[73px]'>
-                    <img src="/images/snapshot5.png" alt="" className='w-[238px] h-[280px] ml-[30px] mt-[127px]'/>
-                    <img src="/images/snapshot6.png" alt="" className='w-[333.36px] h-[312px]'/>
+                    <img src="/images/snapshot5.png" alt="" className='w-[238px] h-[280px] ml-[30px] mt-[127px] story-image-5 object-contain'/>
+                    <img src="/images/snapshot6.png" alt="" className='w-[333.36px] h-[312px] story-image-6 object-contain'/>
                 </div>
                 <div className='flex flex-col items-end gap-y-[71px] '>
-                    <img src="/images/snapshot7.png" alt="" className='w-[312px] h-[252px] mr-[50px]'/>
-                    <img src="/images/snapshot8.png" alt="" className='w-[288px] h-[337px] '/>
+                    <img src="/images/snapshot7.png" alt="" className='w-[312px] h-[252px] mr-[50px] story-image-7 object-contain'/>
+                    <img src="/images/snapshot8.png" alt="" className='w-[288px] h-[337px] story-image-8 object-contain'/>
                 </div>
             </div>
             <div className='w-full h-screen flex justify-between items-center pr-[44px] absolute z-20 top-0 secondscene'>
                 <div className='flex items-center -mt-[70px]'>
-                    <img src="/images/snapshot1.png" alt="" />
+                    <img src="/images/snapshot1.png" alt="" className='story-image-1 object-contain' />
                 </div>
                 <div className='flex flex-col gap-y-[70px]'>
-                    <img src="/images/snapshot2.png" alt="" className='w-[378px] h-[257px]'/>
-                    <img src="/images/snapshot3.png" alt="" className='w-[284px] h-[397px] '/>
+                    <img src="/images/snapshot2.png" alt="" className='w-[378px] h-[257px] story-image-2 object-contain'/>
+                    <img src="/images/snapshot3.png" alt="" className='w-[284px] h-[397px] story-image-3 object-contain'/>
                 </div>
                 <div className='flex flex-col gap-y-[129px] mt-[86px]'>
-                    <img src="/images/snapshot4.png" alt="" className='w-w-67.25 h-86.75'/>
+                    <img src="/images/snapshot4.png" alt="" className='w-67.25 h-86.75 story-image-4 object-contain'/>
                 </div>
                 <div className='flex flex-col justify-end gap-y-[73px]'>
-                    <img src="/images/snapshot5.png" alt="" className='w-[238px] h-[280px] ml-[30px] mt-[127px]'/>
-                    <img src="/images/snapshot6.png" alt="" className='w-[333.36px] h-[312px]'/>
+                    <img src="/images/snapshot5.png" alt="" className='w-[238px] h-[280px] ml-[30px] mt-[127px] story-image-5 object-contain'/>
+                    <img src="/images/snapshot6.png" alt="" className='w-[333.36px] h-[312px] story-image-6 object-contain'/>
                 </div>
                 <div className='flex flex-col items-end gap-y-[71px] '>
-                    <img src="/images/snapshot7.png" alt="" className='w-[312px] h-[252px] mr-[50px]'/>
-                    <img src="/images/snapshot8.png" alt="" className='w-[288px] h-[337px] '/>
+                    <img src="/images/snapshot7.png" alt="" className='w-[312px] h-[252px] mr-[50px] story-image-7 object-contain'/>
+                    <img src="/images/snapshot8.png" alt="" className='w-[288px] h-[337px] story-image-8 object-contain'/>
                 </div>
             </div>
             <div className='w-[241px] h-[74px]  flex flex-col items-center absolute bottom-10 z-20'>

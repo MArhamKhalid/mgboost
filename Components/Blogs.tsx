@@ -48,7 +48,7 @@ const slidtext = [
                 end: "bottom bottom",
                 toggleActions: "play none none reverse",
                 // scrub: true,
-                // markers: true,
+                markers: true,
             }
         });
 
@@ -102,10 +102,10 @@ const slidtext = [
   return () => ctx.revert();
 }, []);
   return (
-    <section ref={BlogsRef} className='w-full h-[110vh] bg-white relative overflow-hidden'>
-        <div className='w-full h-full px-25 flex flex-col justify-center text-black pt-10   '>
-            <div className='flex gap-x-6 w-full h-full max-h-200 pt-10'>
-                <div className='w-199.5 h-full flex justify-center items-center '>
+    <section ref={BlogsRef} className='w-full h-[110vh] bg-white relative overflow-hidden all-Blogs'>
+        <div className='w-full h-full px-25 flex flex-col justify-center text-black pt-10 Blogs'>
+            <div className='flex gap-x-6 w-full h-full max-h-200 pt-10 sub-Blogs-01'>
+                <div className='w-199.5 h-full flex justify-center items-center Blogs-img'>
                     <img src="/images/can-holding-woman-about.png" alt="/" className=' object-cover blog-image flex items-center' />
                 </div>
                 <div className='w-220 h-full flex flex-col justify-center gap-y-10 blogs-text'>
@@ -120,7 +120,7 @@ const slidtext = [
                         <p className='font-Albert font-normal text-[#141414] text-[24px]'>Over time, I began learning how closely digestion, stress, sleep, hydration, mineral intake, and mental well-being are connected. The more I researched, the more I realized that many people are experiencing the same challenges—feeling tired, stressed, bloated, restless, and disconnected from their bodies while trying to keep up with busy modern lives.</p>
                     </div>
                     <div>
-                        <button className='bg-[#DAA404] text-white px-1.5 py-1.5 w-[227px] h-[52px] capitalize font-Alan flex justify-center items-center rounded-full gap-x-[20px] cursor-pointer'>
+                        <button className='blogs-btn bg-[#DAA404] text-white px-1.5 py-1.5 w-[227px] h-[52px] capitalize font-Alan flex justify-center items-center rounded-full gap-x-[20px] cursor-pointer'>
                             <p className='pl-3 text-[20px]'>read full story</p>
                             <span className='bg-white flex justify-center items-center rounded-full w-[42px] h-[42px]'>
                                 <img src="/icons/Arrow-orange.svg" alt="" className='px-2 py-3'/>
@@ -129,8 +129,8 @@ const slidtext = [
                     </div>
                 </div>
             </div>
-            <div className="w-full h-100 flex text-black blog-slider-text">
-                <div className="h-full flex justify-start items-center" >
+            <div className="w-full h-100 flex text-black sub-Blogs-02">
+                <div className="h-full flex justify-start items-center blog-slider-text" >
                 {slidtext.map((text, i) => (
                     <span className="flex items-center justify-evenly capitalize gap-x-0 text-nowrap text-slider" key={i}>
                         <p className='text-[66px] font-Albert font-bold text-[#E0B121] leading-[26px] ml-30'>{text.text}</p>
