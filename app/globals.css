@@ -212,7 +212,9 @@ body {
     inset 0 150px 30px -0px rgba(247, 245, 245),
     inset 0 -150px 30px -0px rgb(247, 245, 245);
 }
-
+.mobile-story-grid{
+  display: none;
+}
 @media (max-width: 1600px) {
 
   .image-one{
@@ -510,7 +512,7 @@ body {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 850px) {
   /* header{
     position: relative;
   } */
@@ -544,17 +546,46 @@ body {
     display: flex;
   }
   .header-mobile{
-    position: absolute;
+    /* background-color: #FFF2CB; */
+    /* max-height: auto; */
+    width: 40vh;
+    position: fixed;
+    height: 100vh;
+    flex-direction: column;
+    display: flex;
+    row-gap: 25%;
+    padding: 5% 20px ;
+    left: 0;
+    transform: translateX(-100%);
+    top: 0;
+    z-index: 10;
+  }
+  .header-m-logo{
+    height: max-content;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .tm-logo{
+    height: 60px;
+    width: 150px;
+  }
+  .header-mobile ul{
+    width: 100%;
     display: flex;
     flex-direction: column;
-    left: -100%;
-    top: 0;
+    align-items: center;
+    row-gap: 20px;
+    /* margin-top: 25%; */
   }
   .hero{
+    width: 100%;
     height: 130vh;
   }
   .sectionChange{
     /* height: 100%; */
+    width: 100%;
     flex-direction: column;
     justify-content: end;
   }
@@ -565,10 +596,22 @@ body {
     height: 66%;
   }
   .sidetext{
+    padding: 0 16%;
     /* max-height: 55%; */
-    width: 100%;
+    width: max-content;
+    /* max-width: max-content; */
   }
-
+  .all-hero-head{
+    max-width: max-content;
+  }
+  .hero-sub-head{
+    font-size: 26px;
+    max-width: max-content;
+  }
+  .hero-head{
+    font-size: 66px;
+    max-width: max-content;
+  }
   .imageChange{
     position: relative;
     display: flex;
@@ -594,6 +637,7 @@ body {
   .scene-1{
     position: relative;
     height: 40vh;
+    z-index: 0;
   }
   .firsthead{
     font-size: 20px;
@@ -601,6 +645,7 @@ body {
   .scene-2{
     position: relative;
     height: 300vh;
+    z-index: 0;
   }
   .sub-scene-2{
     justify-content: start;
@@ -612,7 +657,8 @@ body {
   }
   .scene-3{
     position: relative;
-    height: 250vh;
+    height: 180vh;
+    z-index: 0;
   }
   .sub-scene-3{
     justify-content: start;
@@ -653,7 +699,7 @@ body {
     rotate: 12deg;
   }
   .all-slider{
-    height: 10%;
+    height: 15%;
   }
   .text-slider{
     gap: 20px;
@@ -667,7 +713,7 @@ body {
   }
   .Blogs{
     height: 100%;
-    padding: 0 30px;
+    padding: 30px 30px;
     justify-content: start;
   }
   .sub-Blogs-01{
@@ -681,12 +727,14 @@ body {
   }
   .Blogs-img{
     width: 100%;
+    height: auto;
+    padding: 0 30px;
     display: flex;
     /* justify-content: center; */
     align-items: start;
   }
   .Blogs-img img{
-    width: 80%;
+    width: 100%;
     height: 100%;
   }
   .blogs-text{
@@ -736,5 +784,179 @@ body {
   }
   .detail-sub-Text-2 p{
     font-size: 20px;
+  }
+  .Benefits{
+    max-height: max-content;
+    margin: 0;
+    padding: 0 30px;
+    /* row-gap: 10%; */
+    background-color: #e0b121;
+  }
+  .benefits-banner{
+    display: none;
+  }
+  .benefits-sub-head{
+    margin: 16% 0 0 0;
+    padding: 0 10px;
+  }
+  .benefitshead h2{
+    font-size: 66px;
+  }
+  .benefitshead p{
+    font-size: 18px;
+    text-wrap-mode: wrap;
+    /* word-break: normal; */
+  }
+  .Benefits-Cards{
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    row-gap: 30px;
+    padding: 8% 0;
+  }
+  .leftcards{
+    margin: 0px;
+    align-items: center;
+    row-gap: 30px;
+  }
+  .all-canrotate{
+    display: none;
+  }
+  .rightcards{
+    margin: 0px;
+    align-items: center;
+    row-gap: 30px;
+  }
+  .benefits-desc{
+    margin: 0;
+  }
+  .left-cards-01, .left-cards-02, .left-cards-03{
+    flex-direction: row-reverse;
+    width: 400px;
+    justify-content: space-between;
+    gap: 30px;
+    box-shadow: none;
+  }
+  .left-cards-01 p, .left-cards-02 p, .left-cards-03 p{
+    max-width: 70%;
+    margin: 0;
+    text-align: left;
+  }
+  .left-cards-img-01, .left-cards-img-02, .left-cards-img-03{
+    margin: 0 0 0 6px;
+  }
+  .right-cards-01, .right-cards-02, .right-cards-03{
+    width: 400px;
+    justify-content: space-between;
+    gap: 30px;
+    box-shadow: none;
+  }
+  .right-cards-01 p{
+    max-width: 75%;
+    margin: 0;
+  }
+  .right-cards-02 p, .right-cards-03 p{
+    max-width: 70%;
+    margin: 0;
+  }
+  .benefits-desc-img{
+    width: 75px;
+    height: 75px;
+  }
+  .story-section{
+    height: auto;
+    min-height: 250vh;
+  }
+  .sub-story-section{
+    height: auto;
+  }
+  .storyhead{
+    position: relative;
+    width: 100%;
+    max-height: 40vh;
+    padding: 40px 30px;
+  }
+  .storyhead h2{
+    font-size: 66px;
+    line-height: 58px;
+    text-align: left;
+  }
+  .firstscene, .secondscene{
+    display: none;
+  }
+  /* .mobile-story-grid{
+    display: flex;
+  } */
+  .mobile-story-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    width: 100%;
+    padding:40px 40px;
+  }
+  .insta-icon{
+    bottom: 0px;
+  }
+  .EndDetails{
+    padding: 80px 30px;
+  }
+  .sub-EndDetails{
+    width: 100%;
+  }
+  .endblur1{
+    font-size: 66px;
+  }
+  .sub-EndDetails .endblur2, .endblur3{
+    font-size: 24px;
+    text-wrap: wrap;
+    line-height: 30px;
+  }
+  .footer{
+    height: 100vh;
+  }
+  .sub-footer{
+    flex-direction: column;
+    row-gap: 40px;
+  }
+  .subscribe-footer{
+    width: 100%;
+    max-width: 100%;
+    justify-content: center;
+  }
+  .links-footer{
+    justify-content: start;
+    width: 100%;
+  }
+  .footer-social{
+    width: 100%;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+  .footer-social div{
+    width: 30%;
+  }
+  .f-social-01{
+    justify-content: start;
+  }
+  .f-social-02{
+    justify-content: center;
+  }
+  .f-social-03{
+    justify-content: end;
+  }
+  .mg-text{
+    bottom: -18%;
+  }
+  .mg-text h2{
+    font-size: 120px;
+  }
+  .footer-privacy{
+    background: none;
+    box-shadow: none;
+    bottom: 25%;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 10px;
+    row-gap: 10px;
   }
 }

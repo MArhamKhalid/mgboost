@@ -12,8 +12,12 @@ const EndDetails = () => {
     const EndDetailsRef = useRef(null);
     useLayoutEffect(() => {
 
-    const ctx = gsap.context(() => 
-    {
+    const ctx = gsap.context(() => {
+        
+        const mm = gsap.matchMedia();
+
+
+        mm.add("(min-width: 769px)", () => {
       gsap.set(
         ".endblur1",
         {
@@ -122,6 +126,7 @@ const EndDetails = () => {
           ease: "power1.inOut",
         }
       );
+    });
 
 
 
@@ -130,8 +135,8 @@ const EndDetails = () => {
   return () => ctx.revert();
 }, []);
   return (
-    <section className=' bg-white py-[155px] flex justify-center' ref={EndDetailsRef}>
-      <div className="w-full max-w-[980px] flex flex-col justify-center items-center ">
+    <section className=' bg-white py-[155px] flex justify-center EndDetails' ref={EndDetailsRef}>
+      <div className="w-full max-w-[980px] flex flex-col justify-center items-center sub-EndDetails">
           <h2 className='text-[#E0B121] font-Alan font-bold text-[82px] capitalize endblur1'>unique flavor</h2>
           <p className="capitalize font-Alan text-center text-[#818181] text-[36px] mt-[37px] font-light leading-[50px] endblur2 text-nowrap"><span className=' text-[#E0B121] font-bold'>Thousands are making magnesium</span> part of their daily ritual.</p>
           <p className="capitalize font-Alan text-center text-[#818181] text-[36px] mt-[10px] font-light leading-[50px] endblur3 text-nowrap">Be among <span className=' text-[#E0B121] font-bold'>the first to experience MG BOOST.</span></p>

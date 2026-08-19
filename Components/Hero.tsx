@@ -81,7 +81,7 @@ const Hero = () => {
           </div>
           
 
-          <div className="capitalize font-Alan text-[#161616] leading-[78px]">
+          <div className="capitalize font-Alan text-[#161616] leading-[78px] all-hero-head">
 
             <h2 className="text-[50px] leading-[55px] font-bold font-Albert hero-sub-head">
               the smarter way to

@@ -11,8 +11,10 @@ const Footer = () => {
     const FooterRef = useRef(null);
     useLayoutEffect(() => {
 
-    const ctx = gsap.context(() => 
-    {
+    const ctx = gsap.context(() =>  {
+    // ////////////////////////////////////////////////////////////////for DESKTOP///////////////////////////////////////////////
+        const mm = gsap.matchMedia();
+        mm.add("(min-width: 769px)", () => {
 
         gsap.set(
             ".mg-text",
@@ -44,14 +46,50 @@ const Footer = () => {
             }
         );
 
+        });
+    // ////////////////////////////////////////////////////////////////for TABLET///////////////////////////////////////////////
+        const mmm = gsap.matchMedia();
+        mmm.add("(max-width: 768px)", () => {
+
+        gsap.set(
+            ".mg-text",
+            {
+                y: "80%"
+            }
+        );
+
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger:FooterRef.current,
+                start:"top top",
+                end: "bottom bottom",
+                toggleActions: "play none none reverse",
+                // scrub: true,
+                // markers: true,
+            }
+        });
+
+
+        tl.to(
+            ".mg-text",
+            {
+                y: "0%",
+                duration:1,
+                ease: "power2.inOut",
+            }
+        );
+
+
+        });
+
   }, FooterRef);
 
   return () => ctx.revert();
 }, []);
   return (
-    <footer className='w-full h-[749px] bg-linear-to-b from-[#FFFAED] to-[#FFF1C8] relative overflow-hidden ' ref={FooterRef}>
-        <div className='pt-[138px] px-25 flex justify-between pb-[64px]'>
-            <div className='w-full max-w-[500px] text-black h-full '>
+    <footer className='w-full h-[749px] bg-linear-to-b from-[#FFFAED] to-[#FFF1C8] relative overflow-hidden footer' ref={FooterRef}>
+        <div className='pt-[138px] px-25 flex justify-between pb-[64px] sub-footer'>
+            <div className='w-full max-w-[500px] text-black h-full subscribe-footer'>
                 <h2 className='font-Albert font-bold text-[26px]'>Sign up to get 10% off your first order!</h2>
                 <div className='flex flex-col gap-y-2 mt-[47px]'>
                     <div className='border-b flex w-[480px]'>
@@ -68,7 +106,7 @@ const Footer = () => {
                     <img src="/images/airgoods.png" alt="" />
                 </div>
             </div>
-            <div className='flex justify-center text-black w-full max-w-[500px] font-Albert font-medium text-[20px] items-start gap-x-[43px]'>
+            <div className='flex justify-center text-black w-full max-w-[500px] font-Albert font-medium text-[20px] items-start gap-x-[43px] links-footer'>
                 <ul className='flex flex-col gap-y-2'>
                     <a href="/home">Home</a>
                     <a href="/Shop">Shop</a>
@@ -80,14 +118,14 @@ const Footer = () => {
                     <a href="/Contact">Contact</a>
                 </ul>
             </div>
-            <div className='w-[300px] flex flex-col items-end  text-[#141414]'>
-                <div className='font-Albert font-medium text-[20px] flex items-center gap-x-2 '><img src="/images/insta.png" alt="/" /><a href="/" className='underline'>Instagram</a></div>
-                <div className='font-Albert font-medium text-[20px] flex items-center gap-x-2 '><img src="/images/facebook.png" alt="/" /><a href="/" className='underline'>Facebook</a></div>
-                <div className='font-Albert font-medium text-[20px] flex items-center gap-x-2 '><img src="/images/tiktok.png" alt="/" /><a href="/" className='underline'>TikTok</a></div>
+            <div className='w-[300px] flex flex-col items-end  text-[#141414] footer-social'>
+                <div className='font-Albert font-medium text-[20px] flex items-center gap-x-2 f-social-01'><img src="/images/insta.png" alt="/" /><a href="/" className='underline'>Instagram</a></div>
+                <div className='font-Albert font-medium text-[20px] flex items-center gap-x-2 f-social-02'><img src="/images/facebook.png" alt="/" /><a href="/" className='underline'>Facebook</a></div>
+                <div className='font-Albert font-medium text-[20px] flex items-center gap-x-2 f-social-03'><img src="/images/tiktok.png" alt="/" /><a href="/" className='underline'>TikTok</a></div>
             </div>
             
         </div>
-        <div className='w-full h-full max-h-[50px] text-black flex justify-between items-start absolute bottom-0 px-25 z-1 bg-[#FFF2CB] shadow-[0_-22px_24px_-1px_#FFF2CB]'>
+        <div className='footer-privacy w-full h-full max-h-[50px] text-black flex justify-between items-start absolute bottom-0 px-25 z-1 bg-[#FFF2CB] shadow-[0_-22px_24px_-1px_#FFF2CB]'>
             <div className='flex justify-start items-center'>
                 <p>© 2026 - Copyright MG BOOST</p>
             </div>

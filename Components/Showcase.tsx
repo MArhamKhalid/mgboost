@@ -47,10 +47,11 @@ const Showcase = () => {
 
     const ctx = gsap.context(() => {
 
+// ////////////////////////////////////////////For DESKTOP/////////////////////////////////
         const mm = gsap.matchMedia();
-
-
         mm.add("(min-width: 769px)", () => {
+
+
         gsap.set(".scene-1", {
             yPercent: 0,
         });
@@ -373,6 +374,274 @@ const Showcase = () => {
     
         tl.to({}, { duration: 11});
     });
+
+    // ////////////////////////////////////////////////////////////////for TABLET///////////////////////////////////////////////
+        const mmm = gsap.matchMedia();
+        mmm.add("(max-width: 768px)", () => {
+        gsap.set(
+            ".firstheaddev",
+            {
+                clipPath: "inset(0 0 55% 0)",
+            });
+        gsap.set(
+            ".firsthead",
+            {
+                fontSize: "20px",
+            });
+
+        gsap.set(
+            ".CanLeft",
+            {
+                opacity: 0,
+                x: -100,
+            }
+        );
+        gsap.set(
+            ".Can-animate",
+            {
+                clipPath: "inset(0 0 100% 0)",
+            }
+        );
+
+        gsap.set(
+            ".middle-can",
+            {
+                opacity: 0,
+                x: -100,
+
+            }
+        )
+        gsap.set(
+            ".behindCantext",
+            {
+              opacity: 0,
+              y: 80,
+            }
+        );
+
+        gsap.set(
+            ".Cantext",
+            {
+                clipPath: "inset(100% 0 0 0)",
+            }
+        );
+
+        gsap.set(
+            ".MangoCan",
+            {
+                left: "35.5%",
+                rotate: 0,
+            }
+        );
+
+        gsap.set(
+            ".LemonCan",
+            {
+                right: "35.5%",
+                rotate: 0,
+            }
+        );
+        gsap.set(
+            ".CanRight",
+            {
+                opacity: 0,
+                x: -100,
+            }
+        );
+
+        gsap.set(
+            ".Can-animate",
+            {
+                clipPath: "inset(0 0 100% 0)",
+            }
+        );
+
+        gsap.set(
+            ".mg-banner",
+            {
+                clipPath:"inset(0 100% 0 -5%)",
+            }
+        );
+        gsap.set(
+            ".mgspan",
+            {
+                // opacity: 0,
+                clipPath: "inset(0 0 100% 0)",
+                y: "100%",
+            }
+        );
+
+
+
+        const split = new SplitText(
+            ".firsthead" ,
+            {
+                type: "lines",
+            }
+        );
+        
+        const lines = split.lines;
+        const bottomThree = lines.slice(-3);
+        
+        const tl = gsap.timeline({
+            
+            scrollTrigger: {
+                trigger:sectionRef.current,
+                start: "top top ",
+                end: "bottom bottom",
+                toggleActions:"play none none reverse",
+                // scrub: true,
+                // markers: true,
+            }
+        });
+
+        tl.to(
+            ".firsthead",
+            {   
+
+                fontSize: "30px",
+                duration: 0.6,
+                ease: "power1.inOut",
+            }
+        );
+        tl.to(
+            ".firstheaddev",
+            {
+                clipPath: "inset(0 0 50% 0)",
+                duration: 0.8,
+                ease: "power1.inOut",
+            },
+            "<"
+        );
+        tl.to(
+            ".firstheaddev",
+            {
+                clipPath: "inset(0 0 0% 0)",
+                duration: 0.6,
+                ease: "power1.inOut",
+            }
+        );
+
+        tl.fromTo(
+            bottomThree ,
+            {
+                filter: "blur(15px)"
+            },
+            {
+                filter: "blur(0px)",
+                duration: 0.8,
+            },
+            
+            "<"
+        );
+
+        tl.to(
+            ".CanLeft",
+            {
+                opacity: 1,
+                x: -0,
+                duration: 0.7,
+                ease: "power1.inOut",
+
+            }
+        );
+
+        tl.to(
+                ".Can-animate",
+            {
+                clipPath: "inset(0 0 0% 0)",
+                duration: 0.7,
+                ease:"power1.inOut",
+            },
+        );
+
+        tl.to({}, { duration: 1});
+
+        tl.to(
+            ".middle-can",
+            {
+                opacity: 1,
+                x: -0,
+                duration: 0.7,
+                ease: "power1.inOut",
+
+            }
+        )
+
+        tl.to(
+        ".behindCantext",
+        {
+            opacity: 1,
+            y: 0,
+            duration: 1,
+            ease: "power1.inOut",
+        }
+        );
+
+        tl.to(
+            ".Cantext",
+        {
+            clipPath: "inset(0% 0 0  0)",
+            duration: 1,
+            ease: "power2.inOut",
+
+        });
+
+        tl.to(
+        ".MangoCan",
+        {
+            left: "20%",
+            rotate: -8,
+            duration: 1,
+            ease: "power2.inOut" ,
+        },
+        "<"
+        );
+
+        tl.to(
+        ".LemonCan",
+        {
+            right: "20%",
+            rotate: 8,
+            duration: 1,
+            ease: "power2.inOut",
+        },
+        "<"
+        );
+
+        tl.to(
+            ".CanRight",
+            {
+                opacity: 1,
+                x: -0,
+                duration: 0.7,
+                ease: "power1.inOut",
+            }
+        );
+        tl.to({}, { duration: 0.2});
+        
+        tl.to(
+            ".mg-banner",
+            {
+                clipPath:"inset(0 0% 0 -5%)",
+                duration: 1,
+                ease: "power1.inOut",
+            }
+        );
+        tl.to(
+            ".mgspan",
+            {
+                clipPath: "inset(0 0 0% 0)",
+                y: "0%",
+                duration: 1,
+                ease: "power1.inOut"
+            },
+            "<"
+        );
+
+
+
+        });
 
         // ScrollTrigger.refresh();
         // ScrollTrigger.update();

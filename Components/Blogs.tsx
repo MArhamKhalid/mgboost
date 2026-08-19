@@ -22,8 +22,11 @@ const slidtext = [
     const BlogsRef = useRef(null);
     useLayoutEffect(() => {
 
-    const ctx = gsap.context(() => 
-    {
+    const ctx = gsap.context(() => {
+        const mm = gsap.matchMedia();
+
+
+        mm.add("(min-width: 769px)", () => {
 
         gsap.set(
             ".blogs-text",
@@ -96,6 +99,81 @@ const slidtext = [
             },
             "<"
         );
+    });
+        const mmm = gsap.matchMedia();
+
+
+        mmm.add("(max-width: 768px)", () => {
+
+        gsap.set(
+            ".blogs-text",
+            {
+                clipPath: "inset(0 100% 0 0)"
+            }
+        );
+        gsap.set(
+            ".blog-image",
+            {
+                rotate: "-160deg",
+                width: "50%",
+                borderRadius: "100%",
+            }
+        );
+            const tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger:BlogsRef.current,
+                    start:"top top",
+                    end: "bottom bottom",
+                    toggleActions: "play none none none",
+                    // scrub: true,
+                    // markers: true,
+                }
+            });
+
+        tl.to(
+            ".blog-image",
+            {
+                rotate: "-90deg",
+                borderRadius: "100%",
+                duration: 0.2,
+                ease: "power1.inOut",
+            }
+        );
+
+
+        tl.to(
+            ".blog-image",
+            {
+                rotate: "-0deg",
+                // borderRadius: "100%",
+                duration: 1,
+                ease: "power1.inOut",
+            },
+            "<"
+        );
+
+        tl.to(
+            ".blog-image",
+            {
+                width: "100%",
+                rotate: "-0deg",
+                borderRadius: "5%",
+                duration: 1.5,
+                ease: "power2.inOut",
+            }
+        );
+
+        tl.to(
+            ".blogs-text",
+            {
+                clipPath: "inset(0 0% 0 0)",
+                duration: 1.3,
+                ease: "power1.inOut",
+            }
+        );
+
+
+        });
 
   }, BlogsRef);
 
