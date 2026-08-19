@@ -310,36 +310,36 @@ const Story = () => {
             </div>
             <div className="mobile-story-grid">
     
-                <div className="story-img m-img-1">
-                    <img src="/images/snapshot1.png" alt="" />
-                </div>
-
-                <div className="story-img m-img-2">
-                    <img src="/images/snapshot2.png" alt="" />
-                </div>
-
-                <div className="story-img  m-img-3">
-                    <img src="/images/snapshot3.png" alt="" />
-                </div>
-
-                <div className="story-img  m-img-4">
-                    <img src="/images/snapshot4.png" alt="" />
-                </div>
-
-                <div className="story-img  m-img-5">
-                    <img src="/images/snapshot5.png" alt="" />
-                </div>
-
-                <div className="story-img  m-img-6">
+                <div className="story-img m-img-7">
                     <img src="/images/snapshot6.png" alt="" />
                 </div>
 
-                <div className="story-img  m-img-7">
-                    <img src="/images/snapshot7.png" alt="" />
+                <div className="story-img m-img-5">
+                    <img src="/images/snapshot5.png" alt="" />
+                </div>
+
+                <div className="story-img  m-img-3">
+                    <img src="/images/snapshot8.png" alt="" />
                 </div>
 
                 <div className="story-img  m-img-8">
-                    <img src="/images/snapshot8.png" alt="" />
+                    <img src="/images/snapshot4.png" alt="" />
+                </div>
+
+                <div className="story-img  m-img-2">
+                    <img src="/images/snapshot7.png" alt="" />
+                </div>
+
+                <div className="story-img  m-img-6">
+                    <img src="/images/snapshot1.png" alt="" />
+                </div>
+
+                <div className="story-img  m-img-1">
+                    <img src="/images/snapshot2.png" alt="" />
+                </div>
+
+                <div className="story-img  m-img-4">
+                    <img src="/images/snapshot3.png" alt="" />
                 </div>
 
             </div>

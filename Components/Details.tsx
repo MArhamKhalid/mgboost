@@ -135,14 +135,14 @@ const Details = () => {
                     <h2 className='text-[#E0B121] font-Alan font-bold text-[87px] capitalize leading-18'>L-Threonate?</h2>
                 </div>
                 <div className='detail-sub-Text-2'>
-                    <p className='font-Albert font-normal text-[#141414] text-[22px]'>Magnesium L-Threonate is a unique form of magnesium known<br/>for its ability to support cognitive function and brain health. It<br/>may help with:</p>
+                    <p className='font-Albert font-normal text-[#141414] text-[22px]'>Magnesium L-Threonate is a unique form of magnesium known for its ability to support cognitive function and brain health. It may help with:</p>
                 </div>
                 {items.map((item) => (
                     <div className='leading-[18px] ml-10 detail-sub-Text-3' key={item.description} >
                         <li className='font-semibold font-Albert text-[24px] text-black'>{item.description}</li>
                     </div>
                 ))}
-                <div className='ml-14'>
+                <div className='ml-14 detai-btn'>
                     <button className='primary-btn '>
                         <p className='pl-8'>shop now</p>
                         <span className=''>

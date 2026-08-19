@@ -377,7 +377,7 @@ const Showcase = () => {
 
     // ////////////////////////////////////////////////////////////////for TABLET///////////////////////////////////////////////
         const mmm = gsap.matchMedia();
-        mmm.add("(max-width: 768px)", () => {
+        mmm.add("(min-width: 481px)", () => {
         gsap.set(
             ".firstheaddev",
             {
@@ -672,7 +672,7 @@ const Showcase = () => {
                             </div>
                             <div className="w-full h-68 flex flex-col justify-end items-center gap-y-4 leading-[18px] Can-animate">
                                 <h2 className="uppercase font-Albert font-bold text-[20px]">magnesium infused</h2>
-                                <p className="capitalize text-[28px] font-Albert">sparkling water mango flavor</p>
+                                <p className="capitalize text-[28px] font-Albert sub-Can-animate">sparkling water mango flavor</p>
                                 <button className='primary-btn mt-4'>
                                     <p className='pl-8'>shop now</p>
                                     <span className=''>
@@ -684,7 +684,7 @@ const Showcase = () => {
                         <div className="middle-can w-144.5 h-230 bg-[#EEAF09] relative flex flex-col justify-start items-center overflow-hidden text-black rounded-[16px] z-10">
                             <div className="pt-10 w-full max-w-[520px] Cantext  ">
                                 <h2 className="text-[#FFFCD9] text-center text-[48px] font-Albert font-bold capitalize leading-[40px]">Thousands are making
-                                    <span className="flex inline-block pt-3 pb-6 px-4 bg-[#045C00] rounded-xl -rotate-3 text-white leading-[30px]">magnesium</span> part of their daily ritual.</h2>
+                                <span className="flex inline-block pt-3 pb-6 px-4 bg-[#045C00] rounded-xl -rotate-3 text-white leading-[30px]">magnesium</span> part of their daily ritual.</h2>
                             </div>
                             <div className="relative w-full h-full flex flex-col items-center mt-10 behindCantext">
                                 <img src="/images/MGBOOST.png" alt="" className="w-[80%]"/>
@@ -710,8 +710,8 @@ const Showcase = () => {
                                 <img src="/images/lemon-flavor.png" alt="" className="mt-14 w-[282px] h-176" />
                             </div>
                             <div className="w-full h-68 flex flex-col justify-end items-center gap-y-4 leading-[18px] Can-animate">
-                                <p className="uppercase font-Albert font-bold text-[20px]">magnesium infused</p>
-                                <p className="capitalize text-[28px] font-Albert">sparkling water lemon flavor</p>
+                                <h2 className="uppercase font-Albert font-bold text-[20px]">magnesium infused</h2>
+                                <p className="capitalize text-[28px] font-Albert sub-Can-animate">sparkling water lemon flavor</p>
                                 <button className='primary-btn mt-4'>
                                     <p className='pl-8'>shop now</p>
                                     <span className=''>
