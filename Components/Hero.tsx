@@ -62,7 +62,7 @@ const Hero = () => {
   return (
     <section className={`w-full h-[100vh] relative overflow-hidden bg-white hero`}>
 
-      <div className={`w-full h-full flex justify-between items-center relative sectionChange ${currentSlide.sectionbg}`} key={currentSec}>
+      <div className={`w-full h-full flex justify-between items-center relative sectionChange ${currentSlide.sectionbg}` } key={currentSec} >
 
         <div className=" w-full absolute top-0 topChange">
           <img  src={currentSlide.mask} alt="" className="bg-cover w-full"/>

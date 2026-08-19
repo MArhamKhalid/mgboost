@@ -91,7 +91,7 @@ const Footer = () => {
         <div className='pt-[138px] px-25 flex justify-between pb-[64px] sub-footer'>
             <div className='w-full max-w-[500px] text-black h-full subscribe-footer'>
                 <h2 className='font-Albert font-bold text-[26px]'>Sign up to get 10% off your first order!</h2>
-                <div className='flex flex-col gap-y-2 mt-[47px]'>
+                <div className='flex flex-col gap-y-2 mt-[47px] sub-subscribe-footer'>
                     <div className='border-b flex w-[480px]'>
                         <input type="text" placeholder='Enter Your Email' required className='outline-none w-full max-w-90'/>
                         <button className='flex capitalize gap-x-[12px] items-center'>
@@ -100,7 +100,7 @@ const Footer = () => {
                     </div>
                     <p className='font-Albert text-[20px] font-light'>i have read the <span className='underline cursor-pointer'>Privacy Policy</span> provided by <span className='font-bold underline italic'>MG BOOST</span></p>
                 </div>
-                <div className='flex items-center gap-x-[51px]'>
+                <div className='flex items-center gap-x-[51px] sub-subscribe-02'>
                     <p>Buy On</p>
                     <img src="/images/faire.png" alt="" />
                     <img src="/images/airgoods.png" alt="" />
