@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Hero from "@/Components/Hero";
 import Showcase from "@/Components/Showcase";
+import Products from "@/Components/Products";
+import Advertise from "@/Components/Advertise";
 import Blogs from "@/Components/Blogs";
 import Benefits from "@/Components/Benefits";
 import Details from "@/Components/Details";
@@ -12,6 +14,8 @@ export default function Home() {
   <>
         <Hero/>
         <Showcase/>
+        {/* <Products/>
+        <Advertise/> */}
         <Blogs/>
         <Benefits/>
         <Details/>

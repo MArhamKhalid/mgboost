@@ -249,9 +249,9 @@ const Benefits = () => {
             <img src="/images/benefits-mask.png" alt="" className='w-full bg-cover'/>
         </div>
         <div className='w-full max-h-[170px] z-10 flex flex-col mt-[14%] mb-[3%] benefits-sub-head'>
-            <div className='text-center capitalize benefitshead'>
+            <div className='text-center capitalize benefitshead w-full flex flex-col items-center'>
                 <h2 className='font-bold font-Alan text-[87px] text-white '>benefits of MG boost</h2>
-                <p className='text-[22px] font-Albert font-normal'>MG Boost is a refreshing magnesium-powered sparkling drink designed to support calmness,focus, digestion, hydration, and better daily recovery — without added sugar</p>
+                <p className='text-[22px] font-Albert font-normal max-w-[700px]'>MG Boost is a refreshing magnesium-powered sparkling drink designed to support calmness,focus, digestion, hydration, and better daily recovery — without added sugar</p>
             </div>
         </div>
         
@@ -280,7 +280,7 @@ const Benefits = () => {
                 <div className='relative w-full max-h-[90%] flex justify-center items-center canrotate'>
                     <img src="/images/benefitsmango.png" alt="" className=' w-[38%] h-[70%]'/>
 
-                    <img src="/images/Subtract02.png" alt="" className=' absolute z-1 w-[100%] h-[92%] watercan'/>
+                    <img src="/images/Subtract02.png" alt="" className=' absolute z-1 w-[100%] h-[130%] watercan'/>
                 </div>
             </div>
             <div className='flex flex-col justify-center items-start gap-y-20 h-full max-h-max w-full max-w-[37%] z-1 mt-[6%] rightcards'>       

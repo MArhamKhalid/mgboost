@@ -166,6 +166,7 @@ const Showcase = () => {
                 start: "top top ",
                 end: "bottom top",
                 scrub: true,
+                pin: false,
                 // markers: true,
             }
         });
@@ -375,6 +376,74 @@ const Showcase = () => {
         tl.to({}, { duration: 11});
     });
 
+    
+        // const mmT = gsap.matchMedia();
+        // mmT.add("(min-width: 1280px)", () => {
+
+        //     gsap.set(
+        //         ".firsthead",
+        //         {
+        //             fontSize: "20px",
+        //         });
+        
+        // const tl = gsap.timeline({
+            
+        //     scrollTrigger: {
+        //         trigger:sectionRef.current,
+        //         start: "top top ",
+        //         end: "bottom top",
+        //         scrub: true,
+        //         pin: false,
+        //     }
+        // });
+
+
+        // tl.to(
+        //     ".firsthead",
+        //     {   
+
+        //         fontSize: "35px",
+        //         duration: 0.6,
+        //         ease: "power1.inOut",
+        //     }
+        // );
+        // tl.to(
+        //     ".firstheaddev",
+        //     {
+        //         clipPath: "inset(0 0 50% 0)",
+        //         duration: 0.8,
+        //         ease: "power1.inOut",
+        //     });
+
+        // tl.to(
+        //     ".firsthead", 
+        //     {
+        //         fontSize: "45px",
+        //         duration: 0.6,
+        //         ease: "power1.inOut",
+        //     }
+        // );
+        // tl.to(
+        //     ".firstheaddev",
+        //     {
+        //         clipPath: "inset(0 0 0% 0)",
+        //         duration: 0.6,
+        //         ease: "power1.inOut",
+        //     });
+        
+        // tl.to(
+        //     ".firsthead", 
+        //     {                
+        //         fontSize: "55px",
+        //       duration: 0.6,
+        //       ease: "power1.inOut",
+        //     },
+        //     "<"
+        // );
+
+
+
+        // });
     // ////////////////////////////////////////////////////////////////for TABLET///////////////////////////////////////////////
         const mmm = gsap.matchMedia();
         mmm.add("(max-width: 768px)", () => {
@@ -500,7 +569,7 @@ const Showcase = () => {
             {   
 
                 fontSize: "30px",
-                duration: 0.6,
+                duration: 0.2,
                 ease: "power1.inOut",
             }
         );
@@ -508,7 +577,7 @@ const Showcase = () => {
             ".firstheaddev",
             {
                 clipPath: "inset(0 0 50% 0)",
-                duration: 0.8,
+                duration: 0.6,
                 ease: "power1.inOut",
             },
             "<"
@@ -540,7 +609,7 @@ const Showcase = () => {
             {
                 opacity: 1,
                 x: -0,
-                duration: 0.7,
+                duration: 0.6,
                 ease: "power1.inOut",
 
             }
@@ -550,7 +619,7 @@ const Showcase = () => {
                 ".Can-animate",
             {
                 clipPath: "inset(0 0 0% 0)",
-                duration: 0.7,
+                duration: 0.6,
                 ease:"power1.inOut",
             },
         );
@@ -573,7 +642,7 @@ const Showcase = () => {
         {
             opacity: 1,
             y: 0,
-            duration: 1,
+            duration: 0.6,
             ease: "power1.inOut",
         }
         );
@@ -582,7 +651,7 @@ const Showcase = () => {
             ".Cantext",
         {
             clipPath: "inset(0% 0 0  0)",
-            duration: 1,
+            duration: 0.6,
             ease: "power2.inOut",
 
         });

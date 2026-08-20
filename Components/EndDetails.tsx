@@ -17,7 +17,7 @@ const EndDetails = () => {
         const mm = gsap.matchMedia();
 
 
-        mm.add("(min-width: 769px)", () => {
+      mm.add("(min-width: 1281px)", () => {
       gsap.set(
         ".endblur1",
         {
@@ -117,6 +117,117 @@ const EndDetails = () => {
         },
         "<"
       );
+      tl.to(
+        ".btnblur",
+        {
+          scale: 1.1,
+          filter: "blur(0px)",
+          duration:0.8,
+          ease: "power1.inOut",
+        }
+      );
+    });
+      mm.add("(max-width: 1280px) and (min-width: 769px)", () => {
+      gsap.set(
+        ".endblur1",
+        {
+          fontSize: "70px",
+          // filter: "blur(20px)",
+          clipPath:"inset(100% 0 0 0)"
+        }
+      );
+      gsap.set(
+        ".endblur2",
+        {
+          scale: 0.3,
+          filter: "blur(20px)",
+        }
+      );
+      gsap.set(
+        ".endblur3",
+        {
+          scale: 0.3,
+          filter: "blur(20px)",
+        }
+      );
+      gsap.set(
+        ".btnblur",
+        {
+          scale: 0.3,
+          filter: "blur(20px)"
+        }
+      );
+
+
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger:EndDetailsRef.current,
+                start:"top top",
+                end: "bottom bottom",
+                toggleActions: "play none none reverse",
+                // scrub: 0.2,
+                // markers: true,
+            }
+        });
+        tl.to({}, { duration: 0.2 });
+
+        tl.to(
+          ".endblur1",
+          {
+            fontSize: "80px",
+            // filter: "blur(0px)",
+            clipPath:"inset(0% 0 0 0)",
+            duration:1,
+            ease: "power1.inOut",
+          }
+        );
+        tl.to({}, { duration: 0.2 });
+
+      tl.to(
+        ".endblur2",
+        {
+          scale: 0.7,
+          // fontSize: "45px",
+          filter: "blur(0px)",
+          duration:0.8,
+          ease: "power1.inOut",
+        }
+      );
+      tl.to(
+        ".endblur3",
+        {
+          scale: 0.7,
+          // fontSize: "45px",
+          filter: "blur(20px)",
+          duration:0.8,
+          ease: "power1.inOut",
+        },
+        "<"
+      );
+        tl.to({}, { duration: 0.2 });
+
+      tl.to(
+        ".endblur2",
+        {
+          // fontSize: "49px",
+          scale: 1,
+          duration:0.8,
+          ease: "power1.inOut",
+
+        }
+      );
+      tl.to(
+        ".endblur3",
+        {
+          scale: 1,
+          // fontSize: "49px",
+          filter: "blur(0px)",
+          duration:0.8,
+          ease: "power1.inOut",
+        },
+        "<"
+      );
+
       tl.to(
         ".btnblur",
         {

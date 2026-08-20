@@ -381,6 +381,10 @@ body {
 
 }
 
+/* /////////////////////////////////////////////////// MAX 1600 End   //////////////////////////////////////////////// */
+
+/* /////////////////////////////////////////////////// MAX 1440 Start /////////////////////////////////////////////// */
+
 @media (max-width: 1440px) {
   .LOGO{
     width: 210px;
@@ -511,6 +515,98 @@ body {
     font-size: 230px;
   }
 }
+/* /////////////////////////////////////////////////// MAX 1440 End  /////////////////////////////////////////////// */
+
+/* /////////////////////////////////////////////////// MAX 1280 Start ////////////////////////////////////////////// */
+@media (max-width: 1280px) {
+  nav{
+    padding: 0 4%;
+  }
+  .hero-head{
+    font-size: 66px;
+  }
+  .firsthead h2{
+    font-size: 40px;
+  }
+  .sub-scene-2{
+    padding: 0 3%;
+  }
+  .CanLeft .can-bg img{
+    margin-top: 30%;
+    width: 200px;
+    height: 94%;
+  }
+  .CanRight .can-bg img{
+    margin-top: 30%;
+    width: 200px;
+    height: 94%;
+  }
+  .sub-Can-animate{
+    font-size: 24px;
+  }
+  .all-canrotate{
+    margin-top: -1%;
+    margin-left: 1%;
+  }
+  .canrotate{
+    height: 60%;
+  }
+  .watercan{
+    height: 100%;
+  }
+  .leftcards {
+    row-gap: 50px;
+    margin-top: 18%;
+  }
+  .right-cards-01 .benefits-desc-img{
+    width: 22%;
+  }
+  .right-cards-03 .benefits-desc-img{
+    width: 36%;
+  }
+  .story-image-7{
+    margin-right: 0;
+  }
+}
+
+
+
+/* /////////////////////////////////////////////////// MAX 1280 End  ////////////////////////////////////////////// */
+@media (max-width: 1024px) {
+  .LOGO{
+    margin-top: 0;
+  }
+  .LOGO img{
+    margin-top: 20px;
+  }
+  .sidetext{
+    padding: 0 0 0 4%;
+  }
+  .imageChange{
+    /* width: 100%; */
+    padding: 0;
+  }
+  .image-one{
+    padding: 0;
+    /* width: 50%; */
+    height: 58%;
+  }
+  .image-two{
+    width: 70%;
+  }
+  .hero-head{
+    font-size: 54px;
+  }
+  .firsthead h2 {
+    font-size: 30px;
+  }
+  .mg-text h2{
+    font-size: 160px;
+  }
+}
+
+
+/* /////////////////////////////////////////////////// MAX 768 start /////////////////////////////////////////////// */
 
 @media (max-width: 768px) {
   /* header{
@@ -865,6 +961,13 @@ body {
     max-width: 70%;
     margin: 0;
   }
+  .right-cards-01 .benefits-desc-img{
+    width: 75px;
+    
+  }
+  .right-cards-03 .benefits-desc-img{
+    width: 75px;
+  }
   .benefits-desc-img{
     width: 75px;
     height: 75px;
@@ -970,6 +1073,9 @@ body {
     row-gap: 10px;
   }
 }
+/* /////////////////////////////////////////////////// MAX 768 End ////////////////////////////////////////////////// */
+
+/* /////////////////////////////////////////////////// MAX 480 start /////////////////////////////////////////////// */
 @media (max-width: 480px) {
   .LOGO img{
     width: 175px;
@@ -1018,7 +1124,7 @@ body {
   .imageChange .image-two{
     width: 100%;
   }
-  /* /////////////////////////////////////////////Primary button////////////////////////////////////////// */
+  /* //////////////////////////////Primary button//////////////////////////////// */
   .primary-btn, .btn2{
     width: 150px;
     height: 45px;
@@ -1050,7 +1156,7 @@ body {
   .btn-secondary{
     justify-content: center;
   }
-  /* /////////////////////////////////////////////Primary button////////////////////////////////////////// */
+  /* ///////////////////////////////Primary button//////////////////////////////// */
   .all-scene{
     width: 100%;
     height: auto;
@@ -1085,8 +1191,9 @@ body {
     height: 310px;
   }
   .CanLeft .can-bg img{
+    margin-top: 10%;
     width: 40%;
-    height: 360px;
+    height: 390px;
   }
   .Can-animate{
     margin: 0;
@@ -1130,8 +1237,9 @@ body {
     height: 310px;
   }
   .CanRight .can-bg img{
+    margin-top: 10%;
     width: 40%;
-    height: 360px;
+    height: 390px;
   }
   .scene-3{
     height: 150vh;
@@ -1262,7 +1370,7 @@ body {
   .sub-EndDetails .endblur2, .endblur3{
     font-size: 20px;
   }
-  /* ///////////////////////////////////////Footer start ////////////////////////////////////////////////// */
+  /* ////////////////////////Footer start /////////////////////////// */
   .footer{
     width: 100%;
   }
@@ -1305,7 +1413,10 @@ body {
   }
 
 }
+/* /////////////////////////////////////////////////// MAX 480 End  ///////////////////////////////////////////////// */
 
+
+/* /////////////////////////////////////////////////// MAX 428 start /////////////////////////////////////////////// */
 @media (max-width: 428px) {
   .LOGO{
     align-items: center;
@@ -1401,3 +1512,4 @@ body {
   }
 
 }
+/* /////////////////////////////////////////////////// MAX 428 End  ///////////////////////////////////////////////// */
