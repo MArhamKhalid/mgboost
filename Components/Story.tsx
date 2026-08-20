@@ -164,7 +164,7 @@ const Story = () => {
             const tl = gsap.timeline({
                 scrollTrigger: {
                     trigger:StorysRef.current,
-                    start:"top top",
+                    start:"top 95%",
                     end: "bottom bottom",
                     toggleActions: "play none none reverse",
                     // scrub: true,

@@ -21,6 +21,21 @@ const Header = () => {
             ease: "power2.out",
         });
 
+        gsap.fromTo(
+            ".mobile-links",
+            {
+                opacity: 0,
+                x: "-150%",
+            },
+            {
+                opacity: 1,
+                x: "-0%",
+                duration: 0.3,
+                stagger: 0.15,
+                ease: "power2.inOut"
+            }
+        );
+
     };
 
     const closeSidebar = () => {
@@ -31,10 +46,6 @@ const Header = () => {
             ease: "power2.inOut",
         });
     };
-
-    // const ctx = gsap.context(() => {
-
-    // }) []
 
   return (
     <header className="w-full absolute header flex justify-between">
@@ -54,19 +65,19 @@ const Header = () => {
                     <a href="/contact" className="hover:border-b-2 border-[#FFEAB5]">contact</a>
 
                 </ul>
-                <div className=" header-mobile bg-linear-to-t from-[#FFEAB5] via-[#bd9a49] to-[#bd9a49]" ref={headermobileRef}>
+                <div className=" header-mobile bg-[#C7A348]" ref={headermobileRef}>
                     <div className=" header-m-logo">
                         <img src="/images/logo.png" alt="" className="tm-logo"/>
                         <button onClick={closeSidebar}>
                             <img src="/icons/x.svg" alt="" className="h-8 w-8"/>
                         </button>
                     </div>
-                    <ul className="flex gap-x-10 capitalize text-black text-[20px]">
-                        <a href="/home" className="border-b-2 border-[#FFEAB5]">home</a>
-                        <a href="/ourstory" className="hover:border-b-2 border-[#FFEAB5]">our story</a>
-                        <a href="/shop" className="hover:border-b-2 border-[#FFEAB5]">shop</a>
-                        <a href="/mgboost" className="hover:border-b-2 border-[#FFEAB5]">why MG Boost</a>
-                        <a href="/contact" className="hover:border-b-2 border-[#FFEAB5]">contact</a>
+                    <ul className="flex capitalize text-[#151515] text-[24px] capitalize mobile-header-links">
+                        <a href="/home" className="border-b-2 border-[#FFEAB5] mobile-links">home</a>
+                        <a href="/ourstory" className="hover:border-b-2 border-[#FFEAB5] mobile-links">our story</a>
+                        <a href="/shop" className="hover:border-b-2 border-[#FFEAB5] mobile-links">shop</a>
+                        <a href="/mgboost" className="hover:border-b-2 border-[#FFEAB5] mobile-links">why MG Boost</a>
+                        <a href="/contact" className="hover:border-b-2 border-[#FFEAB5] mobile-links">contact</a>
 
                     </ul>
                 </div>

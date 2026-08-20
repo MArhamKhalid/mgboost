@@ -170,7 +170,7 @@ const Benefits = () => {
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger:BenefitsRef.current,
-                start:"top top",
+                start:"top 98%",
                 end: "bottom bottom",
                 toggleActions: "play none none none",
                 // scrub: true,

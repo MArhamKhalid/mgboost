@@ -60,7 +60,7 @@ const Details = () => {
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger:DetailsRef.current,
-                start:"top top",
+                start:"top 99%",
                 end: "bottom bottom",
                 toggleActions: "play none none reverse",
                 // scrub: true,
@@ -69,19 +69,10 @@ const Details = () => {
         });
 
         tl.to(
-            ".detailText",
-            {
-                clipPath: "inset(0 0% 0 0)",
-                duration:0.8,
-                ease: "power1.inOut",
-
-            }
-        );
-        tl.to(
             ".detailImageLeft",
             {
                 y: "-0%",
-                duration:0.8,
+                duration:0.6,
                 ease: "power2.inOut",
             }
         );
@@ -89,10 +80,19 @@ const Details = () => {
             ".detailImageRight",
             {
                 y: "0%",
-                duration:0.8,
+                duration:0.6,
                 ease: "power2.inOut",
             },
             "<"
+        );
+        tl.to(
+            ".detailText",
+            {
+                clipPath: "inset(0 0% 0 0)",
+                duration:0.5,
+                ease: "power1.inOut",
+
+            }
         );
     // });
 

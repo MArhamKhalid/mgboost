@@ -556,9 +556,9 @@ const Showcase = () => {
             
             scrollTrigger: {
                 trigger:sectionRef.current,
-                start: "top top ",
+                start: "top top",
                 end: "bottom bottom",
-                toggleActions:"play none none reverse",
+                toggleActions:"play none none none",
                 // scrub: true,
                 // markers: true,
             }
@@ -569,7 +569,8 @@ const Showcase = () => {
             {   
 
                 fontSize: "30px",
-                duration: 0.1,
+                duration: 0.5,
+                // stagger: 0.08,
                 ease: "power1.inOut",
             }
         );
@@ -577,7 +578,7 @@ const Showcase = () => {
             ".firstheaddev",
             {
                 clipPath: "inset(0 0 50% 0)",
-                duration: 0.1,
+                duration: 0.5,
                 ease: "power1.inOut",
             },
             "<"
@@ -586,9 +587,10 @@ const Showcase = () => {
             ".firstheaddev",
             {
                 clipPath: "inset(0 0 0% 0)",
-                duration: 0.1,
+                duration: 0.5,
                 ease: "power1.inOut",
-            }
+            },
+            "<"
         );
 
         tl.fromTo(
@@ -609,19 +611,21 @@ const Showcase = () => {
             {
                 opacity: 1,
                 x: -0,
-                duration: 0.4,
+                duration: 0.3,
                 ease: "power1.inOut",
 
-            }
+            },
+            "<"
         );
 
         tl.to(
                 ".Can-animate",
             {
                 clipPath: "inset(0 0 0% 0)",
-                duration: 0.4,
+                duration: 0.3,
                 ease:"power1.inOut",
             },
+            "<"
         );
 
         // tl.to({}, { duration: 1});
@@ -631,10 +635,11 @@ const Showcase = () => {
             {
                 opacity: 1,
                 x: -0,
-                duration: 0.4,
+                duration: 0.3,
                 ease: "power1.inOut",
 
-            }
+            },
+            "<"
         )
 
         tl.to(
@@ -644,7 +649,8 @@ const Showcase = () => {
             y: 0,
             duration: 0.1,
             ease: "power1.inOut",
-        }
+        },
+        "<"
         );
 
         tl.to(
@@ -683,9 +689,10 @@ const Showcase = () => {
             {
                 opacity: 1,
                 x: -0,
-                duration: 0.4,
+                duration: 0.3,
                 ease: "power1.inOut",
-            }
+            },
+            "<"
         );
         // tl.to({}, { duration: 0.2});
         

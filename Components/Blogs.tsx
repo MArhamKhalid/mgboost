@@ -158,7 +158,7 @@ const slidtext = [
                 width: "100%",
                 rotate: "-0deg",
                 borderRadius: "5%",
-                duration: 0.8,
+                duration: 0.6,
                 ease: "power2.inOut",
             }
         );
@@ -167,7 +167,7 @@ const slidtext = [
             ".blogs-text",
             {
                 clipPath: "inset(0 0% 0 0)",
-                duration: 0.6,
+                duration: 0.4,
                 ease: "power1.inOut",
             }
         );
