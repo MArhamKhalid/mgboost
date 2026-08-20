@@ -54,7 +54,7 @@ const Header = () => {
                     <a href="/contact" className="hover:border-b-2 border-[#FFEAB5]">contact</a>
 
                 </ul>
-                <div className=" header-mobile bg-linear-to-t from-[#FFEAB5] via-[#FFF8E8] to-[#FFEAB5]" ref={headermobileRef}>
+                <div className=" header-mobile bg-linear-to-t from-[#FFEAB5] via-[#bd9a49] to-[#bd9a49]" ref={headermobileRef}>
                     <div className=" header-m-logo">
                         <img src="/images/logo.png" alt="" className="tm-logo"/>
                         <button onClick={closeSidebar}>

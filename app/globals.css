@@ -559,6 +559,9 @@ body {
     transform: translateX(-100%);
     top: 0;
     z-index: 10;
+    border-right: 1px solid rgb(207, 198, 198);
+    /* background: #171717; */
+    
   }
   .header-m-logo{
     height: max-content;
@@ -566,6 +569,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-bottom: 1px solid rgb(207, 198, 198);
+    padding-bottom: 14px;
   }
   .tm-logo{
     height: 60px;
@@ -577,6 +582,7 @@ body {
     flex-direction: column;
     align-items: center;
     row-gap: 20px;
+    /* color: #ededed; */
     /* margin-top: 25%; */
   }
   .hero{
@@ -995,7 +1001,7 @@ body {
     font-size: 26px;
   }
   .hero-head{
-    font-size: 50px;
+    font-size: 46px;
   }
   .hero-desc{
     font-size:16px;
@@ -1009,7 +1015,39 @@ body {
   .imageChange .image-two{
     width: 100%;
   }
+  /* /////////////////////////////////////////////Primary button////////////////////////////////////////// */
+  .primary-btn, .btn2{
+    width: 150px;
+    height: 45px;
+    
+  }
+  .primary-btn p, .btn2 p{
+    font-size: 18px;
+    padding-left: 8px;
+  }
+  .primary-btn span, .btn2 span{
+    width: 36px;
+    height: 36px;
+  }
+  .blogs-btn{
+    width: 210px;
+    height: 50px;
+    gap: 24px;
+  }
+  
+  .blogs-btn p{
+    font-size: 18px;
+    padding-left: 8px;
+  }
+  .blogs-btn span{
+    width: 38px;
+    height: 38px;
+  }
 
+  .btn-secondary{
+    justify-content: center;
+  }
+  /* /////////////////////////////////////////////Primary button////////////////////////////////////////// */
   .all-scene{
     width: 100%;
     height: auto;
@@ -1020,6 +1058,9 @@ body {
     display: flex;
     flex-direction: column;
     row-gap: 40px;
+  }
+  .firsthead h2{
+    font-size: 18px;
   }
   .scene-2{
     width: 100%;
@@ -1038,7 +1079,7 @@ body {
   }
   .CanLeft .can-bg{
     width: 100%;
-    height: 330px;
+    height: 310px;
   }
   .CanLeft .can-bg img{
     width: 40%;
@@ -1059,6 +1100,23 @@ body {
   }
   .middle-can .Cantext h2{
     font-size: 24px;
+    line-height: 20px;
+  }
+  .middle-can .Cantext h2 > span{
+    padding: 6px 14px 6px 14px;
+  }
+  .can-show-middle{
+    bottom: 15%;
+    /* width: 250px; */
+    height: 300px;
+  }
+  .can-show-middle .MangoCan{
+    width: 120px;
+    height: 310px;
+  }
+  .can-show-middle .LemonCan{
+    width: 120px;
+    height: 300px;
   }
   .CanRight{
     width: 100%;
@@ -1066,7 +1124,7 @@ body {
   }
   .CanRight .can-bg{
     width: 100%;
-    height: 330px;
+    height: 310px;
   }
   .CanRight .can-bg img{
     width: 40%;
@@ -1085,10 +1143,10 @@ body {
   }
   .Lemon-scene{
     width: 100%;
-    height: 550px;
+    height: 500px;
   }
   .all-lemon{
-    margin-top: 0%;
+    margin-top: 5%;
   }
   .lemon-sub-text, .mgspan{
     font-size: 44px;
@@ -1103,11 +1161,16 @@ body {
     left: 15px;
   }
   .all-Blogs{
-    height: 170vh;
+    height: max-content;
+    min-height: 170vh;
   }
   .Blogs{
     height: max-content;
+    padding-top: 0;
   }
+  /* .sub-Blogs-01{
+    padding-top: 0;
+  } */
   .Blogs-img{
     padding: 0;
   }
@@ -1186,6 +1249,16 @@ body {
   .insta-icon a{
     font-size: 18px;
   }
+  .sub-EndDetails{
+    width: 100%;
+    padding: 0;
+  }
+  .sub-EndDetails .endblur1{
+    font-size: 46px;
+  }
+  .sub-EndDetails .endblur2, .endblur3{
+    font-size: 20px;
+  }
   /* ///////////////////////////////////////Footer start ////////////////////////////////////////////////// */
   .footer{
     width: 100%;
@@ -1223,6 +1296,9 @@ body {
   }
   .footer-social{
     width: 100%;
+  }
+  .footer-privacy{
+    bottom: 18%;
   }
 
 }

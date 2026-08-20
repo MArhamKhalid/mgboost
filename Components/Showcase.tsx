@@ -377,7 +377,7 @@ const Showcase = () => {
 
     // ////////////////////////////////////////////////////////////////for TABLET///////////////////////////////////////////////
         const mmm = gsap.matchMedia();
-        mmm.add("(min-width: 481px)", () => {
+        mmm.add("(max-width: 768px)", () => {
         gsap.set(
             ".firstheaddev",
             {
