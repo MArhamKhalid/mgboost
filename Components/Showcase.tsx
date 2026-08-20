@@ -682,7 +682,7 @@ const Showcase = () => {
                             </div>
                         </div>
                         <div className="middle-can w-144.5 h-230 bg-[#EEAF09] relative flex flex-col justify-start items-center overflow-hidden text-black rounded-[16px] z-10">
-                            <div className="pt-10 w-full max-w-[520px] Cantext  ">
+                            <div className="pt-10 w-full max-w-[520px] Cantext">
                                 <h2 className="text-[#FFFCD9] text-center text-[48px] font-Albert font-bold capitalize leading-[40px]">Thousands are making
                                 <span className="flex inline-block pt-3 pb-6 px-4 bg-[#045C00] rounded-xl -rotate-3 text-white leading-[30px]">magnesium</span> part of their daily ritual.</h2>
                             </div>
@@ -696,7 +696,7 @@ const Showcase = () => {
                                 <img src="/images/mango-flavor.png" alt="" className="absolute z-1  h-[503.02px] w-[194.13px] MangoCan"/>
                                 <img src="/images/lemon-flavor.png" alt="" className="absolute h-[484.81px] w-[193.13px] LemonCan"/>
                             </div>
-                            <div className="w-full h-142 rounded-t-full bg-[#FFF4D7] absolute -bottom-70">
+                            <div className="w-full h-142 rounded-t-full bg-[#FFF4D7] absolute -bottom-70 sub-can-bg">
                             </div>
                             <button className="btn-secondary w-[158px] h-[42px] flex items-center cursor-pointer z-10 capitalize underline gap-x-4 absolute bottom-4">
                                 <p className="text-[20px] font-Albert">shop now </p>

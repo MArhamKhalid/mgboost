@@ -944,12 +944,15 @@ body {
   }
   .f-social-01{
     justify-content: start;
+    gap: 0;
   }
   .f-social-02{
     justify-content: center;
+    gap: 0;
   }
   .f-social-03{
     justify-content: end;
+    gap: 0;
   }
   .mg-text{
     bottom: -18%;
@@ -1019,7 +1022,7 @@ body {
   .primary-btn, .btn2{
     width: 150px;
     height: 45px;
-    
+    margin-top: 0;
   }
   .primary-btn p, .btn2 p{
     font-size: 18px;
@@ -1299,6 +1302,102 @@ body {
   }
   .footer-privacy{
     bottom: 18%;
+  }
+
+}
+
+@media (max-width: 428px) {
+  .LOGO{
+    align-items: center;
+  }
+  .LOGO img{
+    width: 145px;
+    height: 60px;
+  }
+  .sidetext{
+    width: 100%;
+    padding: 0 6%;
+  }
+  .spanicons span{
+    font-size: 12px;
+  }
+  .sub-scene{
+    row-gap: 50px;
+  }
+  .sub-scene-2{
+    padding-right: 5%;
+    padding-left: 5%;
+  }
+  .CanLeft, .CanRight{
+    height: 500px;
+  }
+  .CanLeft .can-bg{
+    height: 260px;
+  }
+  .CanLeft .can-bg img{
+    height: 310px;
+  }
+  .middle-can{
+    height: 550px;
+  }
+  .middle-can .Cantext{
+    display: flex;
+    justify-content: center;
+  }
+  .middle-can .Cantext h2{
+    font-size: 22px;
+    max-width:70%;
+  }
+  .can-show-middle{
+    bottom: 4%;
+  }
+  .can-show-middle .MangoCan{
+    height: 260px;
+    width: 110px;
+  }
+  .can-show-middle .LemonCan{
+    height: 250px;
+    width: 110px;
+  }
+  .sub-can-bg{
+    bottom: -70%;
+  }
+  .CanRight{
+    height: 500px;
+  }
+  .CanRight .can-bg{
+    height: 260px;
+  }
+  .CanRight .can-bg img{
+    height: 300px;
+  }
+  .Can-animate{
+    margin-top: 34%;
+    height: max-content;
+  }
+  .Can-animate h2{
+    font-size: 16px;
+  }
+  .Can-animate .sub-Can-animate{
+    font-size: 19px;
+  }
+  .benefits-sub-head{
+    padding: 0;
+  }
+  .benefitshead p{
+    margin-top: 5px;
+    font-size: 14px;
+    width: 100%;
+  }
+  .left-cards-01, .left-cards-02, .left-cards-03, .right-cards-01, .right-cards-02, .right-cards-03{
+    width: 320px;
+    gap: 10px;
+  }
+  .left-cards-01 p, .left-cards-02 p, .left-cards-03 p, .right-cards-01 p, .right-cards-02 p, .right-cards-03 p{
+    font-size: 16px;
+  }
+  .right-cards-01 .benefits-desc-img {
+    width: 86px;
   }
 
 }
