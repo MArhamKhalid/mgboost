@@ -184,7 +184,7 @@ const Benefits = () => {
                 clipPath: "inset(0% 0 0 0)",
                 // opacity: 1,
                 // y: "0%",
-                duration: 0.6,
+                duration: 0.4,
                 ease: "power1.inOut"
             }
         );
@@ -192,7 +192,7 @@ const Benefits = () => {
             ".left-cards-01",
             {
                 clipPath: "inset(0 0% 0 0)",
-                duration: 0.5,
+                duration: 0.35,
                 ease: "power1.inOut"
             }
         );
@@ -200,7 +200,7 @@ const Benefits = () => {
             ".left-cards-02",
             {
                 clipPath: "inset(0 0% 0 0)",
-                duration: 0.5,
+                duration: 0.35,
                 ease: "power1.inOut"
             }
         );
@@ -208,7 +208,7 @@ const Benefits = () => {
             ".left-cards-03",
             {
                 clipPath: "inset(0 0% 0 0)",
-                duration: 0.5,
+                duration: 0.35,
                 ease: "power1.inOut"
             }
         );
@@ -216,7 +216,7 @@ const Benefits = () => {
             ".right-cards-01",
             {
                 clipPath: "inset(0 0% 0 0)",
-                duration: 0.5,
+                duration: 0.35,
                 ease: "power1.inOut"
             }
         );
@@ -224,7 +224,7 @@ const Benefits = () => {
             ".right-cards-02",
             {
                 clipPath: "inset(0 0% 0 0)",
-                duration: 0.5,
+                duration: 0.35,
                 ease: "power1.inOut"
             }
         );
@@ -232,7 +232,7 @@ const Benefits = () => {
             ".right-cards-03",
             {
                 clipPath: "inset(0 0% 0 0)",
-                duration: 0.5,
+                duration: 0.35,
                 ease: "power1.inOut"
             }
         );

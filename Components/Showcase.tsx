@@ -569,7 +569,7 @@ const Showcase = () => {
             {   
 
                 fontSize: "30px",
-                duration: 0.2,
+                duration: 0.1,
                 ease: "power1.inOut",
             }
         );
@@ -577,7 +577,7 @@ const Showcase = () => {
             ".firstheaddev",
             {
                 clipPath: "inset(0 0 50% 0)",
-                duration: 0.6,
+                duration: 0.1,
                 ease: "power1.inOut",
             },
             "<"
@@ -586,7 +586,7 @@ const Showcase = () => {
             ".firstheaddev",
             {
                 clipPath: "inset(0 0 0% 0)",
-                duration: 0.6,
+                duration: 0.1,
                 ease: "power1.inOut",
             }
         );
@@ -598,7 +598,7 @@ const Showcase = () => {
             },
             {
                 filter: "blur(0px)",
-                duration: 0.8,
+                duration: 0.08,
             },
             
             "<"
@@ -609,7 +609,7 @@ const Showcase = () => {
             {
                 opacity: 1,
                 x: -0,
-                duration: 0.6,
+                duration: 0.4,
                 ease: "power1.inOut",
 
             }
@@ -619,19 +619,19 @@ const Showcase = () => {
                 ".Can-animate",
             {
                 clipPath: "inset(0 0 0% 0)",
-                duration: 0.6,
+                duration: 0.4,
                 ease:"power1.inOut",
             },
         );
 
-        tl.to({}, { duration: 1});
+        // tl.to({}, { duration: 1});
 
         tl.to(
             ".middle-can",
             {
                 opacity: 1,
                 x: -0,
-                duration: 0.7,
+                duration: 0.4,
                 ease: "power1.inOut",
 
             }
@@ -642,7 +642,7 @@ const Showcase = () => {
         {
             opacity: 1,
             y: 0,
-            duration: 0.6,
+            duration: 0.1,
             ease: "power1.inOut",
         }
         );
@@ -651,7 +651,7 @@ const Showcase = () => {
             ".Cantext",
         {
             clipPath: "inset(0% 0 0  0)",
-            duration: 0.6,
+            duration: 0.3,
             ease: "power2.inOut",
 
         });
@@ -661,7 +661,7 @@ const Showcase = () => {
         {
             left: "20%",
             rotate: -8,
-            duration: 1,
+            duration: 0.3,
             ease: "power2.inOut" ,
         },
         "<"
@@ -672,7 +672,7 @@ const Showcase = () => {
         {
             right: "20%",
             rotate: 8,
-            duration: 1,
+            duration: 0.3,
             ease: "power2.inOut",
         },
         "<"
@@ -683,17 +683,17 @@ const Showcase = () => {
             {
                 opacity: 1,
                 x: -0,
-                duration: 0.7,
+                duration: 0.4,
                 ease: "power1.inOut",
             }
         );
-        tl.to({}, { duration: 0.2});
+        // tl.to({}, { duration: 0.2});
         
         tl.to(
             ".mg-banner",
             {
                 clipPath:"inset(0 0% 0 -5%)",
-                duration: 1,
+                duration: 0.6,
                 ease: "power1.inOut",
             }
         );
@@ -702,7 +702,7 @@ const Showcase = () => {
             {
                 clipPath: "inset(0 0 0% 0)",
                 y: "0%",
-                duration: 1,
+                duration: 0.6,
                 ease: "power1.inOut"
             },
             "<"

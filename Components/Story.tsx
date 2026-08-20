@@ -176,7 +176,7 @@ const Story = () => {
                 ".storyhead",
                 {
                     clipPath: "inset(0 0 0% 0)",
-                    duration: 0.8,
+                    duration: 0.4,
                     ease:"power1.inOut"
                 }
             );
@@ -186,7 +186,7 @@ const Story = () => {
                 {
                     opacity:1,
                     y: "0%",
-                    duration: 0.6,
+                    duration: 0.3,
                     ease:"power2.inOut"
                 }
             );
@@ -195,7 +195,7 @@ const Story = () => {
                 {
                     opacity:1,
                     y: "0%",
-                    duration: 0.6,
+                    duration: 0.3,
                     ease:"power2.inOut"
                 },
                 "<"
@@ -205,7 +205,7 @@ const Story = () => {
                 {
                     opacity:1,
                     x: "0%",
-                    duration: 0.6,
+                    duration: 0.4,
                     ease:"power2.inOut"
                 }
             );
@@ -214,7 +214,7 @@ const Story = () => {
                 {
                     opacity:1,
                     x: "0%",
-                    duration: 0.6,
+                    duration: 0.4,
                     ease:"power2.inOut"
                 },
                 "<"
@@ -224,7 +224,7 @@ const Story = () => {
                 {
                     opacity:1,
                     y: "0%",
-                    duration: 0.6,
+                    duration: 0.4,
                     ease:"power2.inOut"
                 }
             );
@@ -233,7 +233,7 @@ const Story = () => {
                 {
                     opacity:1,
                     y: "0%",
-                    duration: 0.6,
+                    duration: 0.4,
                     ease:"power2.inOut"
                 },
                 "<"
@@ -244,7 +244,7 @@ const Story = () => {
                     opacity:1,
                     y: "-0%",
                     x: "-0%",
-                    duration: 0.6,
+                    duration: 0.4,
                     ease:"power2.inOut"
                 }
             );
@@ -254,7 +254,7 @@ const Story = () => {
                     opacity:1,
                     y: "0%",
                     x: "0%",
-                    duration: 0.6,
+                    duration: 0.4,
                     ease:"power2.inOut"
                 },"<"
             );
