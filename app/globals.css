@@ -225,7 +225,7 @@ body {
   }
   .sidetext{
     width: 60%;
-    margin-top: 10%;
+    /* margin-top: 10%; */
   }
   .scene-2{
     margin: 25px 0px;
@@ -700,6 +700,8 @@ body {
     padding: 0 16%;
     /* max-height: 55%; */
     width: max-content;
+    height: 36vh;
+    justify-content: start;
     /* max-width: max-content; */
   }
   .all-hero-head{
@@ -722,14 +724,14 @@ body {
     padding-right: 0;
   }
   .image-one{
-    height: 100%;
+    max-height: max-content;
   }
   .image-two{
-    width: 100%;
+    max-width: max-content;
   }
   .all-scene{
-    height: 530vh;
-    max-height: max-content;
+    height: max-content;
+    /* max-height: max-content; */
   }
   .sub-scene{
     position: relative;
@@ -746,11 +748,11 @@ body {
   }
   .scene-2{
     position: relative;
-    height: 300vh;
+    height: max-content;
     z-index: 0;
   }
   .sub-scene-2{
-    max-height: max-content;
+    /* max-height: max-content; */
     justify-content: start;
     flex-direction: column;
     row-gap: 40px;
@@ -760,10 +762,12 @@ body {
   }
   .scene-3{
     position: relative;
-    height: 180vh;
+    height: 200vh;
+    /* max-height: max-content; */
     z-index: 0;
   }
   .sub-scene-3{
+    height: max-content;
     justify-content: start;
     flex-direction: column;
     row-gap: 40px;
@@ -812,7 +816,7 @@ body {
     gap: 8px;
   }
   .all-Blogs{
-    height: 190vh;
+    height: 160vh;
     max-height: max-content;
   }
   .Blogs{
@@ -1230,7 +1234,7 @@ body {
     height: 310px;
   }
   .scene-3{
-    height: 150vh;
+    height: 130vh;
   }
   .sub-scene-3{
     height: max-content;
@@ -1260,7 +1264,7 @@ body {
     left: 15px;
   }
   .all-Blogs{
-    max-height: 200vh;
+    /* max-height: max-content; */
     /* height: max-content; */
   }
   .Blogs{
