@@ -730,18 +730,19 @@ body {
     max-width: max-content;
   }
   .all-scene{
-    height: max-content;
-    /* max-height: max-content; */
+    height: 600vh;
+    max-height: max-content;
   }
   .sub-scene{
     position: relative;
-    max-height: max-content;
+    /* max-height: max-content; */
     height: 100%;
   }
   .scene-1{
+    height: 34vh;
+    max-height: max-content;
     position: relative;
-    height: 40vh;
-    z-index: 0;
+    padding: 30px 10px;
   }
   .firsthead{
     font-size: 20px;
@@ -763,7 +764,7 @@ body {
   .scene-3{
     position: relative;
     height: 200vh;
-    /* max-height: max-content; */
+    max-height: max-content;
     z-index: 0;
   }
   .sub-scene-3{
@@ -806,7 +807,7 @@ body {
     rotate: 12deg;
   }
   .all-slider{
-    height: 15%;
+    height: 20vh;
   }
   .text-slider{
     gap: 20px;
@@ -816,7 +817,7 @@ body {
     gap: 8px;
   }
   .all-Blogs{
-    height: 160vh;
+    height: 170vh;
     max-height: max-content;
   }
   .Blogs{
@@ -1233,13 +1234,6 @@ body {
     width: 100%;
     height: 310px;
   }
-  .scene-3{
-    height: 130vh;
-  }
-  .sub-scene-3{
-    height: max-content;
-    padding: 0 6%;
-  }
   .can-holding{
     width: 100%;
     height: 500px;
@@ -1269,7 +1263,7 @@ body {
   }
   .Blogs{
     max-height: max-content;
-    padding-top: 0;
+    /* padding-top: 0; */
   }
   /* .sub-Blogs-01{
     padding-top: 0;
@@ -1492,6 +1486,14 @@ body {
   .can-holding, .Lemon-scene {
     height: 450px;
   }
+  
+  /* .scene-3{
+    height: 190vh;
+  } */
+  .sub-scene-3{
+    /* height: max-content; */
+    padding: 0 6%;
+  }
   .all-lemon{
     margin-top: 10%;
   }
@@ -1500,6 +1502,9 @@ body {
   }
   .text-slider {
     gap: 10px;
+  }
+  .Blogs{
+    padding: 20px 20px;
   }
   .sub-Blogs-01{
     padding-top: 0;
