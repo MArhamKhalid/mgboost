@@ -733,6 +733,7 @@ body {
   }
   .sub-scene{
     position: relative;
+    max-height: max-content;
     height: 100%;
   }
   .scene-1{
@@ -812,15 +813,15 @@ body {
   }
   .all-Blogs{
     height: 190vh;
+    max-height: max-content;
   }
   .Blogs{
-    height: 100%;
+    max-height: max-content;
     padding: 30px 30px;
     justify-content: start;
   }
   .sub-Blogs-01{
     width: 100%;
-    height: 180vh;
     max-height: max-content;
     flex-direction: column;
     display: flex;
@@ -1159,6 +1160,7 @@ body {
   /* ///////////////////////////////Primary button//////////////////////////////// */
   .all-scene{
     width: 100%;
+    max-height: max-content;
   }
   .sub-scene{
     width: 100%;
