@@ -690,11 +690,11 @@ const Showcase = () => {
 
                 <div className="scene-2 w-full h-screen absolute top-0 left-0 z-20  bg-white">
                     <div className=" flex justify-center items-center gap-x-[32px] text-black h-full px-15 sub-scene-2 ALL-sub-CAN">
-                        <div className="w-144.5 h-230 CanLeft ALL-CAN">
+                        <div className="w-144.5 h-230 CanLeft ALL-CAN flex flex-col justify-between">
                             <div className="w-full h-160 bg-[#FFF4D7] rounded-b-xl flex justify-center rounded-[16px] can-bg">
-                                <img src="/images/mango-flavor.png" alt="" className="mt-14 w-67.5 h-176" />
+                                <img src="/images/mango-flavor.png" alt="" className=" mt-14 -mb-24" />
                             </div>
-                            <div className="w-full h-68 flex flex-col justify-end items-center gap-y-4 leading-[18px] Can-animate">
+                            <div className="w-full h-50 flex flex-col items-center justify-end gap-y-4 leading-[18px] Can-animate">
                                 <h2 className="uppercase font-Albert font-bold text-[20px]">magnesium infused</h2>
                                 <p className="capitalize text-[28px] font-Albert sub-Can-animate">sparkling water mango flavor</p>
                                 <button className='primary-btn mt-4'>
@@ -729,11 +729,11 @@ const Showcase = () => {
                                 </span>
                             </button>
                         </div>
-                        <div className="w-144.5 h-230 CanRight ALL-CAN">
+                        <div className="w-144.5 h-230 CanRight ALL-CAN flex flex-col justify-between">
                             <div className="w-full h-160 bg-[#FFF4D7] rounded-b-xl flex justify-center rounded-[16px]  can-bg">
-                                <img src="/images/lemon-flavor.png" alt="" className="mt-14 w-[282px] h-176" />
+                                <img src="/images/lemon-flavor.png" alt="" className="mt-14 -mb-24" />
                             </div>
-                            <div className="w-full h-68 flex flex-col justify-end items-center gap-y-4 leading-[18px] Can-animate">
+                            <div className="w-full h-50 flex flex-col justify-end items-center gap-y-4 leading-[18px] Can-animate">
                                 <h2 className="uppercase font-Albert font-bold text-[20px]">magnesium infused</h2>
                                 <p className="capitalize text-[28px] font-Albert sub-Can-animate">sparkling water lemon flavor</p>
                                 <button className='primary-btn mt-4'>
