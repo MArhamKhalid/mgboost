@@ -729,6 +729,7 @@ body {
   }
   .all-scene{
     height: 530vh;
+    max-height: max-content;
   }
   .sub-scene{
     position: relative;
@@ -1158,7 +1159,6 @@ body {
   /* ///////////////////////////////Primary button//////////////////////////////// */
   .all-scene{
     width: 100%;
-    height: auto;
   }
   .sub-scene{
     width: 100%;
