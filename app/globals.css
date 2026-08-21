@@ -1505,6 +1505,22 @@ body {
   .Can-animate .sub-Can-animate{
     font-size: 19px;
   }
+  .text-slider {
+    gap: 10px;
+  }
+  .sub-Blogs-02 .text-slider p{
+    font-size: 16px;
+  }
+  .sub-Blogs-02 .text-slider img{
+    width: 30px;
+  }
+  .text-sub-slider p {
+      gap: 6px;
+      font-size: 20px;
+  }
+  .text-sub-slider p img{
+    width: 30px;
+  }
   .Benefits{
     max-height: max-content;
   }

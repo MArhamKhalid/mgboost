@@ -557,9 +557,9 @@ const Showcase = () => {
             
             scrollTrigger: {
                 trigger:sectionRef.current,
-                start: "top top",
+                start: "-20% top",
                 end: "bottom bottom",
-                toggleActions:"play none none none",
+                toggleActions:"play none none reverse",
                 // scrub: true,
                 // markers: true,
             }

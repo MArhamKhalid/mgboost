@@ -122,7 +122,7 @@ const slidtext = [
             const tl = gsap.timeline({
                 scrollTrigger: {
                     trigger:BlogsRef.current,
-                    start:"top top",
+                    start:"-35% top",
                     end: "bottom bottom",
                     toggleActions: "play none none none",
                     // scrub: true,

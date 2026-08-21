@@ -60,7 +60,7 @@ const Details = () => {
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger:DetailsRef.current,
-                start:"top 99%",
+                start:"-30% top",
                 end: "bottom bottom",
                 toggleActions: "play none none reverse",
                 // scrub: true,
@@ -89,10 +89,11 @@ const Details = () => {
             ".detailText",
             {
                 clipPath: "inset(0 0% 0 0)",
-                duration:0.5,
+                duration:0.2,
                 ease: "power1.inOut",
 
-            }
+            },
+            "<"
         );
     // });
 
