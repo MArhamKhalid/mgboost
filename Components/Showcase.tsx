@@ -548,7 +548,7 @@ const Showcase = () => {
 
                 fontSize: "30px",
                 duration: 0.5,
-                // stagger: 0.08,
+                stagger: 0.08,
                 ease: "power1.inOut",
             }
         );
