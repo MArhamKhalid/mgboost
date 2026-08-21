@@ -1,18 +1,37 @@
 "use client";
-import { useLayoutEffect, useRef } from 'react'
+import { useLayoutEffect, useState, useRef } from 'react'
 import gsap from 'gsap'
+
+// const mobileslides = [
+//   {
+//     Mobilesidebar:"bg-linear-to-b from-[#FFFBF3] via-[#FFF8E8] to-[#FFEAB5]",
+//   },
+//   {
+    
+//     Mobilesidebar:"bg-linear-to-b from-[#F6EDE9] to-[#FFF2CE]",
+//   }
+// ]
 
 const Header = () => {
     
     const headermobileRef = useRef(null);
+    // const [currentSec, setCurrentSec] = useState(0);
+    
     useLayoutEffect(() => {
+    // const timer = setInterval(() => {
+    //   setCurrentSec((next) => (next + 1) % mobileslides.length);
+    // }, 30000);
+
         gsap.set(
             ".header-mobile",
             {
                 x:"-100%"
             }
         )
+    
+    // return () => clearInterval(timer);
     }, []);
+    // const currentSlide = mobileslides[currentSec];
     const openSidebar = () => {
         gsap.to(
             headermobileRef.current, {
@@ -65,7 +84,7 @@ const Header = () => {
                     <a href="/contact" className="hover:border-b-2 border-[#FFEAB5]">contact</a>
 
                 </ul>
-                <div className=" header-mobile bg-[#C7A348]" ref={headermobileRef}>
+                <div className="header-mobile bg-linear-to-t from-[#F6EDE9] to-[#FFF2CE] border-[#DAA404]" ref={headermobileRef}>
                     <div className=" header-m-logo">
                         <img src="/images/logo.png" alt="" className="tm-logo"/>
                         <button onClick={closeSidebar}>
@@ -73,11 +92,11 @@ const Header = () => {
                         </button>
                     </div>
                     <ul className="flex capitalize text-[#151515] text-[24px] capitalize mobile-header-links">
-                        <a href="/home" className="border-b-2 border-[#FFEAB5] mobile-links">home</a>
-                        <a href="/ourstory" className="hover:border-b-2 border-[#FFEAB5] mobile-links">our story</a>
-                        <a href="/shop" className="hover:border-b-2 border-[#FFEAB5] mobile-links">shop</a>
-                        <a href="/mgboost" className="hover:border-b-2 border-[#FFEAB5] mobile-links">why MG Boost</a>
-                        <a href="/contact" className="hover:border-b-2 border-[#FFEAB5] mobile-links">contact</a>
+                        <a href="/home" className="border-b-2 border-[#DAA404] mobile-links">home</a>
+                        <a href="/ourstory" className="hover:border-b-2 border-[#DAA404] mobile-links">our story</a>
+                        <a href="/shop" className="hover:border-b-2 border-[#DAA404] mobile-links">shop</a>
+                        <a href="/mgboost" className="hover:border-b-2 border-[#DAA404] mobile-links">why MG Boost</a>
+                        <a href="/contact" className="hover:border-b-2 border-[#DAA404] mobile-links">contact</a>
 
                     </ul>
                 </div>

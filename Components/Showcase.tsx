@@ -459,27 +459,28 @@ const Showcase = () => {
             });
 
         gsap.set(
-            ".CanLeft",
+            ".ALL-CAN",
             {
                 opacity: 0,
-                x: -100,
+                x: "-100%",
             }
         );
-        gsap.set(
-            ".Can-animate",
-            {
-                clipPath: "inset(0 0 100% 0)",
-            }
-        );
+        // gsap.set(
+        //     ".CanLeft",
+        //     {
+        //         opacity: 0,
+        //         x: -100,
+        //     }
+        // );
 
-        gsap.set(
-            ".middle-can",
-            {
-                opacity: 0,
-                x: -100,
+        // gsap.set(
+        //     ".middle-can",
+        //     {
+        //         opacity: 0,
+        //         x: -100,
 
-            }
-        )
+        //     }
+        // )
         gsap.set(
             ".behindCantext",
             {
@@ -510,13 +511,13 @@ const Showcase = () => {
                 rotate: 0,
             }
         );
-        gsap.set(
-            ".CanRight",
-            {
-                opacity: 0,
-                x: -100,
-            }
-        );
+        // gsap.set(
+        //     ".CanRight",
+        //     {
+        //         opacity: 0,
+        //         x: -100,
+        //     }
+        // );
 
         gsap.set(
             ".Can-animate",
@@ -601,46 +602,52 @@ const Showcase = () => {
             {
                 filter: "blur(0px)",
                 duration: 0.08,
-            },
-            
-            "<"
+            }
         );
 
         tl.to(
-            ".CanLeft",
+            ".ALL-CAN",
             {
                 opacity: 1,
-                x: -0,
-                duration: 0.3,
+                x: "-0%",
+                duration: 0.4,
+                stagger: 0.2,
                 ease: "power1.inOut",
 
-            },
-            "<"
+            }
         );
-
         tl.to(
                 ".Can-animate",
             {
                 clipPath: "inset(0 0 0% 0)",
                 duration: 0.3,
                 ease:"power1.inOut",
-            },
-            "<"
+            }
+        
         );
+        // tl.to(
+        //     ".CanLeft",
+        //     {
+        //         opacity: 1,
+        //         x: -0,
+        //         duration: 0.3,
+        //         ease: "power1.inOut",
 
-        // tl.to({}, { duration: 1});
+        //     },
+        //     "<"
+        // );
 
-        tl.to(
-            ".middle-can",
-            {
-                opacity: 1,
-                x: -0,
-                duration: 0.3,
-                ease: "power1.inOut",
+        // tl.to(
+        //     ".middle-can",
+        //     {
+        //         opacity: 1,
+        //         x: -0,
+        //         duration: 0.3,
+        //         ease: "power1.inOut",
 
-            },
-            "<"
-        )
+        //     },
+        //     "<"
+        // )
 
         tl.to(
         ".behindCantext",
@@ -684,16 +691,17 @@ const Showcase = () => {
         "<"
         );
 
-        tl.to(
-            ".CanRight",
-            {
-                opacity: 1,
-                x: -0,
-                duration: 0.3,
-                ease: "power1.inOut",
-            },
-            "<"
-        );
+
+        // tl.to(
+        //     ".CanRight",
+        //     {
+        //         opacity: 1,
+        //         x: -0,
+        //         duration: 0.3,
+        //         ease: "power1.inOut",
+        //     },
+        //     "<"
+        // );
         // tl.to({}, { duration: 0.2});
         
         tl.to(
@@ -741,8 +749,8 @@ const Showcase = () => {
                 </div>
 
                 <div className="scene-2 w-full h-screen absolute top-0 left-0 z-20  bg-white">
-                    <div className=" flex justify-center items-center gap-x-[32px] text-black h-full px-15 sub-scene-2">
-                        <div className="w-144.5 h-230 CanLeft">
+                    <div className=" flex justify-center items-center gap-x-[32px] text-black h-full px-15 sub-scene-2 ALL-sub-CAN">
+                        <div className="w-144.5 h-230 CanLeft ALL-CAN">
                             <div className="w-full h-160 bg-[#FFF4D7] rounded-b-xl flex justify-center rounded-[16px] can-bg">
                                 <img src="/images/mango-flavor.png" alt="" className="mt-14 w-67.5 h-176" />
                             </div>
@@ -757,7 +765,7 @@ const Showcase = () => {
                                 </button>
                             </div>
                         </div>
-                        <div className="middle-can w-144.5 h-230 bg-[#EEAF09] relative flex flex-col justify-start items-center overflow-hidden text-black rounded-[16px] z-10">
+                        <div className="middle-can ALL-CAN w-144.5 h-230 bg-[#EEAF09] relative flex flex-col justify-start items-center overflow-hidden text-black rounded-[16px] z-10">
                             <div className="pt-10 w-full max-w-[520px] Cantext">
                                 <h2 className="text-[#FFFCD9] text-center text-[48px] font-Albert font-bold capitalize leading-[40px]">Thousands are making
                                 <span className="flex inline-block pt-3 pb-6 px-4 bg-[#045C00] rounded-xl -rotate-3 text-white leading-[30px]">magnesium</span> part of their daily ritual.</h2>
@@ -781,7 +789,7 @@ const Showcase = () => {
                                 </span>
                             </button>
                         </div>
-                        <div className="w-144.5 h-230 CanRight">
+                        <div className="w-144.5 h-230 CanRight ALL-CAN">
                             <div className="w-full h-160 bg-[#FFF4D7] rounded-b-xl flex justify-center rounded-[16px]  can-bg">
                                 <img src="/images/lemon-flavor.png" alt="" className="mt-14 w-[282px] h-176" />
                             </div>
@@ -801,10 +809,10 @@ const Showcase = () => {
                 </div>
                 <div className="scene-3 absolute top-0 left-0 z-30 w-full h-screen flex flex-col gap-y-0 justify-start bg-white">
                     <div className="w-full flex justify-center px-25 pt-10 gap-x-[32px] text-black sub-scene-3">
-                        <div className="w-135 h-171 rounded-[20px] bg-gradient-to-b from-[#FFEFC0] to-[#F4B08C] relative can-holding">
+                        <div className="w-135 h-171 rounded-[20px] bg-gradient-to-b from-[#FFEFC0] to-[#F4B08C] relative can-holding ALL-CAN">
                             <img src="/images/can-holding-woman.png" alt="" className="w-full absolute bottom-0" />
                         </div>
-                        <div className="w-294 h-171 rounded-[20px] bg-gradient-to-t from-[#FAF9BA] to-[#C3F8D8] relative Lemon-scene">
+                        <div className="w-294 h-171 rounded-[20px] bg-gradient-to-t from-[#FAF9BA] to-[#C3F8D8] relative Lemon-scene ALL-CAN">
                             <div className="w-full absolute bottom-0 ice">
                                 <img src="/images/ice.png" alt="" className="object-cover w-full rounded-b-[20px]" />
                             </div>

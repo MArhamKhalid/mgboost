@@ -655,7 +655,7 @@ body {
     transform: translateX(-100%);
     top: 0;
     z-index: 10;
-    border-right: 1px solid rgb(207, 198, 198);
+    border-right: 1px solid #DAA404;
     /* background: #171717; */
     
   }
@@ -665,7 +665,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid rgb(207, 198, 198);
+    border-bottom: 1px solid #DAA404;
     padding-bottom: 14px;
   }
   .tm-logo{
@@ -1273,11 +1273,11 @@ body {
     left: 15px;
   }
   .all-Blogs{
-    height: max-content;
-    min-height: 170vh;
+    max-height: 200vh;
+    /* height: max-content; */
   }
   .Blogs{
-    height: max-content;
+    max-height: max-content;
     padding-top: 0;
   }
   /* .sub-Blogs-01{
@@ -1420,6 +1420,7 @@ body {
 /* /////////////////////////////////////////////////// MAX 428 start /////////////////////////////////////////////// */
 @media (max-width: 428px) {
   .LOGO{
+    margin-top: 0%;
     align-items: center;
   }
   .LOGO img{
@@ -1429,9 +1430,20 @@ body {
   .sidetext{
     width: 100%;
     padding: 0 6%;
+    row-gap: 6px;
   }
   .spanicons span{
     font-size: 12px;
+  }
+  .hero-sub-head{
+    font-size: 22px;
+  }
+  .hero-head{
+    font-size: 40px;
+  }
+  .hero-desc{
+    font-size: 14px;
+    line-height: 18px;
   }
   .sub-scene{
     row-gap: 50px;
@@ -1493,6 +1505,9 @@ body {
   .Can-animate .sub-Can-animate{
     font-size: 19px;
   }
+  .Benefits{
+    max-height: max-content;
+  }
   .benefits-sub-head{
     padding: 0;
   }
@@ -1514,3 +1529,32 @@ body {
 
 }
 /* /////////////////////////////////////////////////// MAX 428 End  ///////////////////////////////////////////////// */
+
+/* /////////////////////////////////////////////////// MAX 400 End  ///////////////////////////////////////////////// */
+@media (max-width: 428px) {
+
+  .hero-head{
+
+  }
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* /////////////////////////////////////////////////// MAX 400 Start //////////////////////////////////////////////// */

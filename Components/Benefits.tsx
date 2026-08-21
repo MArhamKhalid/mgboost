@@ -170,11 +170,11 @@ const Benefits = () => {
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger:BenefitsRef.current,
-                start:"top 98%",
+                start:"top 50%",
                 end: "bottom bottom",
-                toggleActions: "play none none none",
+                toggleActions: "play none none reverse",
                 // scrub: true,
-                // markers: true,
+                markers: true,
             }
         });
 
@@ -182,57 +182,16 @@ const Benefits = () => {
             ".benefitshead",
             {
                 clipPath: "inset(0% 0 0 0)",
-                // opacity: 1,
-                // y: "0%",
                 duration: 0.4,
                 ease: "power1.inOut"
             }
         );
         tl.to(
-            ".left-cards-01",
+            ".benefits-desc",
             {
                 clipPath: "inset(0 0% 0 0)",
-                duration: 0.35,
-                ease: "power1.inOut"
-            }
-        );
-        tl.to(
-            ".left-cards-02",
-            {
-                clipPath: "inset(0 0% 0 0)",
-                duration: 0.35,
-                ease: "power1.inOut"
-            }
-        );
-        tl.to(
-            ".left-cards-03",
-            {
-                clipPath: "inset(0 0% 0 0)",
-                duration: 0.35,
-                ease: "power1.inOut"
-            }
-        );
-        tl.to(
-            ".right-cards-01",
-            {
-                clipPath: "inset(0 0% 0 0)",
-                duration: 0.35,
-                ease: "power1.inOut"
-            }
-        );
-        tl.to(
-            ".right-cards-02",
-            {
-                clipPath: "inset(0 0% 0 0)",
-                duration: 0.35,
-                ease: "power1.inOut"
-            }
-        );
-        tl.to(
-            ".right-cards-03",
-            {
-                clipPath: "inset(0 0% 0 0)",
-                duration: 0.35,
+                duration: 0.3,
+                stagger:0.08,
                 ease: "power1.inOut"
             }
         );
