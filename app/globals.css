@@ -1193,7 +1193,7 @@ body {
   }
   .CanLeft .can-bg img{
     margin-top: 10%;
-    width: 40%;
+    width: 36%;
     height: 390px;
   }
   .Can-animate{
@@ -1239,7 +1239,7 @@ body {
   }
   .CanRight .can-bg img{
     margin-top: 10%;
-    width: 40%;
+    width: 36%;
     height: 390px;
   }
   .scene-3{
@@ -1505,8 +1505,20 @@ body {
   .Can-animate .sub-Can-animate{
     font-size: 19px;
   }
+  .can-holding, .Lemon-scene {
+    height: 450px;
+  }
+  .all-lemon{
+    margin-top: 10%;
+  }
+  .btn-secondary{
+    margin-top: 3%;
+  }
   .text-slider {
     gap: 10px;
+  }
+  .sub-Blogs-01{
+    padding-top: 0;
   }
   .sub-Blogs-02 .text-slider p{
     font-size: 16px;

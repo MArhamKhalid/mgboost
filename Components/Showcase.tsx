@@ -465,22 +465,6 @@ const Showcase = () => {
                 x: "-100%",
             }
         );
-        // gsap.set(
-        //     ".CanLeft",
-        //     {
-        //         opacity: 0,
-        //         x: -100,
-        //     }
-        // );
-
-        // gsap.set(
-        //     ".middle-can",
-        //     {
-        //         opacity: 0,
-        //         x: -100,
-
-        //     }
-        // )
         gsap.set(
             ".behindCantext",
             {
@@ -511,13 +495,6 @@ const Showcase = () => {
                 rotate: 0,
             }
         );
-        // gsap.set(
-        //     ".CanRight",
-        //     {
-        //         opacity: 0,
-        //         x: -100,
-        //     }
-        // );
 
         gsap.set(
             ".Can-animate",
@@ -610,7 +587,7 @@ const Showcase = () => {
             {
                 opacity: 1,
                 x: "-0%",
-                duration: 0.4,
+                // duration: 0.3,
                 stagger: 0.2,
                 ease: "power1.inOut",
 
@@ -625,30 +602,6 @@ const Showcase = () => {
             }
         
         );
-        // tl.to(
-        //     ".CanLeft",
-        //     {
-        //         opacity: 1,
-        //         x: -0,
-        //         duration: 0.3,
-        //         ease: "power1.inOut",
-
-        //     },
-        //     "<"
-        // );
-
-        // tl.to(
-        //     ".middle-can",
-        //     {
-        //         opacity: 1,
-        //         x: -0,
-        //         duration: 0.3,
-        //         ease: "power1.inOut",
-
-        //     },
-        //     "<"
-        // )
-
         tl.to(
         ".behindCantext",
         {
@@ -690,19 +643,6 @@ const Showcase = () => {
         },
         "<"
         );
-
-
-        // tl.to(
-        //     ".CanRight",
-        //     {
-        //         opacity: 1,
-        //         x: -0,
-        //         duration: 0.3,
-        //         ease: "power1.inOut",
-        //     },
-        //     "<"
-        // );
-        // tl.to({}, { duration: 0.2});
         
         tl.to(
             ".mg-banner",
