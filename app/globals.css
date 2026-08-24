@@ -55,7 +55,7 @@ body {
 .menu{
   display: none;
 } */
-.primary-btn{
+/* .primary-btn{
   width: 200px;
   height: 52px;
   background-color: #E0B121;
@@ -72,7 +72,7 @@ body {
   font-family: var(--font-Albert);
   font: normal;
   transition: 0.1s linear;
-}
+} */
 /* .btn2{
   width: 200px;
   height: 52px;
@@ -153,7 +153,7 @@ body {
   margin-left: 20px;
 } */
 
-.primary-btn span{
+/* .primary-btn span{
   width: 42px;
   height: 42px;
   display: flex;
@@ -163,8 +163,8 @@ body {
   background-color: white;
   color: #DAA404;
   /* margin-left: 20px; */
-}
-/* .sec-btn{
+/*} 
+ .sec-btn{
   width: 200px;
   border: 1px solid ;
   display: flex ;
@@ -194,12 +194,12 @@ body {
   }
 }
 
-/* .image-one{
+.image-one{
   height: 75%;
 }
 .image-two{
   width: 75%;
-} */
+}
 /* .firsthead{
   animation: firsthead 0.9s ease-in-out;
   animation-delay: 0.5s;

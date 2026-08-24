@@ -102,7 +102,7 @@ const Hero = () => {
 
             <div className="flex gap-x-3 capitalize">
 
-              <button className={`btn2 ${currentSlide.btnbg} 2xs:w-[180px] 2xs:h-[46px] 2xl:w-[200px] 2xl:h-[52px] flex justify-center items-center text-white rounded-[30px] 2xs:text-[14px] xs:text-[18px] 2xl:text-[20px] cursor-pointer font-Albert 2xs:gap-x-6 capitalize`}>
+              <button className={`btn2 ${currentSlide.btnbg} 2xs:w-[180px] 2xs:h-[46px] 2xl:w-[200px] 2xl:h-[52px] flex justify-center items-center text-white rounded-[30px] 2xs:text-[16px] xs:text-[18px] 2xl:text-[20px] cursor-pointer font-Albert 2xs:gap-x-5 capitalize`}>
                 <p className="2xl:pl-7 2xs:pl-3 xs:pl-6">shop now</p>
                 <span className="2xs:w-[36px] 2xs:h-[36px] 2xl:w-[42px] 2xl:h-[42px] flex justify-center items-center rounded-[50%] bg-white">
                   <img src={currentSlide.arrows} alt="" className="w-[17px] h-[15px] "/>

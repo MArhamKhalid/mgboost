@@ -126,7 +126,7 @@ const slidtext = [
                     end: "bottom bottom",
                     toggleActions: "play none none none",
                     // scrub: true,
-                    markers: true,
+                    // markers: true,
                 }
             });
 
@@ -198,9 +198,9 @@ const slidtext = [
                         <p className='max-w-[800px] font-Albert font-normal text-[#141414] text-[24px] lg:text-[20px] 2xl:text-[24px] 2xs:text-[16px] xs:text-[18px] sm:text-[22px]'>Over time, I began learning how closely digestion, stress, sleep, hydration, mineral intake, and mental well-being are connected. The more I researched, the more I realized that many people are experiencing the same challenges—feeling tired, stressed, bloated, restless, and disconnected from their bodies while trying to keep up with busy modern lives.</p>
                     </div>
                     <div className='flex min-[1024px]:max-[1152px]:hidden'>
-                        <button className='blogs-btn bg-[#DAA404] text-white px-1.5 py-1.5 w-[227px] 2xs:w-[182px] h-[52px] 2xs:h-[46px] sm:w-[208px] sm:h-[49px] 2xl:w-[227px] 2xl:h-[52px] capitalize font-Alan flex justify-center items-center rounded-full gap-x-[20px] cursor-pointer'>
+                        <button className='blogs-btn bg-[#DAA404] text-white px-1.5 py-1.5 2xl:w-[227px] 2xs:w-[184px] 2xl:h-[52px] 2xs:h-[46px] sm:w-[208px] sm:h-[49px] 2xl:w-[227px] 2xl:h-[52px] capitalize font-Alan flex justify-center items-center rounded-full gap-x-[20px] cursor-pointer'>
                             <p className='pl-3 text-[20px] 2xs:text-[15px] sm:text-[18px]  2xl:text-[20px]'>read full story</p>
-                            <span className='bg-white flex justify-center items-center rounded-full w-[42px] h-[42px] 2xs:w-[32px] 2xs:h-[32px] sm:w-[38px] sm:h-[38px]  2xl:w-[42px] 2xl:h-[42px]'>
+                            <span className='bg-white flex justify-center items-center rounded-full w-[42px] h-[42px] 2xs:w-[34px] 2xs:h-[34px] sm:w-[38px] sm:h-[38px]  2xl:w-[42px] 2xl:h-[42px]'>
                                 <img src="/icons/Arrow-orange.svg" alt="" className='px-2 py-3'/>
                             </span> 
                         </button>
