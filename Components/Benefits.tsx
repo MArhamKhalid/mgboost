@@ -220,7 +220,7 @@ const Benefits = () => {
                 </div>
 
                 <div className='w-full h-full xl:max-h-[50%] xl:flex justify-center xl:items-center relative Benefits-Cards mt-40 3xs:flex-col 3xs:items-center 3xs:justify-center 3xs:h-full 3xs:mt-0 3xs:w-[100%] lg:grid lg:grid-cols-2 xl:flex-row '>
-                    <div className='flex flex-col justify-center xl:items-end xl:gap-y-22 w-full xl:max-w-[37%] h-full max-h-max z-1 xl:mt-[10%] leftcards 3xs:max-w-[90%] 3xs:mt-0 3xs:items-center 3xs:gap-y-6'>
+                    <div className='flex flex-col justify-center xl:items-end xl:gap-y-22 w-full xl:max-w-[37%] h-full max-h-max z-1 xl:mt-[10%] leftcards 3xs:w-full 3xs:mt-0 3xs:items-center 3xs:gap-y-6'>
                         <div className='benefits-desc left-cards-01 3xs:w-[340px] 3xs:h-[70px] sm:w-[360px] sm:h-[79px] lg:w-[397px] lg:h-[89px] rounded-[88px] bg-linear-to-b from-[#FBFBFB] to-[#FAF1D4] flex justify-end items-center shadow-xl gap-x-[11px] 3xs:flex-row-reverse'>
                             <p className='lg:max-w-[214px] capitalize lg:text-[22px] font-Albert font-normal xl:text-right lg:leading-[26px] xl:mr-1 3xs:leading-[22px] 3xs:text-[18px] 3xs:max-w-[260px]'>Supports calmness and relaxation</p>
                             <div className='left-cards-img-01 lg:w-[75px] lg:h-[75px] 3xs:w-[60px] 3xs:h-[60px] sm:w-[68px] sm:h-[69px] rounded-full bg-[#E0B121] flex justify-center items-center xl:mr-2 3xs:ml-1.5'>
@@ -247,7 +247,7 @@ const Benefits = () => {
                             <img src="/images/Subtract02.png" alt="" className='  watercan object-none'/>
                         {/* </div> */}
                     </div>
-                    <div className='flex flex-col xl:justify-start xl:items-start xl:gap-y-20 h-full max-h-max w-full xl:max-w-[37%] z-1 xl:-mt-[6%] 3xs:mt-6 lg:mt-0 rightcards  3xs:max-w-[90%] 3xs:items-center 3xs:gap-y-6'>
+                    <div className='flex flex-col xl:justify-start xl:items-start xl:gap-y-20 h-full max-h-max w-full xl:max-w-[37%] z-1 xl:-mt-[6%] 3xs:mt-6 lg:mt-0 rightcards  3xs:w-full 3xs:items-center 3xs:gap-y-6'>
                         <div className='benefits-desc right-cards-01 3xs:w-[340px] 3xs:h-[70px] sm:w-[360px] sm:h-[79px]  lg:w-[397px] lg:h-[89px] rounded-[88px] bg-gradient-to-b from-[#FBFBFB] to-[#FAF1D4] flex justify-start items-center px shadow-xl gap-x-[11px] xl:-ml-[14%] 3xs:m-0'>
                             <div className='benefits-desc-img lg:w-[75px] lg:h-[75px] 3xs:w-[60px] 3xs:h-[60px] sm:w-[68px] sm:h-[69px] rounded-full bg-[#E0B121] flex justify-center items-center ml-2 3xs:ml-1.5'>
                                 <img src="/icons/gut.png" alt="" className='3xs:p-2'  />

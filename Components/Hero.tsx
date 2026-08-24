@@ -102,14 +102,14 @@ const Hero = () => {
 
             <div className="flex gap-x-3 capitalize 3xs:max-w-[320px] 2xs:max-w-[362px] 2xl:max-w-[402px]">
 
-              <button className={`btn2 ${currentSlide.btnbg} 2xs:w-[180px] 2xs:h-[46px] 2xl:w-[200px] 2xl:h-[52px] flex justify-center items-center text-white rounded-[30px] 2xs:text-[16px] xs:text-[18px] 2xl:text-[20px] cursor-pointer font-Albert 2xs:gap-x-5 capitalize`}>
-                <p className="2xl:pl-7 2xs:pl-3 xs:pl-6">shop now</p>
-                <span className="2xs:w-[36px] 2xs:h-[36px] 2xl:w-[42px] 2xl:h-[42px] flex justify-center items-center rounded-[50%] bg-white">
+              <button className={` ${currentSlide.btnbg} 3xs:w-[180px] 3xs:h-[46px] 2xl:w-[200px] 2xl:h-[52px] flex justify-center items-center text-white rounded-[30px] 3xs:text-[14px] 2xs:text-[16px] 2xl:text-[20px] cursor-pointer font-Albert 3xs:gap-x-6 capitalize`}>
+                <p className="2xl:pl-7 3xs:pl-3 2xs:pl-5 xs:pl-6">shop now</p>
+                <span className="3xs:w-[36px] 3xs:h-[36px] 2xl:w-[42px] 2xl:h-[42px] flex justify-center items-center rounded-[50%] bg-white">
                   <img src={currentSlide.arrows} alt="" className="w-[17px] h-[15px] "/>
                 </span>
               </button>
 
-              <button className={`sec-btn ${currentSlide.borderColor} ${currentSlide.textColor2} ${currentSlide.bgColor} 2xs:w-[180px] 2xs:h-[46px] 2xl:w-[200px] 2xl:h-[52px] flex justify-center items-center 2xs:text-[14px] xs:text-[18px] 2xl:text-[20px] cursor-pointer font-Albert capitalize border rounded-[30px] hover:text-white`}>
+              <button className={`sec-btn ${currentSlide.borderColor} ${currentSlide.textColor2} ${currentSlide.bgColor} 2xs:w-[180px] 2xs:h-[46px] 2xl:w-[200px] 2xl:h-[52px] flex justify-center items-center 2xs:text-[16px] xs:text-[18px] 2xl:text-[20px] cursor-pointer font-Albert capitalize border rounded-[30px] hover:text-white`}>
                 join to waitlist
               </button>
 
