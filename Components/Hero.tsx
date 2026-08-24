@@ -60,9 +60,9 @@ const Hero = () => {
   const currentSlide = slides[currentSec];
   
   return (
-    <section className={`w-full h-[100vh] relative overflow-hidden bg-white hero 2xs:min-h-[130vh] 2xs:max-h lg:min-h-dvh`}>
+    <section className={`w-full h-[100vh] relative overflow-hidden bg-white hero 2xs:min-h-[130vh] 2xs:max-h lg:min-h-dvh `}>
 
-      <div className={`w-full h-full flex lg:flex-row justify-between items-start relative sectionChange ` } >
+      <div className={`w-full h-full flex lg:flex-row justify-between items-start relative sectionChange ${currentSlide.sectionbg}` } key={currentSec} >
 
         <div className=" w-full absolute top-0 topChange lg:h-auto 2xs:h-[16%] xs:h-[18%] md:h-[22%]">
           <img  src={currentSlide.mask} alt="" className="bg-cover w-full  2xs:h-full"/>
