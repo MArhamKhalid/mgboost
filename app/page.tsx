@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Hero from "@/Components/Hero";
 import Showcase from "@/Components/Showcase";
+import Quote from "@/Components/Quote";
 import Products from "@/Components/Products";
 import Advertise from "@/Components/Advertise";
 import Blogs from "@/Components/Blogs";
@@ -13,14 +14,15 @@ export default function Home() {
   return (
   <>
         <Hero/>
-        <Showcase/>
-        {/* <Products/>
+        {/* <Quote/>
+        <Showcase/> 
+        <Products/>
         <Advertise/> */}
         <Blogs/>
-        <Benefits/>
+        {/* <Benefits/> */}
         <Details/>
-        <Story/>
-        <EndDetails/>
+        {/* <Story/> */}
+        {/* <EndDetails/> */}
   </>
   );
 }

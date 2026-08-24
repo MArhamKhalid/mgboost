@@ -145,7 +145,7 @@ const Advertise = () => {
                 end: "bottom bottom",
                 toggleActions:"play none none reverse",
                 // scrub: true,
-                // markers: true,
+                markers: true,
             }
         });
         tl.to(
@@ -177,34 +177,34 @@ const Advertise = () => {
   return () => ctx.revert();
 }, []);
   return (
-        <section ref={AdvertiseRef} className="relative w-full h-[400vh] bg-white Advertise">
-            <div className="sticky top-0 w-full h-screen overflow-hidden sub-Advertise">
-                <div className="w-full h-screen flex flex-col gap-y-0 justify-start bg-white">
-                    <div className="w-full flex justify-center px-25 pt-10 gap-x-[32px] text-black ">
-                        <div className="w-135 h-171 rounded-[20px] bg-gradient-to-b from-[#FFEFC0] to-[#F4B08C] relative can-holding">
-                            <img src="/images/can-holding-woman.png" alt="" className="w-full absolute bottom-0" />
+        <section ref={AdvertiseRef} className="relative w-full h-[400vh] bg-white Advertise sm:h-max lg:h-max">
+            <div className="sticky top-0 w-full h-screen overflow-hidden sub-Advertise sm:static sm:h-max">
+                <div className="w-full h-screen flex flex-col gap-y-0 justify-start bg-white sm:h-max sm:pb-20">
+                    <div className="w-full sm:w-[100%] sm:h-max flex sm:flex-col sm:gap-y-10 justify-center px-25 pt-10 sm:px-10 sm:pt-0 gap-x-[32px] text-black ">
+                        <div className="w-135 sm:w-[100%] h-171 rounded-[20px] bg-gradient-to-b from-[#FFEFC0] to-[#F4B08C] relative can-holding lg:flex lg:justify-center">
+                            <img src="/images/can-holding-woman.png" alt="" className="w-full lg:w-[70%] h-full object-cover absolute bottom-0" />
                         </div>
-                        <div className="w-294 h-171 rounded-[20px] bg-gradient-to-t from-[#FAF9BA] to-[#C3F8D8] relative Lemon-scene">
+                        <div className="w-294 sm:w-[100%] h-171 sm:h-[600px] rounded-[20px] bg-gradient-to-t from-[#FAF9BA] to-[#C3F8D8] relative Lemon-scene lg:overflow-hidden">
                             <div className="w-full absolute bottom-0 ice">
                                 <img src="/images/ice.png" alt="" className="object-cover w-full rounded-b-[20px]" />
                             </div>
-                            <div className="w-full absolute left-0 bottom-0 doubleCan">
-                                <img src="/images/double-lemon.png" alt="" className="" />
+                            <div className="w-full sm:w-[80%] lg:w-[50%] absolute left-0 bottom-0 doubleCan">
+                                <img src="/images/double-lemon.png" alt="" className="w-full h-full" />
                             </div>
-                            <div className="w-full absolute left-0 bottom-0 z-1 singleCan">
-                                <img src="/images/single-lemon.png" alt="" className="" />
+                            <div className="w-full sm:w-[36%] lg:w-[22%] absolute left-0 bottom-0 z-1 singleCan">
+                                <img src="/images/single-lemon.png" alt="" className="w-full h-full" />
                             </div>
-                            <div className="w-full absolute left-0 top-0 mg-banner frame">
-                                <img src="/images/mg-frame.png" alt="" className="" />
+                            <div className="w-full absolute left-0 top-0 lg:w-[100%] lg:h-[80%] lg:top-[30%] lg:rotate-16 mg-banner frame">
+                                <img src="/images/mg-frame.png" alt="" className="w-full h-full" />
                             </div>
                             <div className="w-full flex justify-end all-lemon">
-                                <div className="w-140 h-full flex flex-col items-center text-center capitalize mt-[117px] lemon-text">
+                                <div className="w-140 h-full flex flex-col items-center text-center capitalize md:mt-14 mt-[117px] lg:gap-y-6 lemon-text">
                                     <div className="leading-[50px] lemon-sub-text">
-                                        <h2 className="font-Alan text-[82px] font-bold text-[#3F6C48] lemon-sub-text-1">find your</h2>
-                                        <h2 className="mgspan py-6 px-2 rounded-2xl bg-[#3F6C48] text-white text-[82px] font-bold -rotate-3">daily boost</h2>
+                                        <h2 className="font-Alan text-[82px] font-bold text-[#3F6C48] lemon-sub-text-1 lg:text-[60px]">find your</h2>
+                                        <h2 className="mgspan py-6 px-2 rounded-2xl bg-[#3F6C48] text-white text-[82px] font-bold -rotate-3 lg:text-[60px]">daily boost</h2>
                                     </div>
-                                    <p className="text-[28px] font-Albert font-normal text-[#3F6C48] leading-[28px] mt-[37px] lemon-sub-text-2">Choose the perfect option<br />for your lifestyle.</p>
-                                    <button className="btn-secondary w-[158px] h-[42px] flex items-center cursor-pointer z-10 capitalize underline gap-x-4 mt-[29px]">
+                                    <p className="text-[28px] font-Albert font-normal text-[#3F6C48] leading-[28px] mt-[37px] lg:mt-0 lemon-sub-text-2">Choose the perfect option<br />for your lifestyle.</p>
+                                    <button className="btn-secondary w-[158px] h-[42px] flex items-center cursor-pointer z-10 capitalize underline gap-x-4 mt-[29px] lg:mt-0">
                                         <p className="text-[20px] font-Albert">shop now </p>
                                         <span className="w-[42px] h-[42px] bg-black rounded-full flex justify-center items-center">
                                             <img src="/icons/Arrow-orange.svg" alt="" className='px-2 py-3' />
@@ -214,7 +214,7 @@ const Advertise = () => {
                             </div>
                         </div>
                     </div>
-                    <div className=" h-[25%] bg-[#FFF7DF] flex justify-start -mt-20 text-black overflow-hidden all-slider">
+                    <div className=" h-[25%] sm:h-[250px]  bg-[#FFF7DF] flex justify-start -mt-20 text-black overflow-hidden all-slider">
                         <div className="text-slider flex w-max items-end gap-x-20">
 
                             {textslider.map((text, i) => (

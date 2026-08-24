@@ -2,7 +2,6 @@
 import { useLayoutEffect, useRef, useState } from "react"
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { SplitText } from "gsap/all";
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -220,22 +219,13 @@ const Products = () => {
     // /////////////////////////////////////////////////////////TABLET //////////////////////////////////////////////////////
         const mmm = gsap.matchMedia();
         mmm.add("(max-width: 768px)", () => {
-
         gsap.set(
-            ".Can-animate",
-            {
-                clipPath: "inset(0 0 100% 0)",
-            }
-        );
-
-        gsap.set(
-            ".middle-can",
+            ".ALL-CAN",
             {
                 opacity: 0,
-                x: -100,
-
+                x: "-100%",
             }
-        )
+        );
         gsap.set(
             ".behindCantext",
             {
@@ -266,18 +256,26 @@ const Products = () => {
                 rotate: 0,
             }
         );
-        gsap.set(
-            ".CanRight",
-            {
-                opacity: 0,
-                x: -100,
-            }
-        );
 
         gsap.set(
             ".Can-animate",
             {
                 clipPath: "inset(0 0 100% 0)",
+            }
+        );
+
+        gsap.set(
+            ".mg-banner",
+            {
+                clipPath:"inset(0 100% 0 -5%)",
+            }
+        );
+        gsap.set(
+            ".mgspan",
+            {
+                // opacity: 0,
+                clipPath: "inset(0 0 100% 0)",
+                y: "100%",
             }
         );
 
@@ -290,59 +288,46 @@ const Products = () => {
                 end: "bottom bottom",
                 toggleActions:"play none none reverse",
                 // scrub: true,
-                // markers: true,
+                markers: true,
             }
         });
 
-
         tl.to(
-            ".CanLeft",
+            ".ALL-CAN",
             {
                 opacity: 1,
-                x: -0,
-                duration: 0.7,
+                x: "-0%",
+                // duration: 0.4,
+                stagger: 0.18,
                 ease: "power1.inOut",
 
             }
         );
-
         tl.to(
                 ".Can-animate",
             {
                 clipPath: "inset(0 0 0% 0)",
-                duration: 0.7,
+                duration: 0.3,
                 ease:"power1.inOut",
-            },
-        );
-
-        tl.to({}, { duration: 1});
-
-        tl.to(
-            ".middle-can",
-            {
-                opacity: 1,
-                x: -0,
-                duration: 0.7,
-                ease: "power1.inOut",
-
             }
-        )
-
+        
+        );
         tl.to(
         ".behindCantext",
         {
             opacity: 1,
             y: 0,
-            duration: 1,
+            duration: 0.1,
             ease: "power1.inOut",
-        }
+        },
+        "<"
         );
 
         tl.to(
             ".Cantext",
         {
             clipPath: "inset(0% 0 0  0)",
-            duration: 1,
+            duration: 0.3,
             ease: "power2.inOut",
 
         });
@@ -352,7 +337,7 @@ const Products = () => {
         {
             left: "20%",
             rotate: -8,
-            duration: 1,
+            duration: 0.3,
             ease: "power2.inOut" ,
         },
         "<"
@@ -363,22 +348,30 @@ const Products = () => {
         {
             right: "20%",
             rotate: 8,
-            duration: 1,
+            duration: 0.3,
             ease: "power2.inOut",
         },
         "<"
         );
-
+        
         tl.to(
-            ".CanRight",
+            ".mg-banner",
             {
-                opacity: 1,
-                x: -0,
-                duration: 0.7,
+                clipPath:"inset(0 0% 0 -5%)",
+                duration: 0.6,
                 ease: "power1.inOut",
             }
         );
-
+        tl.to(
+            ".mgspan",
+            {
+                clipPath: "inset(0 0 0% 0)",
+                y: "0%",
+                duration: 0.6,
+                ease: "power1.inOut"
+            },
+            "<"
+        );
 
         });
 
@@ -389,13 +382,13 @@ const Products = () => {
 
   return (
     
-        <section ref={ProductsRef} className="relative w-full h-[400vh] bg-white Products">
-            <div className="sticky top-0 w-full h-screen overflow-hidden sub-Products">
-                <div className="w-full h-screen bg-white">
-                    <div className=" flex justify-center items-center gap-x-[32px] text-black h-full px-15 max-h-max">
-                        <div className="w-144.5 h-230 CanLeft">
-                            <div className="w-full h-160 bg-[#FFF4D7] rounded-b-xl flex justify-center rounded-[16px] can-bg">
-                                <img src="/images/mango-flavor.png" alt="" className="mt-14 w-67.5 h-176" />
+        <section ref={ProductsRef} className="relative w-full h-[400vh] sm:h-max bg-white Products">
+            <div className="sticky top-0 w-full h-screen overflow-hidden sub-Products sm:static sm:h-max sm:px-10 sm:py-20">
+                {/* <div className="w-full h-screen bg-white"> */}
+                    <div className=" flex justify-center items-center gap-x-[32px] text-black h-full px-15 max-h-max sm:flex-col sm:gap-y-10 sm:h-max sm:px-0">
+                        <div className="w-144.5 h-230 CanLeft ALL-CAN sm:w-[100%] sm:h-max">
+                            <div className="w-full h-160 sm:h-[450px] bg-[#FFF4D7] rounded-b-xl flex justify-center rounded-[16px] can-bg">
+                                <img src="/images/mango-flavor.png" alt="" className=" mt-14 -mb-24 sm:mt-20 sm:-mb-26"  />
                             </div>
                             <div className="w-full h-68 flex flex-col justify-end items-center gap-y-4 leading-[18px] Can-animate">
                                 <h2 className="uppercase font-Albert font-bold text-[20px]">magnesium infused</h2>
@@ -408,7 +401,7 @@ const Products = () => {
                                 </button>
                             </div>
                         </div>
-                        <div className="middle-can w-144.5 h-230 bg-[#EEAF09] relative flex flex-col justify-start items-center overflow-hidden text-black rounded-[16px] z-10">
+                        <div className="middle-can ALL-CAN w-144.5 sm:w-[100%] h-230 bg-[#EEAF09] relative flex flex-col justify-start items-center overflow-hidden text-black rounded-[16px] z-10">
                             <div className="pt-10 w-full max-w-[520px] Cantext">
                                 <h2 className="text-[#FFFCD9] text-center text-[48px] font-Albert font-bold capitalize leading-[40px]">Thousands are making
                                 <span className="flex inline-block pt-3 pb-6 px-4 bg-[#045C00] rounded-xl -rotate-3 text-white leading-[30px]">magnesium</span> part of their daily ritual.</h2>
@@ -432,9 +425,9 @@ const Products = () => {
                                 </span>
                             </button>
                         </div>
-                        <div className="w-144.5 h-230 CanRight">
-                            <div className="w-full h-160 bg-[#FFF4D7] rounded-b-xl flex justify-center rounded-[16px]  can-bg">
-                                <img src="/images/lemon-flavor.png" alt="" className="mt-14 w-[282px] h-176" />
+                        <div className="w-144.5 h-230 CanRight ALL-CAN sm:w-[100%] sm:h-max">
+                            <div className="w-full h-160 sm:h-[450px] bg-[#FFF4D7] rounded-b-xl flex justify-center rounded-[16px]  can-bg">
+                                <img src="/images/lemon-flavor.png" alt="" className=" mt-14 -mb-24 sm:mt-20 sm:-mb-26" />
                             </div>
                             <div className="w-full h-68 flex flex-col justify-end items-center gap-y-4 leading-[18px] Can-animate">
                                 <h2 className="uppercase font-Albert font-bold text-[20px]">magnesium infused</h2>
@@ -449,7 +442,7 @@ const Products = () => {
                         </div>
 
                     </div>
-                </div>
+                {/* </div> */}
             </div>
         </section>
   )

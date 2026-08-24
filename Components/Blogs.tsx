@@ -122,11 +122,11 @@ const slidtext = [
             const tl = gsap.timeline({
                 scrollTrigger: {
                     trigger:BlogsRef.current,
-                    start:"-40% top",
+                    start:"top top",
                     end: "bottom bottom",
                     toggleActions: "play none none none",
                     // scrub: true,
-                    // markers: true,
+                    markers: true,
                 }
             });
 
@@ -180,47 +180,58 @@ const slidtext = [
   return () => ctx.revert();
 }, []);
   return (
-    <section ref={BlogsRef} className='w-full h-[110vh] bg-white relative overflow-hidden all-Blogs'>
-        <div className='w-full h-full px-25 flex flex-col justify-center text-black pt-10 Blogs'>
-            <div className='flex gap-x-6 w-full h-full max-h-200 pt-10 sub-Blogs-01'>
-                <div className='w-199.5 h-full flex justify-center items-center Blogs-img'>
-                    <img src="/images/can-holding-woman-about.png" alt="/" className=' object-cover blog-image flex items-center' />
+    <section ref={BlogsRef} className='w-full h-dvh 2xs:h-max 2xs:min-h-[100vh] sm:min-h-[140vh] sm:max-h lg:h-max lg:min-h-[105vh] xl:h-dvh bg-white relative overflow-hidden all-Blogs'>
+        <div className='w-full h-full 2xs:px-4 2xs:py-4 sm:px-8 sm:py-6 lg:py-10 lg:px-6 xl:px-8 flex flex-col lg:gap-y-6 justify-center text-black pt-10 Blogs 2xs:h-max sm:h-max lg:h-max'>
+            <div className='flex gap-x-6 2xs:gap-y-10 w-full h-full 2xs:flex-col lg:flex-row 2xs:h-max  sm:h-max lg:h-max 2xs:pt-0  sub-Blogs-01'>
+                <div className='w-[800px] 2xs:w-[100%] xs:w-[100%] h-full 2xs:h-[50%] xs:h-[50%] lg:h-[100%] flex justify-center 2xs:justify-center items-center Blogs-img 2xs:pt-[12px] xl:pt-0'>
+                    <img src="/images/can-holding-woman-about.png" alt="/" className=' object-cover blog-image h-full w-full' />
                 </div>
-                <div className='w-220 h-full flex flex-col justify-center gap-y-10 blogs-text'>
+                <div className='w-220 2xs:w-[100%] h-full flex flex-col justify-center gap-y-6 blogs-text '>
                     <div className='blogs-text-1'>
-                        <span className='font-albert text-[36px] font-semibold text-[#141414] capitalize'>MG BOOST began with a </span>
-                        <h2 className='text-[#E0B121] font-Alan font-bold text-[87px] capitalize leading-18'>personal search<br/>for answers.</h2>
+                        <span className='font-albert 2xs:text-[16px] xs:text-[20px] sm:text-[26px] text-[36px] xl:text-[28px] 2xl:text-[36px] font-semibold text-[#141414] capitalize'>MG BOOST began with a </span>
+                        <h2 className='text-[#E0B121] font-Alan font-bold 2xs:text-[34px] xs:text-[40px] sm:text-[56px] xl:text-[70px]  2xs:leading-8 sm:leading-12 text-[87px] lg:text-[67px] 2xl:text-[87px] capitalize 2xl:leading-18 lg:leading-14'>personal search<br/>for answers.</h2>
                     </div>
                     <div className='blogs-text-2'>
-                        <p className='font-Albert font-normal text-[#141414] text-[24px]'>After moving to the United States with big dreams for my future, I began quietly struggling with ongoing digestive discomfort, stress, poor sleep, and low energy. I tried different diets, supplements, probiotics, cleansing methods, and wellness routines. Some provided temporary relief, but I still felt that something deeper was missing.</p>
+                        <p className='max-w-[800px] font-Albert font-normal text-[#141414] text-[24px] lg:text-[20px] 2xl:text-[24px] 2xs:text-[16px] xs:text-[18px] sm:text-[22px]'>After moving to the United States with big dreams for my future, I began quietly struggling with ongoing digestive discomfort, stress, poor sleep, and low energy. I tried different diets, supplements, probiotics, cleansing methods, and wellness routines. Some provided temporary relief, but I still felt that something deeper was missing.</p>
                     </div>
-                    <div className='blogs-text-3'>
-                        <p className='font-Albert font-normal text-[#141414] text-[24px]'>Over time, I began learning how closely digestion, stress, sleep, hydration, mineral intake, and mental well-being are connected. The more I researched, the more I realized that many people are experiencing the same challenges—feeling tired, stressed, bloated, restless, and disconnected from their bodies while trying to keep up with busy modern lives.</p>
+                    <div className='blogs-text-3 flex min-[1024px]:max-[1152px]:hidden'>
+                        <p className='max-w-[800px] font-Albert font-normal text-[#141414] text-[24px] lg:text-[20px] 2xl:text-[24px] 2xs:text-[16px] xs:text-[18px] sm:text-[22px]'>Over time, I began learning how closely digestion, stress, sleep, hydration, mineral intake, and mental well-being are connected. The more I researched, the more I realized that many people are experiencing the same challenges—feeling tired, stressed, bloated, restless, and disconnected from their bodies while trying to keep up with busy modern lives.</p>
                     </div>
-                    <div>
-                        <button className='blogs-btn bg-[#DAA404] text-white px-1.5 py-1.5 w-[227px] h-[52px] capitalize font-Alan flex justify-center items-center rounded-full gap-x-[20px] cursor-pointer'>
-                            <p className='pl-3 text-[20px]'>read full story</p>
-                            <span className='bg-white flex justify-center items-center rounded-full w-[42px] h-[42px]'>
+                    <div className='flex min-[1024px]:max-[1152px]:hidden'>
+                        <button className='blogs-btn bg-[#DAA404] text-white px-1.5 py-1.5 w-[227px] 2xs:w-[182px] h-[52px] 2xs:h-[46px] sm:w-[208px] sm:h-[49px] 2xl:w-[227px] 2xl:h-[52px] capitalize font-Alan flex justify-center items-center rounded-full gap-x-[20px] cursor-pointer'>
+                            <p className='pl-3 text-[20px] 2xs:text-[15px] sm:text-[18px]  2xl:text-[20px]'>read full story</p>
+                            <span className='bg-white flex justify-center items-center rounded-full w-[42px] h-[42px] 2xs:w-[32px] 2xs:h-[32px] sm:w-[38px] sm:h-[38px]  2xl:w-[42px] 2xl:h-[42px]'>
                                 <img src="/icons/Arrow-orange.svg" alt="" className='px-2 py-3'/>
                             </span> 
                         </button>
                     </div>
                 </div>
             </div>
-            <div className="w-full h-100 flex text-black sub-Blogs-02">
+
+            <div className=' min-[1024px]:px-4 hidden min-[1024px]:flex min-[1152px]:hidden'>
+                <p className='font-Albert font-normal text-[#141414] text-[24px] lg:text-[20px]'>Over time, I began learning how closely digestion, stress, sleep, hydration, mineral intake, and mental well-being are connected. The more I researched, the more I realized that many people are experiencing the same challenges—feeling tired, stressed, bloated, restless, and disconnected from their bodies while trying to keep up with busy modern lives.</p>
+            </div>
+            <div className=' min-[1024px]:justify-end  hidden min-[1024px]:flex min-[1152px]:hidden'>
+                <button className='blogs-btn bg-[#DAA404] text-white px-1.5 py-1.5 w-[227px] h-[52px] capitalize font-Alan flex justify-center items-center rounded-full gap-x-[20px] cursor-pointer'>
+                    <p className='pl-3 text-[20px]'>read full story</p>
+                    <span className='bg-white flex justify-center items-center rounded-full w-[42px] h-[42px]'>
+                        <img src="/icons/Arrow-orange.svg" alt="" className='px-2 py-3'/>
+                    </span> 
+                </button>
+            </div>
+
+            <div className="w-full lg:h-20 2xs:h-[100px] flex text-black sub-Blogs-02">
                 <div className="h-full flex justify-start items-center blog-slider-text" >
                 {slidtext.map((text, i) => (
                     <span className="flex items-center justify-evenly capitalize gap-x-0 text-nowrap text-slider" key={i}>
-                        <p className='text-[66px] font-Albert font-bold text-[#E0B121] leading-[26px] ml-30'>{text.text}</p>
-                        <img src="/images/flower.png" alt=""/>
-                        <p className='text-[66px] font-bold text-white [-webkit-text-stroke:1px_#E0B121] leading-[26px]'>Find your balance.  Boost your day.</p>
-                        <img src="/images/flower.png" alt=""/>
+                        <p className='text-[66px] 2xs:text-[20px] sm:text-[28px] lg:text-[50px] font-Albert font-bold text-[#E0B121] leading-[26px] ml-30 2xs:ml-14 sm:ml-18'>{text.text}</p>
+                        <img src="/images/flower.png" alt="" className='2xs:w-[26px] sm:w-[34px]'/>
+                        <p className='text-[66px] 2xs:text-[20px] sm:text-[28px] lg:text-[50px] font-bold text-white [-webkit-text-stroke:1px_#E0B121] leading-[26px]'>Find your balance.  Boost your day.</p>
+                        <img src="/images/flower.png" alt="" className='2xs:w-[26px] sm:w-[34px]'/>
                     </span>
                     
                 ))}
                 </div>
-                    {/* <span className='flex items-center text-center justify-evenly font-bold font-Albert text-[66px] shrink-0'>
-                    </span> */}
             </div>
         </div>
     </section>

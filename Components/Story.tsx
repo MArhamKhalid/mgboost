@@ -269,11 +269,11 @@ const Story = () => {
 }, []);
   return (
     <section className='w-full h-[200vh] flex flex-col items-center bg-white z-1 relative story-section' ref={StorysRef} >
-        <div className='w-full h-screen flex flex-col items-center sticky top-0 overflow-hidden sub-story-section inner-shadow-tb'>
-            <div className=" w-full max-w-[718px] max-h-[160px] leading-[80px] absolute top-0 z-30 storyhead">
+        <div className='w-full h-screen flex flex-col items-center sticky top-0 overflow-hidden sub-story-section inner-shadow-tb sm:static lg:sticky'>
+            <div className=" w-full max-w-[718px] max-h-[160px] leading-[80px] absolute top-0 z-30 storyhead sm:py-10 xl:py-0">
                 <h2 className='text-[#E0B121] font-Alan font-bold text-[82px] capitalize text-center'>turning snapshots into stories</h2>
             </div>
-            <div className="mobile-story-grid">
+            <div className="mobile-story-grid sm:px-6">
     
                 <div className="story-img  m-img-1">
                     <img src="/images/snapshot1.png" alt="" />
@@ -308,7 +308,7 @@ const Story = () => {
                 </div>
 
             </div>
-            <div className="mobile-story-grid">
+            <div className="mobile-story-grid sm:px-6">
     
                 <div className="story-img m-img-7">
                     <img src="/images/snapshot6.png" alt="" />
@@ -383,7 +383,7 @@ const Story = () => {
                     <img src="/images/snapshot8.png" alt="" className='w-[288px] h-[337px] story-image-8 object-contain'/>
                 </div>
             </div>
-            <div className='w-[241px] h-[74px] flex flex-col items-center absolute bottom-10 z-20 insta-icon'>
+            <div className='w-[241px] h-[74px] flex flex-col items-center absolute bottom-10 z-20 insta-icon sm:bottom-0 left-5'>
                 <img src="/icons/instagram-brands-solid.svg" alt="/" className='w-[29.13px] h-[29.13px]'/>
                 <a href="/" className='capitalize font-Albert font-semibold text-black text-[24px] underline'>follow on instagram</a>
             </div>
