@@ -696,7 +696,6 @@
   .benefitshead p{
     font-size: 18px;
     text-wrap-mode: wrap;
-    /* word-break: normal; */
   }
   .Benefits-Cards{
     flex-direction: column;

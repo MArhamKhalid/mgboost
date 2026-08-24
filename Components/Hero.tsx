@@ -68,7 +68,7 @@ const Hero = () => {
           <img  src={currentSlide.mask} alt="" className="bg-cover w-full  2xs:h-full"/>
         </div>
 
-        <div className="2xl:w-full lg:h-[80%] lg:max-h-[100%] 2xs:h-[50%] xs:h-[60%] xs:max-h-[100%] flex flex-col justify-end gap-y-5 z-1 sidetext lg:max-w-[770px] md:w-[550px] 2xl:pl-[100px] 2xs:px-4 2xs:w-full md:pl-17 md:pr-0 lg:pl-10" >
+        <div className="2xl:w-full 2xl:h-[80%] lg:h-[80%] lg:max-h-[100%] 2xs:h-[50%] xs:h-[60%] xs:max-h-[100%] flex flex-col justify-end gap-y-5 z-1 sidetext lg:max-w-[770px] md:w-[550px] 2xl:pl-[100px] 2xs:px-4 2xs:w-full md:pl-17 md:pr-0 lg:pl-10" >
 
         
           <div className="flex justify-start gap-x-3 capitalize font-Alan spanicons" >
@@ -100,7 +100,7 @@ const Hero = () => {
               calm, focus, digestion, and better sleep
             </p>
 
-            <div className="flex gap-x-3 capitalize">
+            <div className="flex gap-x-3 capitalize 3xs:max-w-[320px] 2xs:max-w-[362px] 2xl:max-w-[402px]">
 
               <button className={`btn2 ${currentSlide.btnbg} 2xs:w-[180px] 2xs:h-[46px] 2xl:w-[200px] 2xl:h-[52px] flex justify-center items-center text-white rounded-[30px] 2xs:text-[16px] xs:text-[18px] 2xl:text-[20px] cursor-pointer font-Albert 2xs:gap-x-5 capitalize`}>
                 <p className="2xl:pl-7 2xs:pl-3 xs:pl-6">shop now</p>
@@ -119,7 +119,7 @@ const Hero = () => {
 
         </div>
 
-        <div className={`flex h-full justify-end items-end w-full absolute ${currentSlide.rightside} right-0 bottom-0 imageChange 2xs:h-[500px] 2xs:p-0 lg:w-[50%]`}>
+        <div className={`flex h-full justify-end items-end w-full absolute ${currentSlide.rightside} right-0 bottom-0 imageChange 2xs:h-auto 2xs:p-0 lg:w-[50%] 2xs:w-auto `}>
 
           <img src={currentSlide.images} alt="" className={`object-cover ${currentSlide.imageClass}`}/>
 

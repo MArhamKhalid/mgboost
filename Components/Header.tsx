@@ -68,11 +68,11 @@ const Header = () => {
 
   return (
     <header className="w-full absolute header flex justify-between">
-        <nav className="w-full flex justify-between 2xl:px-[100px] 2xs:px-[10px] md:px-[30px] z-10 2xs:w-full lg:px-10">
+        <nav className="w-full flex justify-between 2xl:px-[100px] 2xs:px-[10px] xs:px-[20px] md:px-[30px] z-10 2xs:w-full lg:px-10">
             <button className="menu 3xs:block lg:hidden md:w-18" onClick={openSidebar}>
                 <img src="/icons/menu.svg" alt="" className="menu-icon "/>
             </button>
-            <div className="flex lg:justify-start lg:w-[260px] lg:h-[88.3px] 2xl:mt-[30px] 3xs:mt-0 3xs:w-[145px] 3xs:h-[60px] md:w-full md:h-[77px] 3xs:ml-4 md:ml-0 LOGO 2xs:justify-end md:justify-center">
+            <div className="flex lg:justify-start lg:w-[260px] lg:h-[88.3px] 2xl:mt-[30px] 3xs:mt-0 3xs:w-[145px] 3xs:h-[60px] sm:h-[70px] md:w-full md:h-[77px] 3xs:ml-4 md:ml-0 LOGO 2xs:justify-end md:justify-center">
                 <img src="/images/logo.png" alt="LOGO" className='3xs:mt-4 xs:mt-4 2xl:mt-0' />
             </div>
             <div className="w-full flex justify-end items-center header-2 3xs:w-[70px] lg:w-full" >

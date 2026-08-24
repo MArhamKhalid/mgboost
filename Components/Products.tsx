@@ -382,13 +382,13 @@ const Products = () => {
 
   return (
     
-        <section ref={ProductsRef} className="relative w-full h-[400vh] sm:h-max bg-white Products">
-            <div className="sticky top-0 w-full h-screen overflow-hidden sub-Products sm:static sm:h-max sm:px-10 sm:py-20">
+        <section ref={ProductsRef} className="relative w-full h-[400vh] xs:h-max bg-white Products">
+            <div className="sticky top-0 w-full h-screen overflow-hidden sub-Products xs:static xs:h-max xs:px-10 xs:py-20">
                 {/* <div className="w-full h-screen bg-white"> */}
-                    <div className=" flex justify-center items-center gap-x-[32px] text-black h-full px-15 max-h-max sm:flex-col sm:gap-y-10 sm:h-max sm:px-0">
-                        <div className="w-144.5 h-230 CanLeft ALL-CAN sm:w-[100%] sm:h-max">
-                            <div className="w-full h-160 sm:h-[450px] bg-[#FFF4D7] rounded-b-xl flex justify-center rounded-[16px] can-bg">
-                                <img src="/images/mango-flavor.png" alt="" className=" mt-14 -mb-24 sm:mt-20 sm:-mb-26"  />
+                    <div className=" flex justify-center items-center gap-x-[32px] text-black h-full px-15 max-h-max xs:flex-col xs:gap-y-10 xs:h-max xs:px-0">
+                        <div className="w-144.5 h-230 CanLeft ALL-CAN xs:w-[100%] xs:h-max">
+                            <div className="w-full h-160 xs:h-[450px] bg-[#FFF4D7] rounded-b-xl flex justify-center rounded-[16px] can-bg">
+                                <img src="/images/mango-flavor.png" alt="" className=" mt-14 -mb-24 xs:mt-20 xs:-mb-26"  />
                             </div>
                             <div className="w-full h-68 flex flex-col justify-end items-center gap-y-4 leading-[18px] Can-animate">
                                 <h2 className="uppercase font-Albert font-bold text-[20px]">magnesium infused</h2>
@@ -401,7 +401,7 @@ const Products = () => {
                                 </button>
                             </div>
                         </div>
-                        <div className="middle-can ALL-CAN w-144.5 sm:w-[100%] h-230 bg-[#EEAF09] relative flex flex-col justify-start items-center overflow-hidden text-black rounded-[16px] z-10">
+                        <div className="middle-can ALL-CAN w-144.5 xs:w-[100%] h-230 bg-[#EEAF09] relative flex flex-col justify-start items-center overflow-hidden text-black rounded-[16px] z-10">
                             <div className="pt-10 w-full max-w-[520px] Cantext">
                                 <h2 className="text-[#FFFCD9] text-center text-[48px] font-Albert font-bold capitalize leading-[40px]">Thousands are making
                                 <span className="flex inline-block pt-3 pb-6 px-4 bg-[#045C00] rounded-xl -rotate-3 text-white leading-[30px]">magnesium</span> part of their daily ritual.</h2>
@@ -425,9 +425,9 @@ const Products = () => {
                                 </span>
                             </button>
                         </div>
-                        <div className="w-144.5 h-230 CanRight ALL-CAN sm:w-[100%] sm:h-max">
-                            <div className="w-full h-160 sm:h-[450px] bg-[#FFF4D7] rounded-b-xl flex justify-center rounded-[16px]  can-bg">
-                                <img src="/images/lemon-flavor.png" alt="" className=" mt-14 -mb-24 sm:mt-20 sm:-mb-26" />
+                        <div className="w-144.5 h-230 CanRight ALL-CAN xs:w-[100%] xs:h-max">
+                            <div className="w-full h-160 xs:h-[450px] bg-[#FFF4D7] rounded-b-xl flex justify-center rounded-[16px]  can-bg">
+                                <img src="/images/lemon-flavor.png" alt="" className=" mt-14 -mb-24 xs:mt-20 xs:-mb-26" />
                             </div>
                             <div className="w-full h-68 flex flex-col justify-end items-center gap-y-4 leading-[18px] Can-animate">
                                 <h2 className="uppercase font-Albert font-bold text-[20px]">magnesium infused</h2>
