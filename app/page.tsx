@@ -21,8 +21,8 @@ export default function Home() {
         <Blogs/>
         <Benefits/>
         <Details/>
-        {/* <Story/> */}
-        {/* <EndDetails/> */}
+        <Story/>
+        <EndDetails/>
   </>
   );
 }

@@ -645,7 +645,7 @@
   .sub-Blogs-02 .text-slider p{
     font-size: 30px;
   } */
-  .details-section{
+  /* .details-section{
     height: 160vh;
   }
   .sub-details-section{
@@ -680,7 +680,6 @@
     max-height: max-content;
     margin: 0;
     padding: 0 30px;
-    /* row-gap: 10%; */
     background-color: #e0b121;
   }
   .benefits-banner{
@@ -759,7 +758,7 @@
   .benefits-desc-img{
     width: 75px;
     height: 75px;
-  }
+  } */
   .story-section{
     height: auto;
     min-height: 250vh;
@@ -1050,7 +1049,7 @@
   /* .sub-Blogs-01{
     padding-top: 0;
   } */
-  .Blogs-img{
+  /* .Blogs-img{
     padding: 0;
   }
   .blogs-text{
@@ -1080,7 +1079,6 @@
     height: max-content;
   }
   .sub-details-section{
-    /* height: max-content; */
     row-gap: 30px;
   }
   .detailimage{
@@ -1104,7 +1102,7 @@
   }
   .detail-sub-Text-3 li{
     font-size: 20px;
-  }
+  } */
   .detai-btn{
     margin: 0;
   }

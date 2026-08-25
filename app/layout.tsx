@@ -30,7 +30,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <Header/>
         
         {children}
-        {/* <Footer/> */}
+        <Footer/>
         {/* <SpeedInsights /> */}
       </body>
     </html>
