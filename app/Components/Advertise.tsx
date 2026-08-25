@@ -177,34 +177,36 @@ const Advertise = () => {
   return () => ctx.revert();
 }, []);
   return (
-        <section ref={AdvertiseRef} className="relative w-full h-[400vh] bg-white Advertise sm:h-max lg:h-max">
-            <div className="sticky top-0 w-full h-screen overflow-hidden sub-Advertise sm:static sm:h-max">
-                <div className="w-full h-screen flex flex-col gap-y-0 justify-start bg-white sm:h-max sm:pb-20">
-                    <div className="w-full sm:w-[100%] sm:h-max flex sm:flex-col sm:gap-y-10 justify-center px-25 pt-10 sm:px-10 sm:pt-0 gap-x-[32px] text-black ">
-                        <div className="w-135 sm:w-[100%] h-171 rounded-[20px] bg-gradient-to-b from-[#FFEFC0] to-[#F4B08C] relative can-holding lg:flex lg:justify-center">
-                            <img src="/images/can-holding-woman.png" alt="" className="w-full lg:w-[70%] h-full object-cover absolute bottom-0" />
+        <section ref={AdvertiseRef} className="relative w-full xl:h-[400vh] bg-white Advertise 3xs:h-max lg:h-max">
+            <div className="xl:sticky top-0 w-full xl:h-screen overflow-hidden sub-Advertise 3xs:static 3xs:h-max">
+                <div className="w-full h-screen flex flex-col gap-y-0 justify-start bg-white 3xs:h-max 3xs:py-12 3xs:gap-y-10 md:gap-y-8">
+                    <div className="w-full 3xs:w-[100%] 3xs:h-max flex 3xs:flex-col xl:flex-row 3xs:gap-y-10 justify-center px-25 pt-10 3xs:px-4 xs:px-6 3xs:pt-0 lg:px-20 gap-x-[32px] text-black ">
+
+                        <div className="w-[540px] 3xs:w-[100%] xs:w-[400px] h-[684px] xl:h-[600px] 3xs:h-[450px] rounded-[20px] bg-gradient-to-b from-[#FFEFC0] to-[#F4B08C] relative lg:flex lg:justify-center 3xs:overflow-hidden">
+                            <img src="/images/can-holding-woman.png" alt="" className="w-full 3xs:h-auto xs:h-[380px] h-full 3xs:object-contain absolute bottom-0 xl:object-cover" />
                         </div>
-                        <div className="w-294 sm:w-[100%] h-171 sm:h-[600px] rounded-[20px] bg-gradient-to-t from-[#FAF9BA] to-[#C3F8D8] relative Lemon-scene lg:overflow-hidden">
+
+                        <div className="w-[1176px] 3xs:w-[100%] h-[684px] xl:h-[600px] 3xs:h-[450px] xs:h-[500px] sm:h-[650px] md:h-[700px] rounded-[20px] bg-gradient-to-t from-[#FAF9BA] to-[#C3F8D8] relative Lemon-scene 3xs:overflow-hidden">
                             <div className="w-full absolute bottom-0 ice">
                                 <img src="/images/ice.png" alt="" className="object-cover w-full rounded-b-[20px]" />
                             </div>
-                            <div className="w-full sm:w-[80%] lg:w-[50%] absolute left-0 bottom-0 doubleCan">
+                            <div className="w-full 3xs:w-[80%] lg:w-[59%] absolute left-0 bottom-0 doubleCan">
                                 <img src="/images/double-lemon.png" alt="" className="w-full h-full" />
                             </div>
-                            <div className="w-full sm:w-[36%] lg:w-[22%] absolute left-0 bottom-0 z-1 singleCan">
+                            <div className="w-full 3xs:w-[36%] lg:w-[26%] absolute left-0 bottom-0 z-1 singleCan">
                                 <img src="/images/single-lemon.png" alt="" className="w-full h-full" />
                             </div>
-                            <div className="w-full absolute left-0 top-0 lg:w-[100%] lg:h-[80%] lg:top-[30%] lg:rotate-16 mg-banner frame">
-                                <img src="/images/mg-frame.png" alt="" className="w-full h-full" />
+                            <div className="w-full absolute left-0 top-0 3xs:left-2 xl:w-[100%] 3xs:top-[60%] 2xs:top-[50%] sm:top-[40%] md:top-[30%] lg:top-[22%] 3xs:rotate-16 xl:-rotate-6 xl:-top-[29%] xl:-left-10 mg-banner frame">
+                                <img src="/images/mg-frame.png" alt="" className="w-full h-full lg:h-auto" />
                             </div>
-                            <div className="w-full flex justify-end all-lemon">
-                                <div className="w-140 h-full flex flex-col items-center text-center capitalize md:mt-14 mt-[117px] lg:gap-y-6 lemon-text">
-                                    <div className="leading-[50px] lemon-sub-text">
-                                        <h2 className="font-Alan text-[82px] font-bold text-[#3F6C48] lemon-sub-text-1 lg:text-[60px]">find your</h2>
-                                        <h2 className="mgspan py-6 px-2 rounded-2xl bg-[#3F6C48] text-white text-[82px] font-bold -rotate-3 lg:text-[60px]">daily boost</h2>
+                            <div className="w-full flex xl:justify-end md:justify-center z-20">
+                                <div className="w-[560px]  h-full flex flex-col items-center text-center capitalize 3xs:mt-[10%] md:mt-[4%] xl:mt-[18%] mt-[117px] 3xs:gap-y-6 ">
+                                    <div className="leading-[50px] 3xs:leading-[26px] 2xs:leading-[34px] sm:leading-[44px] md:leading-[50px]">
+                                        <h2 className="font-Alan text-[82px] font-bold text-[#3F6C48] lemon-sub-text-1 3xs:text-[28px] 2xs:text-[42px] sm:text-[56px] md:text-[72px] lg:text-[82px]">find your</h2>
+                                        <h2 className="mgspan py-6 px-2 3xs:py-3 md:py-6 rounded-2xl bg-[#3F6C48] text-white text-[82px] font-bold -rotate-3 3xs:text-[28px] 2xs:text-[42px] sm:text-[56px] md:text-[72px] lg:text-[82px]">daily boost</h2>
                                     </div>
-                                    <p className="text-[28px] font-Albert font-normal text-[#3F6C48] leading-[28px] mt-[37px] lg:mt-0 lemon-sub-text-2">Choose the perfect option<br />for your lifestyle.</p>
-                                    <button className="btn-secondary w-[158px] h-[42px] flex items-center cursor-pointer z-10 capitalize underline gap-x-4 mt-[29px] lg:mt-0">
+                                    <p className="text-[28px] font-Albert font-normal text-[#3F6C48] leading-[28px] mt-[37px] 3xs:mt-0 3xs:text-[18px] 3xs:leading-[20px] sm:text-[24px] sm:leading-[24px] md:text-[28px]">Choose the perfect option<br />for your lifestyle.</p>
+                                    <button className=" w-[158px] h-[42px] flex items-center cursor-pointer z-10 capitalize underline gap-x-4 mt-[29px] 3xs:mt-0 outline-none">
                                         <p className="text-[20px] font-Albert">shop now </p>
                                         <span className="w-[42px] h-[42px] bg-black rounded-full flex justify-center items-center">
                                             <img src="/icons/Arrow-orange.svg" alt="" className='px-2 py-3' />
@@ -214,14 +216,14 @@ const Advertise = () => {
                             </div>
                         </div>
                     </div>
-                    <div className=" h-[25%] sm:h-[250px]  bg-[#FFF7DF] flex justify-start -mt-20 text-black overflow-hidden all-slider">
-                        <div className="text-slider flex w-max items-end gap-x-20">
+                    <div className=" h-[25%] 3xs:h-[120px] xs:h-[150px] md:h-[200px] bg-[#FFF7DF] flex justify-start -mt-20 text-black overflow-hidden all-slider">
+                        <div className="text-slider flex w-max items-end gap-x-20 3xs:gap-x-4">
 
                             {textslider.map((text, i) => (
                                 <div className="flex items-end mb-5 shrink-0 text-sub-slider" key={i} >
-                                    <p className="flex items-center capitalize text-[40px] font-Albert font-light leading-[26px] text-nowrap gap-x-10">
+                                    <p className="flex items-center capitalize text-[40px] 3xs:text-[18px] xs:text-[24px] md:text-[32px] lg:text-[40px] font-Albert font-light leading-[26px] text-nowrap gap-x-10 3xs:gap-x-4" >
                                         {text.text}
-                                        <img  src="/images/flower.png" alt=""  className="shrink-0" />
+                                        <img  src="/images/flower.png" alt=""  className="shrink-0 3xs:w-[30px] xs:w-[40px] md:w-auto" />
                                     </p>
                                 </div>
                             ))}

@@ -181,21 +181,21 @@ const slidtext = [
 }, []);
   return (
     <section ref={BlogsRef} className='w-full h-dvh 2xs:h-max 2xs:min-h-[100vh] sm:min-h-[140vh] sm:max-h lg:h-max lg:min-h-[105vh] xl:h-dvh bg-white relative overflow-hidden all-Blogs'>
-        <div className='w-full h-full 2xs:px-4 2xs:py-4 sm:px-8 sm:py-6 lg:py-10 lg:px-6 xl:px-8 flex flex-col lg:gap-y-6 justify-center text-black pt-10 Blogs 2xs:h-max sm:h-max lg:h-max'>
-            <div className='flex gap-x-6 2xs:gap-y-10 w-full h-full 2xs:flex-col lg:flex-row 2xs:h-max sm:h-max lg:h-max 2xs:pt-0  sub-Blogs-01'>
-                <div className='w-[800px] 2xs:w-[100%] xs:w-[100%] h-full 2xs:h-[50%] xs:h-[50%] lg:h-[100%] flex justify-center 2xs:justify-center items-center Blogs-img 2xs:pt-[12px] xl:pt-0'>
+        <div className='w-full h-full 2xs:px-4 2xs:py-4 sm:px-8 sm:py-6 lg:py-10 lg:px-6 xl:px-25 flex flex-col lg:gap-y-6 justify-center text-black pt-10 Blogs 2xs:h-max sm:h-max lg:h-max'>
+            <div className='flex gap-x-6 2xs:gap-y-10 xl:w-full xl:h-full 2xs:flex-col lg:flex-row 2xs:h-max sm:h-max lg:h-max 2xs:pt-0 xl:justify-center sub-Blogs-01'>
+                <div className='xl:w-[50%] 2xs:w-[100%] xs:w-[100%] h-full 2xs:h-[50%] xs:h-[50%] lg:h-[80%] flex justify-center 2xs:justify-center items-center Blogs-img 2xs:pt-[12px] xl:pt-0'>
                     <img src="/images/can-holding-woman-about.png" alt="/" className=' object-cover blog-image h-full w-full' />
                 </div>
-                <div className='w-220 2xs:w-[100%] h-full flex flex-col justify-center gap-y-6 blogs-text '>
+                <div className='xl:w-[50%] 2xs:w-[100%] h-full flex flex-col justify-center gap-y-6 blogs-text '>
                     <div className='blogs-text-1'>
                         <span className='font-albert 2xl:text-[36px] font-semibold text-[#141414] capitalize 2xs:text-[18px] xs:text-[26px] lg:text-[30px] font-semibold text-[#141414] capitalize'>MG BOOST began with a </span>
                         <h2 className='text-[#E0B121] font-Alan font-bold 2xs:text-[34px] xs:text-[40px] sm:text-[56px] xl:text-[70px]  2xs:leading-8 sm:leading-12 text-[87px] lg:text-[67px] 2xl:text-[87px] capitalize 2xl:leading-18 lg:leading-14'>personal search<br/>for answers.</h2>
                     </div>
                     <div className='blogs-text-2'>
-                        <p className='max-w-[800px] font-Albert font-normal text-[#141414] text-[24px] lg:text-[20px] 2xl:text-[24px] 2xs:text-[16px] xs:text-[18px] sm:text-[22px]'>After moving to the United States with big dreams for my future, I began quietly struggling with ongoing digestive discomfort, stress, poor sleep, and low energy. I tried different diets, supplements, probiotics, cleansing methods, and wellness routines. Some provided temporary relief, but I still felt that something deeper was missing.</p>
+                        <p className='xl:max-w-[800px] font-Albert font-normal text-[#141414] text-[24px] lg:text-[20px] 2xl:text-[24px] 2xs:text-[16px] xs:text-[18px] sm:text-[22px]'>After moving to the United States with big dreams for my future, I began quietly struggling with ongoing digestive discomfort, stress, poor sleep, and low energy. I tried different diets, supplements, probiotics, cleansing methods, and wellness routines. Some provided temporary relief, but I still felt that something deeper was missing.</p>
                     </div>
                     <div className='blogs-text-3 flex min-[1024px]:max-[1152px]:hidden'>
-                        <p className='max-w-[800px] font-Albert font-normal text-[#141414] text-[24px] lg:text-[20px] 2xl:text-[24px] 2xs:text-[16px] xs:text-[18px] sm:text-[22px]'>Over time, I began learning how closely digestion, stress, sleep, hydration, mineral intake, and mental well-being are connected. The more I researched, the more I realized that many people are experiencing the same challenges—feeling tired, stressed, bloated, restless, and disconnected from their bodies while trying to keep up with busy modern lives.</p>
+                        <p className='xl:max-w-[800px] font-Albert font-normal text-[#141414] text-[24px] lg:text-[20px] 2xl:text-[24px] 2xs:text-[16px] xs:text-[18px] sm:text-[22px]'>Over time, I began learning how closely digestion, stress, sleep, hydration, mineral intake, and mental well-being are connected. The more I researched, the more I realized that many people are experiencing the same challenges—feeling tired, stressed, bloated, restless, and disconnected from their bodies while trying to keep up with busy modern lives.</p>
                     </div>
                     <div className='flex min-[1024px]:max-[1152px]:hidden'>
                         <button className='blogs-btn bg-[#DAA404] text-white px-1.5 py-1.5 2xl:w-[227px] 2xs:w-[184px] 2xl:h-[52px] 2xs:h-[46px] sm:w-[208px] sm:h-[49px] 2xl:w-[227px] 2xl:h-[52px] capitalize font-Alan flex justify-center items-center rounded-full gap-x-[20px] cursor-pointer'>

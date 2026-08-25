@@ -116,7 +116,7 @@ const Benefits = () => {
             },
             "<"
         );
-        tl.to({}, { duration: 3 });
+        tl.to({}, { duration: 10 });
 
         });
         
@@ -207,9 +207,9 @@ const Benefits = () => {
   return () => ctx.revert();
 }, []);
   return (
-    <section className='w-full xl:h-[180vh] relative text-black Benefits 3xs:bg-[#DAA404] xl:bg-white 3xs:flex 3xs:flex-col 3xs:gap-y-14 lg:gap-y-18 3xs:h-max 3xs:py-20 3xs:px-4 '  ref={BenefitsRef}>
+    <section className='w-full xl:h-[180vh] relative text-black Benefits 3xs:bg-[#DAA404] xl:bg-white 3xs:flex 3xs:flex-col 3xs:gap-y-14 lg:gap-y-18 3xs:h-max 3xs:py-20 3xs:px-4 xl:row-gap: 10%;'  ref={BenefitsRef}>
         {/* <div className=" w-full h-full flex flex-col  overflow-hidden pt-[14%] bg-white"> */}
-                <div className='w-full max-h-[170px] z-10 flex flex-col xl:mb-[3%] xl:pt-[10%] benefits-sub-head 3xs:h-max 3xs:pt-0'>
+                <div className='w-full max-h-[170px] z-10 flex flex-col xl:mb-[3%] xl:pt-[6%] benefits-sub-head 3xs:h-max 3xs:pt-0'>
                     <div className='text-center capitalize benefitshead w-full flex flex-col items-center z-10'>
                         <h2 className='font-bold font-Alan  text-white 2xl:text-[87px] 2xs:text-[36px] sm:text-[50px] lg:text-[77px]'>benefits of MG boost</h2>
                         <p className='font-albert 2xl:text-[25px] 2xs:text-[14px] sm:text-[18px] lg:text-[22px] font-normal xl:max-w-[1300px]'>MG Boost is a refreshing magnesium-powered sparkling drink designed to support calmness,focus, digestion, hydration, and better daily recovery — without added sugar</p>
@@ -241,11 +241,9 @@ const Benefits = () => {
                         </div>
                     </div>
                     <div className='flex items-center relative justify-center all-canrotate canrotate 3xs:hidden xl:flex'>
-                        {/* <div className='relative flex justify-center items-center canrotate'> */}
                             <img src="/images/benefitsmango.png" alt="" className='absolute  '/>
 
                             <img src="/images/Subtract02.png" alt="" className='  watercan object-none'/>
-                        {/* </div> */}
                     </div>
                     <div className='flex flex-col xl:justify-start xl:items-start xl:gap-y-20 h-full max-h-max w-full xl:max-w-[37%] z-1 xl:-mt-[6%] 3xs:mt-6 lg:mt-0 rightcards  3xs:w-full 3xs:items-center 3xs:gap-y-6'>
                         <div className='benefits-desc right-cards-01 3xs:w-[340px] 3xs:h-[70px] sm:w-[360px] sm:h-[79px]  lg:w-[397px] lg:h-[89px] rounded-[88px] bg-gradient-to-b from-[#FBFBFB] to-[#FAF1D4] flex justify-start items-center px shadow-xl gap-x-[11px] xl:-ml-[14%] 3xs:m-0'>

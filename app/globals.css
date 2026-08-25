@@ -4,6 +4,13 @@
     --breakpoint-3xs: 320px;
     --breakpoint-2xs: 350px;
     --breakpoint-xs: 428px;
+    --breakpoint-sm: 640px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 1024px;
+    --breakpoint-xl: 1280px;
+    --breakpoint-2xl: 1536px;
+    --breakpoint-3xl: 1600px;
+
     /* --breakpoint-tablet: 900px;
     --breakpoint-wide: 1191px; */
 }
@@ -90,23 +97,23 @@ body {
   font: normal;
   transition: 0.1s linear;
 } */
-.imageChange {
+/* .imageChange {
   animation: imageChange 0.8s ease-in-out;
   animation-delay: 0.5s;
   animation-fill-mode: both;
-}
+} */
 
 .topChange {
   clip-path: inset( 0 0 100% 0);
   animation: topChange 0.8s ease-in-out;
-  animation-delay: 1s;
+  animation-delay: 0.5s;
   animation-fill-mode: both;
 }
 
 .sidetext {
   clip-path: inset( 0 0 100% 0);
   animation: sidetext 1.2s ease-in-out;
-  animation-delay: 1s;
+  animation-delay: 0.5s;
   animation-fill-mode: both;
 }
 .sectionChange {
@@ -228,24 +235,17 @@ body {
 
 @media (max-width: 1600px) {
   
-  .scene-2{
+  /* .scene-2{
     margin: 25px 0px;
     height: 100%;
     max-height: max-content;
   }
-  /* .sub-scene-2{
-    gap: 27px;
-  } */
   .CanLeft{
     height: 850px;
   }
   .CanLeft .can-bg{
     height: 520px;
 
-  }
-  .CanLeft .can-bg img{
-    /* height: 120%;
-    width: 250px; */
   }
   .CanRight{
     height: 850px;
@@ -254,13 +254,6 @@ body {
     height: 520px;
 
   }
-  .CanRight .can-bg img{
-    /* width: 250px;
-    height: 120%; */
-  }
-  /* .Can-animate{
-    margin-top: 40px;
-  } */
   .middle-can{
     margin-top: -20px;
     height: 830px;
@@ -298,7 +291,7 @@ body {
   }
   .lemon-text .lemon-sub-text-2{
     font-size: 24px;
-  }
+  } */
   .mg-text h2{
     font-size: 280px;
   }
@@ -329,19 +322,8 @@ body {
 }
 @media (max-width: 1440px) {
   
-  .CanLeft{
+  /* .CanLeft{
     height: 850px;
-  }
-  .CanLeft .can-bg img{
-    /* width: 230px;
-    height: 110%; */
-  }
-  .CanRight .can-bg img{
-    /* width: 230px;
-    height: 110%; */
-  }
-  .Can-animate{
-    /* margin-top: 40px; */
   }
   .middle-can h2{
     font-size: 34px;
@@ -353,7 +335,7 @@ body {
   .can-show-middle .LemonCan{
     height: 428px;
     width: 165px;
-  }
+  } */
   .primary-btn{
     width: 180px;
     height: 50px;
@@ -363,7 +345,7 @@ body {
   .btn-secondary p{
     font-size: 18px;
   }
-  .lemon-text{
+  /* .lemon-text{
     width: 20rem;
   }
   .frame img{
@@ -371,7 +353,7 @@ body {
   }
   .mgspan{
     text-wrap-mode: nowrap;
-  }
+  } */
   .firstscene , .secondscene{
     column-gap: 22px;
   }
@@ -415,13 +397,13 @@ body {
     width: 100%;
     /* padding:0px 40px; */
   }
-  .all-scene{
+  /* .all-scene{
     height: 600vh;
     max-height: max-content;
   }
   .sub-scene{
     position: relative;
-    /* max-height: max-content; */
+    max-height: max-content; 
     height: 100%;
   }
   .scene-1{
@@ -439,7 +421,6 @@ body {
     z-index: 0;
   }
   .sub-scene-2{
-    /* max-height: max-content; */
     justify-content: start;
     flex-direction: column;
     row-gap: 40px;
@@ -491,8 +472,8 @@ body {
   .frame img{
     width: 100%;
     rotate: 12deg;
-  }
-  .all-slider{
+  } */
+  /* .all-slider{
     height: 20vh;
   }
   .text-slider{
@@ -501,7 +482,7 @@ body {
   .text-sub-slider p{
     font-size: 30px;
     gap: 8px;
-  }
+  } */
   .story-section{
     height: auto;
     min-height: 250vh;
@@ -607,16 +588,16 @@ body {
 /* /////////////////////////////////////////////////// MAX 480 Start /////////////////////////////////////////////// */
 @media (max-width: 480px) {
   /* //////////////////////////////Primary button//////////////////////////////// */
-  .primary-btn, .btn2{
+  .primary-btn{
     width: 150px;
     height: 45px;
     margin-top: 0;
   }
-  .primary-btn p, .btn2 p{
+  .primary-btn p{
     font-size: 18px;
     padding-left: 8px;
   }
-  .primary-btn span, .btn2 span{
+  .primary-btn span{
     width: 36px;
     height: 36px;
   }
@@ -624,7 +605,7 @@ body {
     justify-content: center;
   }
   /* ///////////////////////////////Primary button//////////////////////////////// */
-  .all-scene{
+  /* .all-scene{
     width: 100%;
     max-height: max-content;
   }
@@ -676,7 +657,6 @@ body {
   }
   .can-show-middle{
     bottom: 15%;
-    /* width: 250px; */
     height: 300px;
   }
   .can-show-middle .MangoCan{
@@ -717,7 +697,7 @@ body {
   .Lemon-scene .frame{
     top: 51%;
     left: 15px;
-  }
+  } */
   .story-section{
     height: max-content;
   }
@@ -794,7 +774,7 @@ body {
 }
 
 /* /////////////////////////////////////////////////// MAX 480 End //////////////////////////////////////////////// */
-@media (max-width: 428px) {
+/* @media (max-width: 428px) {
 
   .sub-scene{
     row-gap: 50px;
@@ -853,7 +833,6 @@ body {
     height: 450px;
   }
   .sub-scene-3{
-    /* height: max-content; */
     padding: 0 6%;
   }
   .all-lemon{
@@ -872,7 +851,7 @@ body {
     left: 0;
     width: 26.5%;
   }
-}
+} */
 
 @media (max-width: 390px) {
 

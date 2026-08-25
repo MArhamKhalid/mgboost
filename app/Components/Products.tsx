@@ -1,4 +1,6 @@
 "use client";
+import ProductCards from "./ProductCards/ProductCards";
+import SpecialProductCard from "./ProductCards/SpecialProductCard";
 import { useLayoutEffect, useRef, useState } from "react"
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -35,7 +37,7 @@ const Products = () => {
         gsap.set(
             ".MangoCan",
             {
-                left: "32.8%",
+                left: "35.8%",
                 rotate: 0,
             }
         );
@@ -43,7 +45,7 @@ const Products = () => {
         gsap.set(
             ".LemonCan",
             {
-                right: "32.8%",
+                right: "35.8%",
                 rotate: 0,
             }
         );
@@ -52,14 +54,14 @@ const Products = () => {
             ".CanLeft",
             {
                 opacity: 0,
-                x: 100,
+                x: "100%",
             }
         );
         gsap.set(
             ".CanRight",
             {
                 opacity: 0,
-                x: -100,
+                x: "-100%",
             }
         );
 
@@ -85,12 +87,6 @@ const Products = () => {
             }
         });
 
-        tl.to(".scene-1", {
-            yPercent: -100,
-            duration: 0.5,
-            ease: "power2.inOut",
-        });
-
 // ////           scene 2 start here ///////////////
 
         tl.to(
@@ -98,7 +94,7 @@ const Products = () => {
         {
             opacity: 1,
             y: 0,
-            duration: 2,
+            duration: 3,
             ease: "power1.inOut",
         }
     );
@@ -110,7 +106,7 @@ const Products = () => {
             ".Cantext",
         {
             clipPath: "inset(0% 0 0  0)",
-            duration: 1.5,
+            duration: 3,
             ease: "power2.inOut",
 
         });
@@ -120,7 +116,7 @@ const Products = () => {
         {
             left: "13%",
             rotate: -8,
-            duration: 1.5,
+            duration: 3,
             ease: "power2.inOut" ,
         },
         "<"
@@ -131,7 +127,7 @@ const Products = () => {
         {
             right: "13%",
             rotate: 8,
-            duration: 1.5,
+            duration: 3,
             ease: "power2.inOut",
         },
         "<"
@@ -143,9 +139,9 @@ const Products = () => {
             ".CanLeft",
             {
                 opacity: 1,
-                x: 0,
-                duration: 1.5,
-                ease: "power1.inOut",
+                x: "0%",
+                duration: 8,
+                ease: "power3.inOut",
 
             }
         );
@@ -154,9 +150,9 @@ const Products = () => {
             ".CanRight",
             {
                 opacity: 1,
-                x: 0,
-                duration: 1.5,
-                ease: "power1.inOut",
+                x: "0%",
+                duration: 8,
+                ease: "power3.inOut",
             },
             "<"
         );
@@ -167,51 +163,13 @@ const Products = () => {
                 ".Can-animate",
             {
                 clipPath: "inset(0 0 0% 0)",
-                duration: 1.2,
+                duration: 3,
                 ease:"power1.inOut",
             },
         );
     
-        tl.to({}, { duration: 2});
-        
-        // Scene 2 → Scene 3
-        tl.to(".scene-2", {
-            yPercent: -100,
-            duration: 1,
-            ease: "none",
-        });
-        tl.to(
-            ".scene-3",
-            {
-                yPercent: 0,
-                duration: 1,
-                ease: "none",
-            },
-            "<"
-        );
-        tl.to({}, { duration: 1});
-        
-        tl.to(
-            ".mg-banner",
-            {
-                clipPath:"inset(0 0% 0 0)",
-                duration: 1.5,
-                ease: "power1.inOut",
-            }
-        );
-        tl.to(
-            ".mgspan",
-            {
-                clipPath: "inset(0 0 0% 0)",
-                y: "0%",
-                duration: 1.5,
-                ease: "power1.inOut"
-            },
-            "<"
-        );
+        tl.to({}, { duration: 10});
 
-    
-        tl.to({}, { duration: 11});
     });
 
 
@@ -354,24 +312,6 @@ const Products = () => {
         "<"
         );
         
-        tl.to(
-            ".mg-banner",
-            {
-                clipPath:"inset(0 0% 0 -5%)",
-                duration: 0.6,
-                ease: "power1.inOut",
-            }
-        );
-        tl.to(
-            ".mgspan",
-            {
-                clipPath: "inset(0 0 0% 0)",
-                y: "0%",
-                duration: 0.6,
-                ease: "power1.inOut"
-            },
-            "<"
-        );
 
         });
 
@@ -382,56 +322,19 @@ const Products = () => {
 
   return (
     
-        <section ref={ProductsRef} className="relative w-full h-[400vh] xs:h-max bg-white Products">
-            <div className="sticky top-0 w-full h-screen overflow-hidden sub-Products xs:static xs:h-max xs:px-10 xs:py-20">
+        <section ref={ProductsRef} className="relative w-full xl:h-[400vh] 3xs:h-max bg-white">
+            <div className="xl:sticky xl:top-0 w-full xl:h-screen xl:overflow-hidden 3xs:static 3xs:h-max 3xs:px-4 3xs:py-20 sm:px-20 xl:px-10 2xl:py-10 3xl:py-10">
                 {/* <div className="w-full h-screen bg-white"> */}
-                    <div className=" flex justify-center items-center gap-x-[32px] text-black h-full px-15 max-h-max xs:flex-col xs:gap-y-10 xs:h-max xs:px-0">
-                        <div className="w-144.5 h-230 CanLeft ALL-CAN xs:w-[100%] xs:h-max">
-                            <div className="w-full h-160 xs:h-[450px] bg-[#FFF4D7] rounded-b-xl flex justify-center rounded-[16px] can-bg">
-                                <img src="/images/mango-flavor.png" alt="" className=" mt-14 -mb-24 xs:mt-20 xs:-mb-26"  />
+                    <div className=" flex justify-center items-center xl:gap-x-[32px] text-black 3xl:h-[90vh] 2xl:px-15 3xl:p-0 max-h-max 3xs:flex-col 3xs:gap-y-10 3xs:h-max 3xs:px-0 xl:flex-row">
+                        <ProductCards/>
+                        <SpecialProductCard/>
+                        <div className="lg:w-144.5 xl:h-[650px] 2xl:h-[800px] 3xl:h-full ALL-CAN 3xs:w-[100%] 3xs:h-max 3xl:max-h-[900px] 3xl:flex 3xl:flex-col 3xl:gap-y-40 CanRight">
+                            <div className="lg:w-full lg:h-[550px] xl:h-[380px] 2xl:h-[520px] h-160 3xs:h-[400px] bg-[#FFF4D7] rounded-b-xl flex justify-center rounded-[16px]  can-bg">
+                                <img src="/images/lemon-flavor.png" alt="" className=" mt-14 -mb-24 3xs:mt-20 3xs:-mb-26" />
                             </div>
-                            <div className="w-full h-68 flex flex-col justify-end items-center gap-y-4 leading-[18px] Can-animate">
-                                <h2 className="uppercase font-Albert font-bold text-[20px]">magnesium infused</h2>
-                                <p className="capitalize text-[28px] font-Albert sub-Can-animate">sparkling water mango flavor</p>
-                                <button className='primary-btn mt-4'>
-                                    <p className='pl-8'>shop now</p>
-                                    <span className=''>
-                                        <img src="/icons/Arrow-orange.svg" alt="" className='w-[17px] h-[15px]' />
-                                    </span>
-                                </button>
-                            </div>
-                        </div>
-                        <div className="middle-can ALL-CAN w-144.5 xs:w-[100%] h-230 bg-[#EEAF09] relative flex flex-col justify-start items-center overflow-hidden text-black rounded-[16px] z-10">
-                            <div className="pt-10 w-full max-w-[520px] Cantext">
-                                <h2 className="text-[#FFFCD9] text-center text-[48px] font-Albert font-bold capitalize leading-[40px]">Thousands are making
-                                <span className="flex inline-block pt-3 pb-6 px-4 bg-[#045C00] rounded-xl -rotate-3 text-white leading-[30px]">magnesium</span> part of their daily ritual.</h2>
-                            </div>
-                            <div className="relative w-full h-full flex flex-col items-center mt-10 behindCantext">
-                                <img src="/images/MGBOOST.png" alt="" className="w-[80%]"/>
-                                <img src="/images/MGBOOST.png" alt="" className="w-full"/>
-                                <img src="/images/MGBOOST.png" alt=""  className="w-full"/>
-
-                            </div>
-                            <div className="absolute flex justify-center z-10 w-full h-126 bottom-28 can-show-middle">
-                                <img src="/images/mango-flavor.png" alt="" className="absolute z-1  h-[503.02px] w-[194.13px] MangoCan"/>
-                                <img src="/images/lemon-flavor.png" alt="" className="absolute h-[484.81px] w-[193.13px] LemonCan"/>
-                            </div>
-                            <div className="w-full h-142 rounded-t-full bg-[#FFF4D7] absolute -bottom-70 sub-can-bg">
-                            </div>
-                            <button className="btn-secondary w-[158px] h-[42px] flex items-center cursor-pointer z-10 capitalize underline gap-x-4 absolute bottom-4">
-                                <p className="text-[20px] font-Albert">shop now </p>
-                                <span className="w-[42px] h-[42px] bg-black rounded-full flex justify-center items-center">
-                                    <img src="/icons/Arrow-orange.svg" alt="" className='px-2 py-3' />
-                                </span>
-                            </button>
-                        </div>
-                        <div className="w-144.5 h-230 CanRight ALL-CAN xs:w-[100%] xs:h-max">
-                            <div className="w-full h-160 xs:h-[450px] bg-[#FFF4D7] rounded-b-xl flex justify-center rounded-[16px]  can-bg">
-                                <img src="/images/lemon-flavor.png" alt="" className=" mt-14 -mb-24 xs:mt-20 xs:-mb-26" />
-                            </div>
-                            <div className="w-full h-68 flex flex-col justify-end items-center gap-y-4 leading-[18px] Can-animate">
-                                <h2 className="uppercase font-Albert font-bold text-[20px]">magnesium infused</h2>
-                                <p className="capitalize text-[28px] font-Albert sub-Can-animate">sparkling water lemon flavor</p>
+                            <div className="w-full 3xl:h-[280px] h-68 flex flex-col justify-end items-center gap-y-4 leading-[18px] Can-animate">
+                                <h2 className="uppercase font-Albert font-bold sm:text-[20px] 3xs:text-[14px] 2xs:text-[18px]">magnesium infused</h2>
+                                <p className="capitalize sm:text-[28px] font-Albert sub-Can-animate 3xs:text-[18px] 2xs:text-[22px]  xl:text-[22px]">sparkling water lemon flavor</p>
                                 <button className='primary-btn mt-4'>
                                     <p className='pl-8'>shop now</p>
                                     <span className=''>
