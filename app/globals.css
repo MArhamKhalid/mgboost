@@ -80,29 +80,19 @@ body {
   font: normal;
   transition: 0.1s linear;
 }
-/* .btn2{
-  width: 200px;
-  height: 52px;
-  color: white;
-  display: flex ;
-  justify-content: center;
-  align-items: center;
-  gap: 22px;
-  border-radius: 30px;
-  text-transform: capitalize;
-  cursor: pointer;
-  border: none;
-  font-size: 20px;
-  font-family: var(--font-Albert);
-  font: normal;
-  transition: 0.1s linear;
-} */
 /* .imageChange {
   animation: imageChange 0.8s ease-in-out;
   animation-delay: 0.5s;
   animation-fill-mode: both;
 } */
 
+.image-one{
+  height: 75%;
+  padding-right: 40px;
+}
+.image-two{
+  width: 100%;
+}
 .topChange {
   clip-path: inset( 0 0 100% 0);
   animation: topChange 0.8s ease-in-out;
@@ -134,9 +124,6 @@ body {
   from {
     clip-path: inset(0 0 100% 0);
   }
-  /* 60% {
-    clip-path: inset(0 0 60% 0);
-  } */
   to{
     clip-path: inset(0 0 0% 0);
   }
@@ -149,17 +136,6 @@ body {
     clip-path: inset(0 0 0% 0);
   }
 }
-/* .btn2 span{
-  width: 42px;
-  height: 42px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  background-color: white;
-  margin-left: 20px;
-} */
-
  .primary-btn span{
   width: 42px;
   height: 42px;
@@ -171,23 +147,6 @@ body {
   color: #DAA404;
   /* margin-left: 20px; */
 } 
- /*.sec-btn{
-  width: 200px;
-  border: 1px solid ;
-  display: flex ;
-  justify-content: center;
-  align-items: center;
-  border-radius: 30px;
-  text-transform: capitalize;
-  cursor: pointer;
-  font-size: 20px;
-  font-family: var(--font-Albert);
-  font: normal;
-  transition: 0.2s ease-in-out;
-} */
-/* .sec-btn:hover{
-  color: white;
-} */
 .text-slider{
   width: 100%;
   animation: text1 20s linear infinite;
@@ -203,24 +162,11 @@ body {
 
 .image-one{
   height: 75%;
+  padding-right: 40px;
 }
 .image-two{
   width: 75%;
 }
-/* .firsthead{
-  animation: firsthead 0.9s ease-in-out;
-  animation-delay: 0.5s;
-}
-@keyframes firsthead {
-  from{
-    filter: blur(10px);
-    clip-path: inset( 0 0 80% 0);
-  }
-  to{
-    filter: blur(0);
-    clip-path: inset(0 0 0 0);
-  }
-} */
 .end-logo{
   background: linear-gradient(#DAA404,#FFF2CB);
 }
@@ -234,64 +180,13 @@ body {
 }
 
 @media (max-width: 1600px) {
-  
-  /* .scene-2{
-    margin: 25px 0px;
-    height: 100%;
-    max-height: max-content;
-  }
-  .CanLeft{
-    height: 850px;
-  }
-  .CanLeft .can-bg{
-    height: 520px;
 
+  .image-one{
+    height: 70%;
   }
-  .CanRight{
-    height: 850px;
+  .image-two{
+    width: 6
   }
-  .CanRight .can-bg{
-    height: 520px;
-
-  }
-  .middle-can{
-    margin-top: -20px;
-    height: 830px;
-  }
-  .middle-can h2{
-    font-size: 38px;
-  }
-  .can-show-middle{
-    bottom: 20;
-  }
-  .can-show-middle .MangoCan{
-    height: 460px;
-    width: 180px;
-  }
-  .can-show-middle .LemonCan{
-    height: 440px;
-    width: 179px;
-  }
-  .Lemon-scene .doubleCan{
-    width: 73%;
-  }
-  .Lemon-scene .singleCan{
-    width: 32%;
-  }
-  .lemon-text{        
-    width: 24rem;
-    margin-top: 10rem;
-    margin-right: 5%;
-  }
-  .lemon-sub-text-1{
-    font-size: 50px;
-  }
-  .mgspan{
-    font-size: 60px;
-  }
-  .lemon-text .lemon-sub-text-2{
-    font-size: 24px;
-  } */
   .mg-text h2{
     font-size: 280px;
   }
@@ -321,21 +216,6 @@ body {
   }
 }
 @media (max-width: 1440px) {
-  
-  /* .CanLeft{
-    height: 850px;
-  }
-  .middle-can h2{
-    font-size: 34px;
-  }
-  .can-show-middle .MangoCan{
-    height: 446px;
-    width: 166px;
-  }
-  .can-show-middle .LemonCan{
-    height: 428px;
-    width: 165px;
-  } */
   .primary-btn{
     width: 180px;
     height: 50px;
@@ -345,15 +225,6 @@ body {
   .btn-secondary p{
     font-size: 18px;
   }
-  /* .lemon-text{
-    width: 20rem;
-  }
-  .frame img{
-    width: 550px;
-  }
-  .mgspan{
-    text-wrap-mode: nowrap;
-  } */
   .firstscene , .secondscene{
     column-gap: 22px;
   }
@@ -364,7 +235,23 @@ body {
     margin-right: 0;
   }
 }
+@media (max-width: 1024px) {
+  
+  .imageChange{
+    padding: 0;
+  }
+  .image-one{
+    padding: 0;
+    height: 58%;
+  }
+}
 @media (max-width: 768px)  {
+  .image-one{
+    max-height: max-content;
+  }
+  .image-two{
+    max-width: max-content;
+  }
   .story-section{
     height: auto;
     min-height: 250vh;
@@ -377,7 +264,6 @@ body {
     position: relative;
     width: 100%;
     max-height: 40vh;
-    /* padding: 40px 30px; */
   }
   .storyhead h2{
     font-size: 66px;
@@ -387,9 +273,6 @@ body {
   .firstscene, .secondscene{
     display: none;
   }
-  /* .mobile-story-grid{
-    display: flex;
-  } */
   .mobile-story-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -397,92 +280,6 @@ body {
     width: 100%;
     /* padding:0px 40px; */
   }
-  /* .all-scene{
-    height: 600vh;
-    max-height: max-content;
-  }
-  .sub-scene{
-    position: relative;
-    max-height: max-content; 
-    height: 100%;
-  }
-  .scene-1{
-    height: 34vh;
-    max-height: max-content;
-    position: relative;
-    padding: 30px 10px;
-  }
-  .firsthead{
-    font-size: 20px;
-  }
-  .scene-2{
-    position: relative;
-    height: max-content;
-    z-index: 0;
-  }
-  .sub-scene-2{
-    justify-content: start;
-    flex-direction: column;
-    row-gap: 40px;
-  }
-  .middle-can{
-    margin-top: 0;
-  }
-  .scene-3{
-    position: relative;
-    height: 200vh;
-    max-height: max-content;
-    z-index: 0;
-  }
-  .sub-scene-3{
-    height: max-content;
-    justify-content: start;
-    flex-direction: column;
-    row-gap: 40px;
-    padding: 0 60px;
-  }
-
-  .can-holding{
-    width: 100%;
-  }
-  .can-holding img{
-    width: 90%;
-  }
-  .all-lemon{
-    
-    justify-content: center;
-    align-items: end;
-    height: 55%;
-  }
-  .Lemon-scene{
-    overflow: hidden;
-    width: 100%;
-    height: 700px;
-  }
-  .lemon-text{
-    margin-top: 0;
-    margin-right: 0;
-    justify-content: end;
-    width: 100%;
-  }
-  .frame{
-    top: 40%;
-    left: 20px;
-  }
-  .frame img{
-    width: 100%;
-    rotate: 12deg;
-  } */
-  /* .all-slider{
-    height: 20vh;
-  }
-  .text-slider{
-    gap: 20px;
-  }
-  .text-sub-slider p{
-    font-size: 30px;
-    gap: 8px;
-  } */
   .story-section{
     height: auto;
     min-height: 250vh;
@@ -505,9 +302,6 @@ body {
   .firstscene, .secondscene{
     display: none;
   }
-  /* .mobile-story-grid{
-    display: flex;
-  } */
   .mobile-story-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -605,99 +399,6 @@ body {
     justify-content: center;
   }
   /* ///////////////////////////////Primary button//////////////////////////////// */
-  /* .all-scene{
-    width: 100%;
-    max-height: max-content;
-  }
-  .sub-scene{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    row-gap: 40px;
-  }
-  .firsthead h2{
-    font-size: 18px;
-  }
-  .scene-2{
-    width: 100%;
-    height: 100%;
-    margin-bottom: 0;
-  }
-  .sub-scene-2{
-    height: auto;
-    margin-bottom: 0;
-  }
-  .CanLeft{
-    width: 100%;
-    height: 600px;
-    margin-bottom: 0;
-    padding-bottom: 0;
-  }
-  .CanLeft .can-bg{
-    width: 100%;
-    height: 310px;
-  }
-  .Can-animate h2{
-    font-size: 18px;
-  }
-  .Can-animate .sub-Can-animate{
-    font-size: 22px;
-  }
-  .middle-can{
-    width: 100%;
-    height: 600px;
-  }
-  .middle-can .Cantext h2{
-    font-size: 24px;
-    line-height: 20px;
-  }
-  .middle-can .Cantext h2 > span{
-    padding: 6px 14px 6px 14px;
-  }
-  .can-show-middle{
-    bottom: 15%;
-    height: 300px;
-  }
-  .can-show-middle .MangoCan{
-    width: 120px;
-    height: 310px;
-  }
-  .can-show-middle .LemonCan{
-    width: 120px;
-    height: 300px;
-  }
-  .CanRight{
-    width: 100%;
-    height: 600px;
-  }
-  .CanRight .can-bg{
-    width: 100%;
-    height: 310px;
-  }
-  .can-holding{
-    width: 100%;
-    height: 500px;
-  }
-  .Lemon-scene{
-    width: 100%;
-    height: 500px;
-  }
-  .all-lemon{
-    margin-top: 5%;
-  }
-  .lemon-sub-text, .mgspan{
-    font-size: 44px;
-    padding:13px 12px;
-  }
-  .lemon-text .lemon-sub-text-2 {
-    font-size: 18px;
-    margin: 0;
-  }
-  .Lemon-scene .frame{
-    top: 51%;
-    left: 15px;
-  } */
   .story-section{
     height: max-content;
   }
@@ -727,6 +428,12 @@ body {
   }
   .sub-EndDetails .endblur2, .endblur3{
     font-size: 20px;
+  }
+  .imageChange .image-one{
+    height: 80%;
+  }
+  .imageChange .image-two{
+    width: 100%;
   }
   /* ////////////////////////Footer start /////////////////////////// */
   .footer{
@@ -774,84 +481,6 @@ body {
 }
 
 /* /////////////////////////////////////////////////// MAX 480 End //////////////////////////////////////////////// */
-/* @media (max-width: 428px) {
-
-  .sub-scene{
-    row-gap: 50px;
-  }
-  .sub-scene-2{
-    padding-right: 5%;
-    padding-left: 5%;
-  }
-  .CanLeft, .CanRight{
-    height: 500px;
-  }
-  .CanLeft .can-bg{
-    height: 260px;
-  }
-  .middle-can{
-    height: 550px;
-  }
-  .middle-can .Cantext{
-    display: flex;
-    justify-content: center;
-  }
-  .middle-can .Cantext h2{
-    font-size: 22px;
-    max-width:70%;
-  }
-  .can-show-middle{
-    bottom: 4%;
-  }
-  .can-show-middle .MangoCan{
-    height: 260px;
-    width: 110px;
-  }
-  .can-show-middle .LemonCan{
-    height: 250px;
-    width: 110px;
-  }
-  .sub-can-bg{
-    bottom: -70%;
-  }
-  .CanRight{
-    height: 500px;
-  }
-  .CanRight .can-bg{
-    height: 260px;
-  }
-  .Can-animate{
-    height: max-content;
-  }
-  .Can-animate h2{
-    font-size: 16px;
-  }
-  .Can-animate .sub-Can-animate{
-    font-size: 19px;
-  }
-  .can-holding, .Lemon-scene {
-    height: 450px;
-  }
-  .sub-scene-3{
-    padding: 0 6%;
-  }
-  .all-lemon{
-    margin-top: 10%;
-  }
-  .btn-secondary{
-    margin-top: 3%;
-  }
-  .text-slider {
-    gap: 10px;
-  }
-  .doubleCan{
-    width: 60%;
-  }
-  .singleCan{
-    left: 0;
-    width: 26.5%;
-  }
-} */
 
 @media (max-width: 390px) {
 

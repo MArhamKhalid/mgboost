@@ -119,7 +119,7 @@ const Hero = () => {
 
         </div>
 
-        <div className={`flex h-full justify-end items-end w-full absolute ${currentSlide.rightside} right-0 bottom-0 imageChange 2xs:h-auto 2xs:p-0 lg:w-[50%] 2xs:w-auto `}>
+        <div className={`flex h-full justify-end items-end w-full absolute ${currentSlide.rightside} right-0 bottom-0 imageChange 2xs:h-auto 2xs:p-0 lg:w-[50%] xl:w-auto 2xs:w-auto `}>
 
           <img src={currentSlide.images} alt="" className={`object-cover ${currentSlide.imageClass}`}/>
 
