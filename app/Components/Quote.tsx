@@ -26,7 +26,7 @@ const Quote = () => {
         gsap.set(
             ".firsthead",
             {
-                fontSize: "44px",
+                scale:1,
             });
 
 
@@ -48,7 +48,7 @@ const Quote = () => {
                 trigger:QuoteRef.current,
                 start: "top top ",
                 end: "bottom top",
-                scrub: true,
+                scrub: 3,
                 pin: false,
                 // markers: true,
             }
@@ -59,8 +59,7 @@ const Quote = () => {
         tl.to(
             ".firsthead",
             {   
-
-                fontSize: "55px",
+                scale:1.3,
                 // clipPath: "inset(0 0 30% 0)",
                 duration: 1.6,
                 ease: "power1.inOut",
@@ -78,8 +77,7 @@ const Quote = () => {
         tl.to(
             ".firsthead", 
             {
-                fontSize: "65px",
-                // clipPath: "inset(0 0 10% 0)",
+                scale:1.6,
                 duration: 2.6,
                 ease: "power1.inOut",
             }
@@ -96,8 +94,7 @@ const Quote = () => {
         tl.to(
             ".firsthead", 
             {                
-                fontSize: "76px",
-            //   clipPath: "inset(0 0 0% 0)",
+                scale:1.8,
               duration: 2.6,
               ease: "power1.inOut",
             }
@@ -125,7 +122,7 @@ const Quote = () => {
             },"<"
           );
 
-        tl.to({}, { duration: 3 });
+        tl.to({}, { duration: 4 });
     });
     // ////////////////////////////////////////////////////////////////for TABLET///////////////////////////////////////////////
         const mmm = gsap.matchMedia();
@@ -211,7 +208,7 @@ const Quote = () => {
 }, []);
   return (
     <>
-        <section ref={QuoteRef} className="relative w-full h-[300vh] bg-white">
+        <section ref={QuoteRef} className="relative w-full h-[350vh] bg-white">
             <div className="sticky top-0 w-full h-screen overflow-hidden">
                 
                 <div className=" w-full h-screen absolute top-0 left-0 z-10 flex justify-center items-center bg-white firstheaddev">

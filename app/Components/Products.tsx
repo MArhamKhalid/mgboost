@@ -81,7 +81,7 @@ const Products = () => {
                 trigger:ProductsRef.current,
                 start: "top top ",
                 end: "bottom top",
-                scrub: true,
+                scrub: 4,
                 pin: false,
                 // markers: true,
             }
@@ -322,7 +322,7 @@ const Products = () => {
 
   return (
     
-        <section ref={ProductsRef} className="relative w-full xl:h-[400vh] 3xs:h-max bg-white">
+        <section ref={ProductsRef} className="relative w-full xl:h-[450vh] 3xs:h-max bg-white">
             <div className="xl:sticky xl:top-0 w-full xl:h-screen xl:overflow-hidden 3xs:static 3xs:h-max 3xs:px-4 3xs:py-20 sm:px-20 xl:px-10 2xl:py-10 3xl:py-10">
                 {/* <div className="w-full h-screen bg-white"> */}
                     <div className=" flex justify-center items-center xl:gap-x-[32px] text-black 3xl:h-[90vh] 2xl:px-15 3xl:p-0 max-h-max 3xs:flex-col 3xs:gap-y-10 3xs:h-max 3xs:px-0 xl:flex-row">
